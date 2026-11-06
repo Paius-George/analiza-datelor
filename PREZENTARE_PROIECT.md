@@ -1,235 +1,231 @@
-# Fișa mea de învățare — digitalizare și dezvoltare regională
+# Fișa mea de prezentare — digitalizare și dezvoltare regională
+
+Actualizare: **5 noiembrie 2026**. Acoperă toate cerințele din **Seminarii 1–2, 4–5 și 5–6**, inclusiv tema pentru seminarul 3.
 
 ## Ce rețin înainte de orice
 
-**2024 · Eurostat · 116 regiuni · 21 de țări · 12 indicatori · 4 componente · 85,06%**
+**2024 · Eurostat · 116 regiuni NUTS2 · 21 de țări · 12 indicatori · 4 componente · 85,06%**
 
-- Întrebarea mea: regiunile cu utilizare digitală mai mare tind să aibă și un profil economic mai favorabil?
-- Analizez regiuni în același an, nu evoluția în timp.
-- Șomajul general este pentru **20–64 ani**, iar cel al tinerilor pentru **15–24 ani**.
-- Internet zilnic–PIB: corelație Pearson **0,585**, pozitivă, moderată.
-- Rezultatul arată **asociere**, nu dovedește cauzalitate.
+> Am analizat asocierea dintre digitalizare și dezvoltarea economică regională, folosind 12 indicatori Eurostat pentru anul 2024. Am descris distribuțiile și corelațiile, apoi am aplicat ACP pe date standardizate. Am păstrat patru componente, care explică 85,06% din variație. Am verificat contribuțiile și calitatea reprezentării și am reprezentat simultan primele patru componente.
 
-## Cum încep, în cuvintele mele
+Întrebarea proiectului: **regiunile cu participare digitală mai mare tind să aibă un profil economic și social mai favorabil?** Rezultatele descriu asocieri, fără a demonstra cauzalitate.
 
-> Am analizat legătura dintre digitalizare și dezvoltarea economică regională. Am folosit 12 indicatori Eurostat din 2024, pentru 116 regiuni NUTS2. Mai întâi am descris datele și corelațiile, apoi am folosit analiza componentelor principale pentru a rezuma informația. Am păstrat patru componente, care explică aproximativ 85% din variația datelor.
+## Datele și pregătirea lor
 
-## Datele: ce trebuie să pot explica
+Sursa este **`centralizare.xlsx`, foaia `Date complete`**. Excelul de intrare a fost citit și păstrat intact. `digitalizare.txt` coincide numeric și ca ordine a regiunilor cu Excelul.
 
-**O observație = o regiune. O variabilă = un indicator.**
+| Cod | Indicator | Unitate / populație |
+| --- | --- | --- |
+| X1 | Internet acasă | % gospodării |
+| X2 | Internet zilnic | % persoane 16–74 |
+| X3 | Internet banking | % persoane 16–74 |
+| X4 | Cumpărături online | % persoane 16–74 |
+| X5 | PIB/locuitor | PPS/locuitor |
+| X6 | Ocupare | % populație 20–64 |
+| X7 | Șomaj general | % activi 20–64 |
+| X8 | Șomaj tineri | % activi 15–24 |
+| X9 | Studii superioare | % populație 25–64 |
+| X10 | Formare adulți | % populație 25–64 |
+| X11 | NEET | % populație 15–29 |
+| X12 | Densitate | locuitori/km² |
 
-NUTS2 este un nivel al clasificării statistice regionale europene. În România, Nord-Vest sau Centru sunt regiuni NUTS2; un județ nu este NUTS2.
+- O observație este o regiune; o variabilă este un indicator. Codul, țara, numele și anul sunt identificatori.
+- Datele sunt cantitative, observaționale, de profil: toate pentru **2024**.
+- Din **244 de regiuni centralizate**, 116 au date complete; celelalte 128 au cel puțin o lipsă. Rata de păstrare este 47,54%.
+- Asocierea s-a făcut în Excel prin **VLOOKUP cu potrivire exactă**, după codul regiunii. Foile `Sursa X1`–`Sursa X12` păstrează metadatele.
+- Lipsurile și valorile excluse pentru flagurile `u` / `c` nu sunt înlocuite cu zero. Nu împrumutăm valori din alți ani.
+- Actualizarea folosește anul deja extras; nu a refăcut comparația disponibilității pentru 2022 și 2023.
+- Regiunile au ponderi egale. Media lor nu este media UE ponderată cu populația.
+- PPS înseamnă standard al puterii de cumpărare; NEET înseamnă tineri neocupați care nu participă la educație sau formare.
+- Șomajul general este pentru **20–64 ani**, iar șomajul tinerilor pentru **15–24 ani**. Ratele de șomaj au drept bază populația activă.
 
-| Cod | Ce înseamnă |
+## Ce am folosit din cursuri
+
+- **C1–C2, pp. 16–20 și 29–35:** clasificarea datelor, medie, varianță, corelație, standardizare și descompunere spectrală.
+- **cap1 — ACP, pp. 4–9:** scopul ACP, maximizarea varianței sub restricția normei unitare, proprietăți, selecția axelor și matricea factor.
+- **cap1 — ACP, p. 16 și seminar 5–6, p. 2:** cos² și contribuțiile variabilelor.
+- Cursul de corespondențe studiază variabile **calitative** și tabele de contingență. Nu este cerut de cele trei seminarii și nu se aplică direct matricei noastre de indicatori numerici.
+- Exemplul din curs elimină anumite variabile și extreme într-un alt set. Nu copiem mecanic acea selecție: aici păstrăm cei 12 indicatori, în absența unor erori demonstrate.
+
+## Statistici descriptive, distribuții și outlieri
+
+Media descrie nivelul mediu, mediana centrul distribuției, abaterea standard dispersia, iar Q1–Q3 jumătatea centrală. Pentru procente, abaterea standard este în **puncte procentuale**.
+
+Exemplu: X7 are media **6,54%**, mediana **6,30%** și abaterea standard **3,13 puncte procentuale**.
+
+PIB-ul și densitatea au cozi pronunțate spre dreapta. Ocuparea are câteva valori mult mai reduse decât restul. Standardizarea permite compararea scărilor, dar nu elimină asimetria.
+
+Outlierii sunt identificați prin **1,5 IQR**, cu balamalele Tukey folosite de `boxplot.stats()`. Cuantilele descriptive folosesc convenția `quantile(type=7)`; cele două nu trebuie confundate. Păstrăm extremele ca profiluri regionale reale. Lista cu regiunile și valorile este în `rezultate/outlieri.csv`.
+
+Grafice: histograme, boxploturi originale și standardizate, matricea observațiilor, matricea Pearson, grafic cu trei și grafic cu patru variabile.
+
+## Corelațiile și graficele cu variabilele originale
+
+- Internet zilnic–PIB: **Pearson 0,585**, **Spearman 0,662**.
+- Internet banking–cumpărături online: **0,845**, asociere pozitivă puternică.
+- Ocupare–șomaj general: **-0,739**; ocupare–NEET: **-0,839**.
+
+> Regiunile cu utilizare zilnică mai ridicată a internetului tind să aibă PIB/locuitor mai mare în eșantionul analizat.
+
+Graficul cu **trei variabile**: X = internet zilnic, Y = PIB, culoare = ocupare. Graficul cu **patru variabile** adaugă aria punctului = studii superioare. Punctele reprezintă regiuni; mărimea nu reprezintă populația.
+
+## ACP: ce face și de ce standardizez
+
+ACP construiește combinații liniare ale indicatorilor, ordonate după varianța explicată. Prima axă maximizează varianța; fiecare următoare maximizează variația rămasă, sub restricția de ortogonalitate.
+
+`Z = (X − medie) / abatere standard`
+
+Indicatorii au unități și dispersii diferite; de aceea folosim ACP pe **matricea de corelație**. Coloanele standardizate au medie zero și varianță unu în convenția aleasă. Standardizarea nu produce automat distribuții normale.
+
+Din curs: **R · v = λ · v**, coeficienții au normă unitară, iar **Var(PC) = λ**. Cele 12 axe conservă varianța totală și generalizată; componentele sunt necorelate. Necorelarea nu implică independență.
+
+| Obiect | Semnificație |
 |---|---|
-| X1 | Acces la internet acasă, % gospodării |
-| X2 | Internet zilnic, % persoane 16–74 ani |
-| X3 | Internet banking, % persoane 16–74 ani |
-| X4 | Cumpărături online în ultimele 3 luni, % persoane 16–74 ani |
-| X5 | PIB pe locuitor în PPS |
-| X6 | Ocupare, % populație 20–64 ani |
-| X7 | Șomaj, % populație activă 20–64 ani |
-| X8 | Șomajul tinerilor, % populație activă 15–24 ani |
-| X9 | Studii superioare, % populație 25–64 ani |
-| X10 | Educație și formare în ultimele 4 săptămâni, % populație 25–64 ani |
-| X11 | NEET, % populație 15–29 ani |
-| X12 | Densitate, locuitori/km² |
+| `lambda` | Varianța componentei |
+| `acp$sdev` | Rădăcina pătrată din lambda |
+| `acp$loadings` | Coeficienții combinațiilor liniare, adică vectorii proprii |
+| `acp$scores` | Coordonatele regiunilor pe noile axe |
+| `cor(X, acp$scores)` | Matricea factor: corelațiile indicator–componentă |
 
-- **PPS** = standard al puterii de cumpărare; permite compararea economiilor ținând cont de diferențele de preț. Nu este salariu în euro.
-- **NEET** = tineri care nu sunt ocupați și nu participă la educație sau formare.
-- **Populație activă** = persoane ocupate + șomeri. Aici se raportează rata șomajului.
+Suma valorilor proprii este **12**. Matricea scorurilor complete este **116 × 12**; soluția reținută are **116 × 4**.
 
-### Cum am pregătit setul
+## De ce păstrez patru componente
 
-1. Am asociat indicatorii după codul regiunii, prin `VLOOKUP` cu potrivire exactă.
-2. Am tratat drept indisponibile lipsurile și valorile marcate cu fiabilitate redusă sau confidențialitate.
-3. Am păstrat numai regiunile cu toți cei 12 indicatori disponibili.
-4. Am exportat datele pentru R în TXT.
+| Axe | Variație pe axă | Variație cumulată |
+| --- | --- | --- |
+| PC1 | 55,95% | 55,95% |
+| PC2 | 14,39% | 70,34% |
+| PC3 | 9,13% | 79,47% |
+| PC4 | 5,59% | 85,06% |
 
-Din **244 de regiuni eligibile**, au rămas **116**; celelalte **128** au cel puțin o valoare indisponibilă. Nu am completat lipsurile cu zero.
+**Kaiser recomandă 3 axe** cu λ > 1. Ele explică 79,47%, sub pragul de 80% ales în proiect; reținem **4 axe**, cu 85,06%. Scree plotul completează decizia, fără să înlocuiască justificarea pragului. Cursul mai enumeră analiza paralelă și criteriul statistic; acestea nu sunt impuse de cerințele PDF și nu au fost pretinse ca executate.
 
-Am ales 2024 deoarece avea cele mai multe cazuri complete dintre anii comparați: **95 în 2022, 103 în 2023, 116 în 2024**.
+## Numele și interpretarea componentelor
 
-Fiecare regiune are aceeași pondere. Media eșantionului nu este media UE ponderată cu populația.
+| Componentă | Denumire | Variație |
+| --- | --- | --- |
+| PC1 | Participare digitală și integrare economică și socială | 55,95% |
+| PC2 | Profil mixt al pieței muncii, educației și teritoriului | 14,39% |
+| PC3 | Concentrare urbană și economică versus formare continuă | 9,13% |
+| PC4 | Acces la internet versus studii superioare | 5,59% |
 
-## Statistici și grafice: cum le explic
+**PC1:** indicatorii digitali, ocuparea, educația și PIB au semn pozitiv; șomajul și NEET au semn negativ. Un scor ridicat indică un profil relativ favorabil în aceste dimensiuni. Componenta depășește digitalizarea propriu-zisă.
 
-| Noțiune | Explicația scurtă |
-|---|---|
-| Media | Nivelul mediu al indicatorului în regiunile analizate |
-| Mediana | Valoarea centrală; mai puțin sensibilă la extreme |
-| Abaterea standard | Cât de dispersate sunt valorile |
-| Q1 și Q3 | Delimitează jumătatea centrală a distribuției |
-| Histogramă | Arată cum se distribuie valorile |
-| Boxplot | Arată mediana, dispersia centrală și valorile extreme |
+**PC2:** șomajul general (0,69), șomajul tinerilor (0,55), densitatea (0,52) și studiile superioare (0,49) sunt în sens opus ocupării (-0,38). Este un profil mixt; pozitiv nu înseamnă automat mai bine. Indicatorii regionali nu arată că persoanele cu studii superioare sunt cele șomere.
 
-**Exemplul pe care îl pot da:** șomajul 20–64 ani are media **6,54%**, mediana **6,30%**, abaterea standard **3,13 puncte procentuale**.
+**PC3:** densitatea (0,71) și PIB (0,44) se opun formării adulților (-0,39). **PC4:** accesul la internet acasă (0,61) se opune studiilor superioare (-0,36). Sunt contraste descriptive suplimentare, fără interpretare cauzală.
 
-**Outlier:** valoare dincolo de pragurile bazate pe regula 1,5 IQR. În boxplot, R folosește balamalele Tukey pentru calcul. O valoare extremă poate fi reală, de aceea am păstrat-o.
+Semnele sunt acum **uniformizate între scripturi, Excel și raport** pentru primele patru axe. O axă și opusul ei reprezintă aceeași soluție; trebuie inversate împreună coeficienții, coordonatele variabilelor și scorurile.
 
-PIB și densitatea au cozi spre dreapta: câteva regiuni au valori mult mai mari decât celelalte.
+## Cum interpretez biplotul
 
-### Corelațiile
+Biplotul combină regiunile cu săgețile indicatorilor. Axele sunt numite după componente. Există și o variantă cu **PC1 pe verticală**; inversarea axelor schimbă orientarea desenului, fără să schimbe analiza.
 
-- Pearson: asociere **liniară**, între −1 și +1.
-- Pozitivă: valorile tind să crească împreună. Negativă: tind să varieze în sens opus.
-- Aproape de zero: asociere liniară slabă; poate exista alt tip de relație.
-- Internet zilnic–PIB: **Pearson 0,585** și **Spearman 0,662**. Spearman folosește rangurile.
+- Dreapta: participare digitală, ocupare, educație și PIB mai mari în profilul sintetizat de PC1; stânga: profil opus, asociat șomajului și NEET.
+- Sus pe PC2: profil mixt, inclusiv șomaj, densitate și studii superioare. BE10 și AT13 se disting pe această axă.
+- Săgețile digitale au direcții apropiate; ocuparea și șomajul sunt orientate opus.
+- Apropierea regiunilor arată asemănare **în proiecție**, dacă reprezentarea este bună. Planul PC1–PC2 explică 70,34%, nu întreaga soluție.
+- Biplotul `princomp` are două scări. Pentru corelații și lungimea săgeților consultăm **cercul corelațiilor și matricea factor**, nu citim numeric săgețile biplotului ca și când ar fi corelații.
 
-**Ce spun:** „Regiunile cu utilizare zilnică mai ridicată a internetului tind să aibă PIB pe locuitor mai mare în acest eșantion.”
+## Seminar 5–6: coordonate, cos² și contribuții
 
-### Graficul cu patru variabile
+Pentru variabila j și componenta k:
 
-**X = internet zilnic · Y = PIB · culoare = ocupare · aria punctului = studii superioare.**
+- **Coordonată** = `cor(X_j, PC_k)` = element din matricea factor.
+- **Cos²** = coordonată²; arată cât din variația variabilei este reprezentată de axă.
+- **Contribuție (%)** = `100 × cos² / lambda_k`; arată aportul la varianța axei.
+- Suma cos² pe o **coloană** este lambda; suma contribuțiilor pe o coloană este 100%. Suma cos² pe **toate cele 12 axe**, pentru o variabilă, este 1.
+- Referința unei contribuții egale: **100/12 = 8,33%**. Este o referință descriptivă, nu un test statistic.
 
-Fiecare punct este o regiune. Mărimea punctului nu reprezintă populația. Graficul cu trei variabile folosește numai poziția și culoarea.
+| Axă | Cele mai mari trei contribuții ale variabilelor |
+| --- | --- |
+| PC1 | X11: 12,25%; X4: 12,09%; X3: 11,66% |
+| PC2 | X7: 27,91%; X8: 17,28%; X12: 15,38% |
+| PC3 | X12: 46,21%; X5: 17,77%; X10: 14,15% |
+| PC4 | X1: 55,07%; X9: 19,00%; X2: 15,17% |
 
-## ACP: ideea pe care trebuie să o înțeleg
+**Exemplu X12:** cos² în PC1–PC2 este **0,300**, iar în primele patru axe **0,816**. Densitatea este descrisă mult mai bine când includem PC3. Contribuția și calitatea reprezentării răspund la întrebări diferite.
 
-**ACP = analiza componentelor principale.** Construiește variabile noi, numite componente, ca să rezume variația celor 12 indicatori.
+Pentru regiunea i:
 
-Prima componentă surprinde cea mai mare variație. Următoarele surprind variația rămasă, pe direcții ortogonale. Componentele sunt necorelate; asta nu înseamnă automat independente.
+`d_i² = suma_j Z_n[i,j]²`
 
-### De ce standardizez
+`cos²_ik = scor_ik² / d_i²`
 
-Indicatorii au unități și scări diferite. Fără standardizare, scările mari ar influența puternic rezultatul.
+`contribuție_ik (%) = 100 × scor_ik² / (116 × lambda_k)`
 
-`z = (valoare − medie) / abatere standard`
+`Dist` este **rădăcina lui d²**, nu d². Regiunile au masa **1/116**, iar inerția regiunii este **d²/116**. Suma contribuțiilor regiunilor pe fiecare axă este 100%. Referința egală este **0,862%**. Pentru cos² pe un plan adunăm valorile celor două axe.
 
-După standardizare: medie zero și varianță unu în convenția folosită. Standardizarea nu elimină extremele și nu face automat distribuția normală.
+## Tema: primele patru componente într-un singur grafic
 
-### Trei noțiuni pe care să nu le încurc
+În `Seminarii_5_6.R`, graficul `grafic_4CP` folosește:
 
-| Noțiune | Ce îmi spune |
-|---|---|
-| Valoare proprie, λ | Câtă variație surprinde componenta |
-| Loadings în `princomp` | Coeficienții combinației liniare; vectorii proprii unitari |
-| Scores | Coordonatele fiecărei regiuni pe componente |
-| Matricea factor | Corelațiile indicatorilor cu componentele; o folosesc la interpretare |
+- **X = PC1**, **Y = PC2**;
+- **culoare = PC3**, pe o scală divergentă centrată la zero;
+- **mărime = PC4**, pe o scală crescătoare: un punct mai mare are un scor PC4 mai mare, inclusiv când există scoruri negative.
 
-Suma valorilor proprii este **12**, deoarece lucrez pe matricea de corelație a 12 indicatori. `sdev` este rădăcina pătrată a valorii proprii.
+Legenda mărimii arată scorul PC4, nu populația și nici modulul scorului. Poziția rezumă 70,34% din variație; culoarea și mărimea adaugă informația axelor 3 și 4. Graficul încorporează cele patru scoruri, fără să reprezinte fidel distanțele euclidiene în patru dimensiuni. Planul separat PC3–PC4, cu 14,72%, completează lectura.
 
-Scoruri complete: **116 × 12**. Scoruri pentru soluția păstrată: **116 × 4**.
+Fișier vizual deja generat: `rezultate/grafice/16_primele_patru_componente.png`. Codul `ggplot()` corespunzător este pregătit în R și nu a fost executat în această actualizare.
 
-### De ce păstrez patru componente
+## România
 
-| Componente | Variație explicată cumulat |
-|---|---:|
-| Prima | 55,95% |
-| Primele două | 70,34% |
-| Primele trei | 79,47% |
-| Primele patru | **85,06%** |
+| Regiune | PC1 | PC2 | PC3 | PC4 | Cos² PC1–PC2 | Cos² primele 4 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Nord-Vest | -2,754 | -1,241 | 0,621 | 1,698 | 0,579 | 0,786 |
+| Centru | -3,622 | -1,485 | 1,096 | 1,637 | 0,692 | 0,867 |
+| Nord-Est | -3,705 | -2,030 | 0,822 | 1,037 | 0,834 | 0,916 |
+| Sud-Muntenia | -4,604 | -0,853 | 0,252 | 1,124 | 0,847 | 0,898 |
+| Sud-Vest Oltenia | -5,763 | -0,615 | 0,775 | 0,850 | 0,909 | 0,945 |
+| Sud-Est | -6,140 | 0,093 | 0,210 | 0,806 | 0,893 | 0,910 |
 
-- **Kaiser:** trei valori proprii sunt mai mari decât 1.
-- **Criteriul ales:** minimum 80% din variație → păstrez patru componente.
-- **Scree plot:** urmăresc unde scăderea valorilor proprii începe să se aplatizeze.
+Toate cele șase regiuni incluse au PC1 negativ față de media eșantionului. **Nord-Vest** are cel mai mare scor PC1 dintre ele; **Sud-Est** are cel mai mic. Cos² arată cât de bine justifică proiecția lectura fiecărei regiuni.
 
-**Răspuns de reținut:** „Trei componente sunt recomandate de Kaiser, dar explică 79,47%. Pentru pragul meu de minimum 80%, am păstrat patru.”
+**București–Ilfov și Vest** sunt excluse deoarece X8 este indisponibil, cu flag `u`. Nu le atribuim scoruri și nu deducem poziția pe care ar fi avut-o. Scor negativ nu înseamnă valori negative ale indicatorilor.
 
-Graficul pe PC1–PC2 arată **70,34%**, nu toată informația celor patru componente.
+## Calculul manual și comparația metodelor
 
-## Cum interpretez componentele
-
-### PC1 — participare digitală și integrare economică și socială
-
-- Pozitiv: indicatorii digitali, ocuparea, educația și PIB.
-- Negativ: șomajul și NEET.
-- Un scor mare descrie un profil relativ mai favorabil pe aceste dimensiuni, în eșantion.
-
-Nu o numesc indicator pur al digitalizării: include și piața muncii, educația și economia.
-
-### PC2 — profil mixt al pieței muncii, educației și teritoriului
-
-Corelații: șomaj general **+0,69**, șomaj tineri **+0,55**, densitate **+0,52**, studii superioare **+0,49**, ocupare **−0,38**.
-
-Un scor pozitiv nu înseamnă automat o situație mai bună.
-
-### PC3 și PC4 — diferențe suplimentare
-
-- **PC3**, cu semnele din PDF și Excel: mai ales densitate **+0,71**, PIB **+0,44**, formarea adulților **−0,39**.
-- **PC4:** acces la internet acasă **+0,61**, studii superioare **−0,36**.
-
-**Atenție la PC3:** în scriptul `princomp`, semnele sunt inversate față de PDF și Excel. O axă și opusul ei reprezintă aceeași soluție. Se inversează împreună coeficienții și scorurile; variația explicată rămâne aceeași.
-
-### Cum citesc graficele ACP
-
-- **Graficul regiunilor:** punctele sunt regiunile. Apropierea indică profiluri asemănătoare în proiecția afișată; verific și calitatea reprezentării.
-- **Cercul corelațiilor:** săgeți lungi = variabile bine reprezentate în plan; direcții apropiate sugerează asociere pozitivă, opuse sugerează asociere negativă, dacă reprezentarea este bună.
-- **Biplot:** regiuni și variabile împreună. Nu compar direct scara punctelor cu cea a săgeților.
-- **Contribuție:** aport la construirea axei.
-- **Cos²:** calitatea reprezentării pe axă sau în plan.
-
-## România: ce rețin
-
-Sunt incluse șase regiuni. Toate au PC1 negativ față de media eșantionului, care este zero.
-
-- **Nord-Vest:** cel mai mare PC1 dintre regiunile românești incluse, **−2,754**.
-- **Sud-Est:** cel mai mic, **−6,140**.
-- **București–Ilfov și Vest:** excluse deoarece X8, șomajul tinerilor, este indisponibil, cu marcaj de fiabilitate redusă.
-
-Scor negativ nu înseamnă indicatori negativi. Nu este un clasament oficial și nu pot spune ce poziție ar fi avut regiunile excluse.
-
-## R: ce face fiecare comandă
-
-| Comandă | Ce trebuie să spun |
-|---|---|
-| `read.table(..., header=TRUE, row.names=1, sep="\t")` | Importă TXT; prima coloană devine identificator, nu indicator numeric |
-| `dim(X)` | Numărul de regiuni și indicatori: 116 × 12 |
-| `apply(X, 2, mean)` | Media fiecărei coloane; `2` înseamnă coloane |
-| `apply(X, 2, sd)` | Abaterile standard |
-| `apply(X, 2, quantile)` | Cuantilele |
-| `hist()`, `boxplot()`, `plot()` | Distribuții, extreme, relații între variabile |
-| `boxplot(scale(X))` | Distribuții pe o scară standardizată |
-| `cor(X)`, `corrplot(R)` | Calculează și reprezintă corelațiile |
-| `scale(X)` | Centrează și standardizează |
-| `eigen(R)` | Valorile și vectorii proprii ai matricei de corelație |
-| `princomp(X, cor=TRUE, scores=TRUE)` | ACP pe corelații, cu scorurile regiunilor |
-| `summary(acp)` | Abaterile standard și proporțiile de variație explicată |
-| `cor(X, scoruri)` | Matricea factor |
-| `biplot(acp)` | Regiunile și variabilele în același plan |
-| `PCA(X, scale.unit=TRUE, ncp=12, graph=FALSE)` | ACP cu FactoMineR; standardizare, toate coordonatele, fără grafice automate |
-| `fviz_eig`, `fviz_pca_ind`, `fviz_pca_var` | Variație explicată, regiuni, variabile |
-
-### Dacă mă întreabă despre calculul manual
-
-`scale(X) %*% acp$loadings` combină indicatorii standardizați cu coeficienții axelor. `%*%` înseamnă înmulțire de matrice.
-
-Pentru scorurile exacte din `princomp`, aplic corecția:
+`scale(X)` folosește abaterea standard cu divizor **n−1**; `princomp(cor=TRUE)` și `PCA(scale.unit=TRUE)` folosesc standardizarea cu **n** pentru coordonate. De aceea:
 
 ```r
 sqrt(n / (n - 1)) * scale(X) %*% acp$loadings
 ```
 
-Motiv: `scale()` folosește divizorul **n−1** la calculul varianței, iar `princomp` folosește **n** pentru standardizarea din scoruri.
+reproduce scorurile `princomp`. Matricea factor se obține și prin `loadings × sqrt(lambda)`, pe coloane. După alinierea semnelor, `PCA$ind$coord` se compară cu scorurile, iar `PCA$var$coord` cu matricea factor.
 
-### De ce am folosit și FactoMineR
+**Starea verificării:** au fost efectuate **22 verificări numerice în Python**, pe datele Excel: descompunere spectrală, SVD independentă, identități ale cos² și contribuțiilor, reconstrucție și acord cu valorile deja salvate în Excel. Eroarea maximă este **1.18e-12**, sub toleranța 1e−8. **Scripturile R nu au fost executate**, conform cerinței tale; sintaxa celor patru fișiere a fost verificată separat cu `parse()`, fără evaluarea comenzilor. Nu există un output R nou. Codul de comparare `princomp`–`PCA` și verificările aferente sunt pregătite în `Seminarii_5_6.R`.
 
-Verific aceeași analiză prin altă funcție și obțin graficele cerute. Valorile proprii coincid numeric; scorurile corespunzătoare au corelații **+1 sau −1**, în funcție de orientarea axelor.
+## Ce conține fiecare fișier
 
-`ncp=12` permite comparația tuturor componentelor. Alegerea mea pentru interpretare rămâne **patru**.
+| Fișier | Rol |
+|---|---|
+| `pregatire_date.R` | Import Excel, verificare TXT și funcții de aliniere a axelor |
+| `Seminarii_1_3.R` | Cerințele 1–2 și tema cu trei/patru variabile |
+| `Seminarii_4_5.R` | ACP, calcule manuale, selecție, biploturi și comparație |
+| `Seminarii_5_6.R` | Coordonate, cos², contribuții și tema cu patru componente |
+| `raport_proiect.pdf` | Rezolvarea explicată, cu tabele și grafice |
+| `rezultate/rezultate_seminarii.xlsx` | Toate rezultatele numerice, pe toate cele 12 axe |
+| `rezultate/cerinte.csv` | Corespondența fiecărei cerințe PDF cu rezolvarea |
+| `rezultate/verificari_numerice.csv` | Verificări efectuate în Python |
+| `rezultate/metadate.json` | Sursa, metoda și starea execuției |
+| `construieste_raport.py`, `redactare_proiect.py` | Refacerea documentelor în Python, fără executare R |
+
+La executarea manuală, codul R salvează rezultatele în **`rezultate_R`**, separat de cele deja calculate în Python. Nu instalează automat pachete. Lista pentru instalare manuală este în `pregatire_date.R`.
 
 ## Întrebări la care să fiu pregătit
 
-**De ce șomaj 20–64?** Este grupa disponibilă în tabelul regional ales, respectă limita de vârstă cerută și coincide cu grupa ocupării.
+**De ce patru axe?** Primele trei rămân sub pragul ales de 80%; patru explică 85,06%.
 
-**De ce nu am eliminat extremele?** O valoare extremă poate reflecta o caracteristică reală a regiunii; nu este automat o eroare.
+**Ce diferență există între contribuție și cos²?** Contribuția arată cine construiește axa; cos² arată cât de bine este reprezentată o variabilă sau regiune.
 
-**De ce nu două componente?** Primele două explică numai 70,34%; pentru minimum 80% am nevoie de patru.
+**De ce densitatea pare slab reprezentată în cercul PC1–PC2?** O parte mare din variația sa este pe PC3; calitatea în planul primelor două axe este numai 0,300.
 
-**Pot generaliza la toată UE?** Cu prudență: am numai regiunile cu date complete, iar selecția poate influența rezultatele.
+**Un scor mare pe PC2 este bun?** Nu automat: șomajul, studiile superioare și densitatea au aici același semn.
 
-**Am demonstrat că digitalizarea crește PIB-ul?** Nu. Analiza este descriptivă; alți factori pot influența simultan digitalizarea și economia.
+**Sunt toate cele 116 regiuni un eșantion aleator?** Nu. Sunt cazurile cu date complete din centralizarea existentă; selecția poate influența concluziile.
 
-**Ce alte limite există?** Un singur an, ponderi egale ale regiunilor, sensibilitate la extreme și faptul că PIB nu descrie singur bunăstarea.
+**Am demonstrat că digitalizarea crește PIB-ul?** Nu; analiza este descriptivă și observațională, pentru un singur an.
 
 ## Cum închei
 
-> În regiunile analizate, participarea digitală se asociază cu profilul economic și social. Patru componente rezumă 85,06% din variația celor 12 indicatori. Rezultatele sunt descriptive și se referă la eșantionul cu date complete.
-
-## Recapitulare în 30 de secunde
-
-**Tema → datele → pregătirea → statistici → corelații → standardizare → ACP → patru componente → România → limite.**
-
-Cifrele pe care le învăț: **2024; 116; 12; 20–64; 0,585; 55,95%; 70,34%; 79,47%; 85,06%.**
-
-Dacă demonstrez în RStudio: deschid scriptul → **Session → Set Working Directory → To Source File Location** → rulez pe rând cu **Cmd+Enter** pe Mac. Dacă lipsesc pachetele, rulez o singură dată liniile `install.packages(...)` după eliminarea semnului `#`.
+> În regiunile analizate, participarea digitală se asociază cu un profil economic și social mai favorabil. Patru componente rezumă 85,06% din variația celor 12 indicatori. Interpretarea este susținută de matricea factor, contribuții și cos² și se referă la regiunile cu date complete din 2024.

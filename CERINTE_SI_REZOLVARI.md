@@ -1,0 +1,31 @@
+# Corespondența cerințelor și a rezolvărilor
+
+Au fost citite mai întâi cele trei seminarii, apoi cursurile. Numerele paginilor sunt cele fizice din PDF. Calculele și graficele livrate sunt generate în Python; codul R este redactat, fără execuție.
+
+| seminar | pagini_PDF | cerinta | rezolvare | cod_R | stare |
+| --- | --- | --- | --- | --- | --- |
+| 1–2 | 1–5 | Obiectiv, cel putin 10 indicatori NUTS2, acelasi an | Raport §1; Excel sursa / Date complete | pregatire_date.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 1–2 | 2–4 | Coduri, etichete, VLOOKUP, selectie cazuri complete, TXT | Raport §1; foi sursa si Centralizare; digitalizare.txt | pregatire_date.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 1–2 | 5 | Import si statistici descriptive | Raport §2; statistici.csv | Seminarii_1_3.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 1–2 | 5–6 | Outlieri, histograme, boxploturi, observatii, corelatii | Raport §2–3; grafice 01–06; outlieri.csv | Seminarii_1_3.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 1–2 | 7 | ggplot cu trei si patru variabile | Raport §3; grafice 07–08 | Seminarii_1_3.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 2 | Standardizare: definitie, motive, proprietati | Raport §4; verificari_numerice.csv | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 2 | princomp si summary; lambda versus sdev | Raport §4; valori_proprii.csv | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 2 | Loadings versus vectori proprii | Raport §4; loadings.csv | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 3 | Scores, dimensiuni, calcul manual, primele cinci regiuni | Raport §4; scoruri.csv; scoruri_manual.csv | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 4 | Proprietati si criterii de selectie | Raport §4; scree plot; verificari | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 5 | Matrice factor si interpretarea componentelor | Raport §5; matrice_factor.csv | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 5 | Biplot; supliment: PC1 vertical | Raport §5; grafice 11–12 | Seminarii_4_5.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 6 | PCA; summary, fviz_eig, fviz_pca_ind, fviz_pca_var | Raport §6; grafice si tabele echivalente; cod R pregatit | Seminarii_4_5.R; Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 4–5 | 6 | Comparatie princomp versus PCA | Raport §6; valori Excel existente, control eigen/SVD; R neexecutat | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 5–6 | 1 | Valori proprii, procente, interpretare outputuri | Raport §4 si §6; valori_proprii.csv | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 5–6 | 2 | Variabile: coordonate, cos2, contributii | Raport §6; coord_var, cos2_var, contrib_var.csv | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 5–6 | 2 | Regiuni: distante, coordonate, cos2, contributii | Raport §6–7; regiuni, cos2_ind, contrib_ind.csv | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 5–6 | 3–4 | Scree plot, cercul corelatiilor, regiunile in plan | Raport §4–6; grafice 09–10, 13–14 | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+| 5–6 | 4 | Tema ggplot: reprezentarea primelor patru componente | Raport §7; grafic 16; cod ggplot pregatit | Seminarii_5_6.R | Calcul/documentatie disponibile; cod R neexecutat |
+
+## Prioritatea cursurilor
+
+C1–C2: recapitulare statistică, standardizare și algebră. cap1 — ACP: modelul matematic, proprietățile, selecția și matricea factor. cap2 — ACoresp: citit; metodă pentru date calitative, fără cerință aplicabilă în cele trei seminarii. Fișa disciplinei confirmă utilizarea R; nu adaugă o analiză nouă pentru aceste cerințe.
+
+Nu s-a copiat numărul de observații sau selecția variabilelor din exemplele didactice.
