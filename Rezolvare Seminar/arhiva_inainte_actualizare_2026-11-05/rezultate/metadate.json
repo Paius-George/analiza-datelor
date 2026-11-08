@@ -1,0 +1,22 @@
+{
+  "data_actualizarii": "2026-11-05",
+  "sursa": "centralizare.xlsx / Date complete",
+  "sha256_excel": "6209f6cb7871a4ae60536aac22dcccbc16af8d4bef83883e5b7f0fdd8dac0934",
+  "n": 116,
+  "p": 12,
+  "tari": 21,
+  "regiuni_eligibile": 244,
+  "k_kaiser": 3,
+  "k_80": 4,
+  "verificari_numerice": 22,
+  "eroare_maxima": 1.1795009413617663e-12,
+  "executie_R": false,
+  "metoda_calcul": "Python: eigh(cor(X)) si SVD pe Z_n",
+  "comparatie_R": "Cod pregatit; valorile cache din Excel verificate; nicio executie noua R",
+  "versiuni": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}
