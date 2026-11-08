@@ -1,4 +1,0 @@
-Sintaxa valida (fara executie): pregatire_date.R 
-Sintaxa valida (fara executie): Seminarii_1_3.R 
-Sintaxa valida (fara executie): Seminarii_4_5.R 
-Sintaxa valida (fara executie): Seminarii_5_6.R 
