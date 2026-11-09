@@ -1,0 +1,804 @@
+{
+  "questions": [
+    {
+      "id": "v1-1",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "Abaterea standard",
+      "prompt": "Cum interpretezi SD pentru această rată a șomajului?",
+      "choices": [
+        "Șomajul a crescut cu 3,13% față de anul trecut.",
+        "Dispersia ratelor este de 3,13 puncte procentuale.",
+        "3,13% dintre regiuni au șomaj.",
+        "Media șomajului este 3,13%."
+      ],
+      "correct": 1,
+      "explanation": "SD descrie împrăștierea valorilor. Pentru o rată în procente, unitatea SD este punctul procentual; nu este o creștere în timp.",
+      "output": "Mean 6.54    Median 6.30    SD 3.13",
+      "image": null
+    },
+    {
+      "id": "v1-2",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "Sensul corelației",
+      "prompt": "Ce concluzie este justificată?",
+      "choices": [
+        "Internetul zilnic provoacă o creștere a PIB cu 58,5%.",
+        "Nu există legătură între variabile.",
+        "Regiunile cu utilizare zilnică mai mare a internetului tind să aibă PIB mai mare.",
+        "Relația este cu siguranță semnificativă statistic."
+      ],
+      "correct": 2,
+      "explanation": "Semnul pozitiv arată o asociere liniară pozitivă. Coeficientul singur nu dovedește cauzalitate sau semnificație statistică.",
+      "output": "cor(Internet_zilnic, PIB) = 0.585",
+      "image": null
+    },
+    {
+      "id": "v1-3",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "Date standardizate",
+      "prompt": "Ce indică acest output?",
+      "choices": [
+        "Standardizarea a eșuat, deoarece media nu este exact zero.",
+        "Datele au devenit obligatoriu normale.",
+        "Toate regiunile au aceleași valori.",
+        "Coloanele au medii aproximativ zero și SD unu."
+      ],
+      "correct": 3,
+      "explanation": "2e−16 este practic zero la precizia numerică. Standardizarea schimbă scara, fără să garanteze normalitatea.",
+      "output": "Medii: 2e-16  -1e-16\nSD:    1       1",
+      "image": null
+    },
+    {
+      "id": "v1-4",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Câte axe păstrezi?",
+      "prompt": "Pentru minimum 80% din variație, câte componente alegi?",
+      "choices": [
+        "Două.",
+        "Trei.",
+        "Patru.",
+        "Toate, deoarece există 12 variabile."
+      ],
+      "correct": 2,
+      "explanation": "Primele trei rămân la 79,47%, sub prag. Primele patru ajung la 85,06%.",
+      "output": "Cumulative: PC1 55.95% | PC2 70.34% | PC3 79.47% | PC4 85.06%",
+      "image": null
+    },
+    {
+      "id": "v1-5",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Loading sau corelație?",
+      "prompt": "Ce reprezintă valoarea 0,3303?",
+      "choices": [
+        "Un coeficient al combinației liniare care formează PC1.",
+        "O contribuție de 33,03% la PC1.",
+        "Scorul unei regiuni.",
+        "În mod obligatoriu, corelația X6–PC1."
+      ],
+      "correct": 0,
+      "explanation": "Loadings din princomp sunt coeficienți. În cazul standardizat, corelația se obține înmulțind coeficientul cu SD a componentei.",
+      "output": "acp$loadings\nX6 (ocupare), Comp.1: 0.3303",
+      "image": null
+    },
+    {
+      "id": "v1-6",
+      "kind": "mcq",
+      "category": "pca",
+      "title": "Cos² și contribuție",
+      "prompt": "Cum interpretezi corect cos² pentru X1?",
+      "choices": [
+        "X1 construiește 51,6% din PC1.",
+        "PC1 reprezintă 51,6% din variația lui X1.",
+        "51,6% dintre regiuni au valori X1 mari.",
+        "X1 are contribuția de 51,6%."
+      ],
+      "correct": 1,
+      "explanation": "Cos² privește cât din indicator este reprezentat. Contribuția lui X1 la axă este 7,69%, o întrebare diferită.",
+      "output": "Variables\n     Dim.1   ctr    cos2\nX1   0.719   7.69   0.516",
+      "image": null
+    },
+    {
+      "id": "v1-7",
+      "kind": "numeric",
+      "category": "acp",
+      "title": "Din proporție în procent",
+      "prompt": "Ce procent explică primele patru componente? Scrie procentul, de exemplu 85,06.",
+      "correct": 85.06,
+      "tolerance": 0.02,
+      "explanation": "0,8506 pe scara 0–1 înseamnă 85,06%.",
+      "output": "Cumulative Proportion\nComp.4: 0.8506"
+    },
+    {
+      "id": "v1-8",
+      "kind": "numeric",
+      "category": "pca",
+      "title": "Referința egală",
+      "prompt": "Pentru 12 variabile, cât ar contribui fiecare la o axă dacă toate ar contribui egal? Scrie procentul.",
+      "correct": 8.333333333333334,
+      "tolerance": 0.02,
+      "explanation": "100% împărțit la 12 este aproximativ 8,33%. Este o referință descriptivă, nu un test statistic.",
+      "output": null
+    },
+    {
+      "id": "v1-9",
+      "kind": "written",
+      "category": "grafice",
+      "title": "Interpretează cercul",
+      "prompt": "Scrie 2–3 propoziții: ce reprezintă săgețile, cât explică planul și ce opoziție observi pe PC1.",
+      "model": "Săgețile reprezintă indicatorii. Planul PC1–PC2 explică 70,34% din variație. PC1 opune indicatorii digitali, ocuparea, educația și PIB-ul șomajului și NEET; apropierea direcțiilor sugerează asocieri pozitive pentru variabile bine reprezentate.",
+      "rubric": [
+        "Identifici indicatorii și planul PC1–PC2.",
+        "Citezi 70,34% și opoziția de pe prima axă.",
+        "Nu interpretezi direcțiile ca relații cauzale."
+      ],
+      "output": null,
+      "image": "10_cerc_corelatii12.png"
+    },
+    {
+      "id": "v1-10",
+      "kind": "written",
+      "category": "pca",
+      "title": "Un rând, trei informații",
+      "prompt": "Explică separat cele trei numere pentru X1, în ACP standardizată.",
+      "model": "X1 se corelează pozitiv cu PC1, cu aproximativ 0,719. PC1 reprezintă 51,6% din variația X1. X1 contribuie cu 7,69% la construirea PC1.",
+      "rubric": [
+        "Dim este corelația indicator–componentă.",
+        "Cos² este calitatea indicatorului pe axă.",
+        "Ctr este contribuția la construirea axei."
+      ],
+      "output": "Variables\n     Dim.1   ctr    cos2\nX1   0.719   7.69   0.516",
+      "image": null
+    },
+    {
+      "id": "v2-1",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Varianța totală",
+      "prompt": "Într-o ACP pe corelații cu 8 variabile, care este suma lambda?",
+      "choices": [
+        "100.",
+        "Numărul observațiilor.",
+        "8.",
+        "Nu se poate ști niciodată."
+      ],
+      "correct": 2,
+      "explanation": "Fiecare variabilă standardizată are varianță unu în convenția analizei. Suma varianțelor, deci suma lambda, este 8.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v2-2",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Semne opuse",
+      "prompt": "Aceeași componentă are semne inversate în două programe. Scorurile sunt și ele inversate. Ce afirmi?",
+      "choices": [
+        "Programele descriu aceeași axă, cu orientări opuse.",
+        "Un program este obligatoriu greșit.",
+        "Varianța explicată s-a schimbat.",
+        "Contribuțiile au devenit negative."
+      ],
+      "correct": 0,
+      "explanation": "Inversarea împreună a coeficienților și scorurilor schimbă orientarea, fără să schimbe lambda, cos² sau contribuțiile.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v2-3",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Componente necorelate",
+      "prompt": "Ce poți deduce din această matrice?",
+      "choices": [
+        "Indicatorii originali sunt toți independenți.",
+        "Componentele sunt necorelate între ele.",
+        "Componentele sunt obligatoriu independente.",
+        "Scorurile tuturor regiunilor sunt zero."
+      ],
+      "correct": 1,
+      "explanation": "Zerourile din afara diagonalei arată necorelare între componente. Independența este o condiție mai puternică.",
+      "output": "cor(scoruri)\n      PC1 PC2\nPC1    1   0\nPC2    0   1",
+      "image": null
+    },
+    {
+      "id": "v2-4",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Ce înseamnă ncp?",
+      "prompt": "PCA(..., ncp=12) înseamnă că trebuie interpretate toate cele 12 axe?",
+      "choices": [
+        "Da, numărul este ales automat ca soluție finală.",
+        "Da, altfel se invalidează PCA.",
+        "Nu; ncp păstrează coordonate, iar selecția pentru interpretare se justifică separat.",
+        "Nu; pot fi păstrate obligatoriu doar două."
+      ],
+      "correct": 2,
+      "explanation": "ncp controlează câte coordonate sunt stocate. Criteriul de variație cumulată sau alte criterii justifică separat selecția.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v2-5",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "SS loadings",
+      "prompt": "Cum citești acest fragment din printarea loadings?",
+      "choices": [
+        "Fiecare axă explică 8,3% din variația datelor.",
+        "Coeficienții au normă unu; procentele explicate se citesc în summary.",
+        "Ambele valori proprii sunt obligatoriu 1.",
+        "Fiecare variabilă are scorul 0,083."
+      ],
+      "correct": 1,
+      "explanation": "În princomp, coloanele loadings sunt vectori unitari. Proportion Var din această afișare nu înlocuiește Proportion of Variance din summary.",
+      "output": "SS loadings     1.000  1.000\nProportion Var  0.083  0.083",
+      "image": null
+    },
+    {
+      "id": "v2-6",
+      "kind": "mcq",
+      "category": "pca",
+      "title": "Suma pe coloană",
+      "prompt": "Ce reprezintă 6,714 în acest control?",
+      "choices": [
+        "Numărul regiunilor.",
+        "Cos² al fiecărei variabile.",
+        "Un procent de 6,714% pentru fiecare indicator.",
+        "Valoarea proprie a PC1, în ACP standardizată."
+      ],
+      "correct": 3,
+      "explanation": "Suma cos² pentru toate variabilele pe aceeași axă este lambda acelei axe, în cazul standardizat.",
+      "output": "Suma cos2 ale variabilelor pe PC1: 6.714",
+      "image": null
+    },
+    {
+      "id": "v2-7",
+      "kind": "numeric",
+      "category": "acp",
+      "title": "Citește lambda",
+      "prompt": "Care este varianța componentei a doua?",
+      "correct": 1.727,
+      "tolerance": 0.003,
+      "explanation": "Varianța componentei este valoarea sa proprie: lambda2≈1,727.",
+      "output": "           PC1     PC2     PC3\nlambda    6.714   1.727   1.096"
+    },
+    {
+      "id": "v2-8",
+      "kind": "numeric",
+      "category": "pca",
+      "title": "Calitatea în plan",
+      "prompt": "Ce procent din variația densității este reprezentat în planul PC1–PC2?",
+      "correct": 30,
+      "tolerance": 0.02,
+      "explanation": "Cos²=0,300 înseamnă aproximativ 30% din variația densității. Nu înseamnă contribuție de 30% la axă.",
+      "output": "X12: cos2 plan12 = 0.300\n     cos2 primele4 = 0.816"
+    },
+    {
+      "id": "v2-9",
+      "kind": "written",
+      "category": "acp",
+      "title": "O componentă mixtă",
+      "prompt": "Propune o interpretare în 2–3 propoziții. Un scor pozitiv este automat favorabil?",
+      "model": "Componenta opune șomajul și studiile superioare ocupării. Este un profil mixt; pozitiv nu înseamnă automat favorabil. Coexistența regională a studiilor și șomajului nu dovedește că persoanele cu studii superioare sunt cele șomere.",
+      "rubric": [
+        "Grupezi corect semnele pozitive și negative.",
+        "Nu numești automat sensul pozitiv performanță bună.",
+        "Eviți concluzia nejustificată despre indivizi."
+      ],
+      "output": "Matrice factor, PC2\nSomaj general       +0.694\nStudii superioare   +0.490\nOcupare             -0.378",
+      "image": null
+    },
+    {
+      "id": "v2-10",
+      "kind": "written",
+      "category": "acp",
+      "title": "Acordul metodelor",
+      "prompt": "Explică diferența inițială și rezultatul după corecție.",
+      "model": "Calculul manual cu scale folosește convenția n−1, iar scorurile princomp folosesc standardizarea cu n. După corecția de scară, eroarea de ordin 1e−14 indică acord la precizia numerică, fără să justifice concluzii economice suplimentare.",
+      "rubric": [
+        "Recunoști diferența de standardizare n−1/n.",
+        "Interpretezi eroarea foarte mică drept acord numeric.",
+        "Nu declari automat o metodă greșită sau relații cauzale."
+      ],
+      "output": "AT12, PC1: manual 0.589 | princomp 0.592\nDupa corectie, diferenta maxima: 4e-14",
+      "image": null
+    },
+    {
+      "id": "v3-1",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Coada histogramei",
+      "prompt": "O histogramă are multe valori mici și câteva valori foarte mari. Cum o descrii?",
+      "choices": [
+        "Asimetrie pozitivă, cu o coadă spre dreapta.",
+        "Asimetrie negativă.",
+        "Normalitate demonstrată.",
+        "Toate observațiile sunt egale."
+      ],
+      "correct": 0,
+      "explanation": "Coada este dată de valorile rare foarte mari. Aspectul unei histograme nu constituie singur un test de normalitate.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v3-2",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Mustățile boxplotului",
+      "prompt": "Ce afirmație este corectă când există puncte separate de mustăți?",
+      "choices": [
+        "Mustățile sunt întotdeauna minimul și maximul întregului set.",
+        "Punctele separate sunt obligatoriu erori.",
+        "Mustățile pot să nu includă minimul sau maximul întregului set.",
+        "Mediana este întotdeauna la jumătatea lungimii mustăților."
+      ],
+      "correct": 2,
+      "explanation": "Observațiile din afara regulii boxplotului sunt desenate separat. Ele pot include minimul sau maximul global.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v3-3",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "O valoare atipică",
+      "prompt": "Ai identificat un outlier. Care este următorul pas justificat?",
+      "choices": [
+        "Îl înlocuiești automat cu zero.",
+        "Îl elimini fără să verifici.",
+        "Declari întregul set invalid.",
+        "Verifici dacă este eroare sau particularitate reală."
+      ],
+      "correct": 3,
+      "explanation": "O observație rară poate fi reală. Regula semnalează un caz, fără să decidă automat eliminarea lui.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v3-4",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Legenda culorilor",
+      "prompt": "În acest apel, ce codifică culoarea?",
+      "choices": [
+        "Contribuția variabilelor la PIB.",
+        "Calitatea reprezentării variabilelor în planul PC3–PC4.",
+        "Scorul PC1 al regiunilor.",
+        "Numărul locuitorilor."
+      ],
+      "correct": 1,
+      "explanation": "Este un grafic al variabilelor pe axele 3 și 4, iar cos² măsoară calitatea reprezentării în acel plan.",
+      "output": "fviz_pca_var(acp2, axes=c(3,4), col.var=\"cos2\")",
+      "image": null
+    },
+    {
+      "id": "v3-5",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Săgeată scurtă",
+      "prompt": "Ce concluzie este potrivită pentru o săgeată scurtă în cercul corelațiilor?",
+      "choices": [
+        "Variabila este inutilă în orice analiză.",
+        "Variabila are neapărat toate valorile aproape de zero.",
+        "Variabila este slab reprezentată în planul afișat.",
+        "Variabila are contribuția zero pe toate axele."
+      ],
+      "correct": 2,
+      "explanation": "O parte importantă din variația ei poate fi pe alte axe. Săgeata scurtă limitează interpretarea în planul curent.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v3-6",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Apropierea regiunilor",
+      "prompt": "Două regiuni sunt apropiate pe PC1–PC2. Ce poți afirma?",
+      "choices": [
+        "Au scoruri apropiate pe aceste două axe; pot diferi pe alte componente.",
+        "Au toate cele 12 valori identice.",
+        "Au aceeași populație.",
+        "Au obligatoriu cos²=1."
+      ],
+      "correct": 0,
+      "explanation": "Apropierea este în proiecție. Consultă calitatea reprezentării și celelalte componente înainte de o concluzie globală.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v3-7",
+      "kind": "numeric",
+      "category": "grafice",
+      "title": "Cât explică PC3–PC4?",
+      "prompt": "Ce procent explică împreună aceste două axe?",
+      "correct": 14.72,
+      "tolerance": 0.02,
+      "explanation": "Aduni 9,13% și 5,59%: aproximativ 14,72%.",
+      "output": "PC3 9.13%   PC4 5.59%"
+    },
+    {
+      "id": "v3-8",
+      "kind": "numeric",
+      "category": "acp",
+      "title": "Un alt prag",
+      "prompt": "Câte componente sunt suficiente pentru minimum 75%?",
+      "correct": 3,
+      "tolerance": 0,
+      "explanation": "Două axe explică numai 70,34%. Trei ajung la 79,47% și depășesc pragul de 75%.",
+      "output": "Cumulat: PC1 55.95% | PC2 70.34% | PC3 79.47% | PC4 85.06%"
+    },
+    {
+      "id": "v3-9",
+      "kind": "written",
+      "category": "grafice",
+      "title": "Biplotul vertical",
+      "prompt": "Explică ce reprezintă obiectele și în ce direcție crește PC1 în acest desen.",
+      "model": "Codurile/punctele sunt regiuni, iar săgețile sunt indicatori. PC1 este pe verticală, deci scorurile PC1 cresc în sus. Schimbarea poziției axelor păstrează aceeași analiză; punctele și săgețile pot avea scări diferite.",
+      "rubric": [
+        "Separi regiunile de indicatori.",
+        "Identifici PC1 pe Y și sensul în sus.",
+        "Menționezi scările sau faptul că analiza rămâne aceeași."
+      ],
+      "output": null,
+      "image": "12_biplot_vertical.png"
+    },
+    {
+      "id": "v3-10",
+      "kind": "written",
+      "category": "grafice",
+      "title": "Patru scoruri într-un desen",
+      "prompt": "Identifică cele patru canale vizuale și explică de ce pozițiile nu păstrează toate distanțele în patru dimensiuni.",
+      "model": "Poziția orizontală arată PC1, poziția verticală PC2, culoarea PC3, iar mărimea crescătoare PC4. Primele patru axe explică împreună 85,06%, dar pozițiile punctelor reprezintă numai primul plan, cu 70,34%. Culoarea și mărimea nu fac din distanțele pe ecran distanțe fidele în 4D.",
+      "rubric": [
+        "Identifici toate cele patru canale.",
+        "Separi 85,06% pentru patru axe de 70,34% pentru poziții.",
+        "Nu asociezi automat mărimea cu populația sau performanța."
+      ],
+      "output": null,
+      "image": "16_primele_patru_componente.png"
+    },
+    {
+      "id": "v4-1",
+      "kind": "mcq",
+      "category": "pca",
+      "title": "Scor mai mare decât unu",
+      "prompt": "Care interpretare este corectă?",
+      "choices": [
+        "Outputul este invalid deoarece orice Dim este o corelație.",
+        "Scorul observației pe PC2 este 6,169; nu are limita ±1.",
+        "Variabila BE10 are corelația 6,169.",
+        "BE10 contribuie cu 616,9%."
+      ],
+      "correct": 1,
+      "explanation": "La Individuals, Dim este scor. La Variables, în ACP standardizată, coordonata este corelația cu componenta.",
+      "output": "Individuals\nBE10   Dim.2 = 6.169",
+      "image": null
+    },
+    {
+      "id": "v4-2",
+      "kind": "mcq",
+      "category": "acp",
+      "title": "Direcțiile axelor",
+      "prompt": "Cum interpretezi acest control?",
+      "choices": [
+        "Scorurile fiecărei regiuni sunt 1.",
+        "Indicatorii inițiali sunt toți independenți.",
+        "Vectorii proprii sunt unitari și ortogonali.",
+        "Primele două axe explică 100% în orice set."
+      ],
+      "correct": 2,
+      "explanation": "crossprod(V) verifică direcțiile coeficienților: normă unu și perpendicularitate. Nu descrie automat legăturile indicatorilor originali.",
+      "output": "crossprod(V)\n     [,1] [,2]\n[1,]   1    0\n[2,]   0    1",
+      "image": null
+    },
+    {
+      "id": "v4-3",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "Covarianță sau corelație?",
+      "prompt": "Ce înseamnă elementul −3?",
+      "choices": [
+        "Corelație imposibilă, deci orice calcul este invalid.",
+        "SD a lui A este −3.",
+        "Varianța totală este −3.",
+        "Covarianță negativă; A și B tind să varieze în sens opus."
+      ],
+      "correct": 3,
+      "explanation": "Covarianța depinde de unități și nu este limitată la −1…1. Pe diagonală sunt varianțele.",
+      "output": "Covarianta\n   A   B\nA  4  -3\nB -3   9",
+      "image": null
+    },
+    {
+      "id": "v4-4",
+      "kind": "mcq",
+      "category": "grafice",
+      "title": "Aproape de origine",
+      "prompt": "O regiune are scoruri aproape zero pe PC1 și PC2. Ce afirmi?",
+      "choices": [
+        "Este aproape de centru pe axele afișate, dar poate fi distinctă pe alte axe.",
+        "Toți cei 12 indicatori sunt neapărat egali cu mediile.",
+        "Are populația zero.",
+        "Nu poate exista în date."
+      ],
+      "correct": 0,
+      "explanation": "Un plan redus poate ascunde diferențele de pe celelalte componente. Apropierea de origine este o afirmație despre proiecție.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v4-5",
+      "kind": "mcq",
+      "category": "pca",
+      "title": "Toate axele împreună",
+      "prompt": "Ce exprimă suma cos²=1 pentru un indicator pe toate axele?",
+      "choices": [
+        "Fiecare axă îl descrie în proporție de 100%.",
+        "Indicatorul este independent de toate componentele.",
+        "Toate axele împreună descriu întreaga variație a indicatorului.",
+        "Indicatorul contribuie cu 100% la fiecare axă."
+      ],
+      "correct": 2,
+      "explanation": "Cos² ale aceluiași indicator se adună pe toate axele la 1. Nu este același lucru cu suma contribuțiilor pe o axă.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v4-6",
+      "kind": "mcq",
+      "category": "descriptive",
+      "title": "O corelație aproape zero",
+      "prompt": "Ce concluzie susține r=0,03?",
+      "choices": [
+        "Nu poate exista nicio relație, de niciun fel.",
+        "Asocierea liniară este foarte slabă.",
+        "Relația este cauzală și negativă.",
+        "Variabilele sunt obligatoriu independente."
+      ],
+      "correct": 1,
+      "explanation": "Un r mic descrie o legătură liniară slabă. Nu exclude o relație neliniară și nu dovedește independența.",
+      "output": null,
+      "image": null
+    },
+    {
+      "id": "v4-7",
+      "kind": "numeric",
+      "category": "pca",
+      "title": "Citește contribuția",
+      "prompt": "Cu ce procent contribuie BE10 la PC2?",
+      "correct": 19,
+      "tolerance": 0.02,
+      "explanation": "Ctr este deja pe scala procentuală: 19%. Nu îl confunda cu cos² sau cu scorul.",
+      "output": "Individuals\nBE10: Dim.2 6.169 | ctr PC2 19.00 | cos2 PC2 0.469"
+    },
+    {
+      "id": "v4-8",
+      "kind": "numeric",
+      "category": "pca",
+      "title": "Distanță sau pătratul ei?",
+      "prompt": "Care este distanța BE10 față de centru? Scrie valoarea Dist, nu Dist².",
+      "correct": 9.006,
+      "tolerance": 0.003,
+      "explanation": "Dist este aproximativ 9,006. Dist² este 81,110, un obiect diferit.",
+      "output": "BE10\nDist 9.006 | distanta2 81.110 | masa 0.008621 | inertie 0.6992"
+    },
+    {
+      "id": "v4-9",
+      "kind": "written",
+      "category": "acp",
+      "title": "Alte date, aceeași metodă",
+      "prompt": "Pe un set cu 8 variabile standardizate, compară selecția Kaiser și selecția pentru minimum 80%.",
+      "model": "Kaiser recomandă două axe, fiindcă numai 4,16 și 1,28 sunt peste 1. Primele trei explică 79%, sub 80%; pentru minimum 80% sunt necesare patru axe, cu 86%. Numărul ales se citește din acest output, fără a-l copia din proiect.",
+      "rubric": [
+        "Kaiser: două axe.",
+        "Pragul de 80%: patru axe.",
+        "Justifici cu 79% versus 86%."
+      ],
+      "output": "        PC1   PC2   PC3   PC4\nlambda  4.16  1.28  0.88  0.56\nCumulat 52%   68%   79%   86%",
+      "image": null
+    },
+    {
+      "id": "v4-10",
+      "kind": "written",
+      "category": "acp",
+      "title": "Un scor negativ",
+      "prompt": "Interpretează scorul RO11 pe PC1, știind că PC1 are corelații pozitive cu digitalizarea și ocuparea și negative cu șomajul și NEET.",
+      "model": "RO11 are un scor PC1 negativ, deci este sub centrul eșantionului pe dimensiunea participării digitale și integrării. Această poziție descrie un profil relativ mai puțin favorabil pe axa respectivă, fără să însemne că valorile indicatorilor sunt negative sau că digitalizarea cauzează șomajul.",
+      "rubric": [
+        "Legi scorul de semnificația axei.",
+        "Îl raportezi la centrul eșantionului.",
+        "Nu atribui valori originale negative sau cauzalitate."
+      ],
+      "output": "Scores\nRO11   PC1 = -2.754",
+      "image": null
+    }
+  ],
+  "exams": [
+    {
+      "id": "varianta-1",
+      "number": 1,
+      "title": "Fundamentele interpretării",
+      "description": "Descriptive, corelații și primii pași în ACP.",
+      "minutes": 35,
+      "level": "Încălzire",
+      "questions": [
+        "v1-1",
+        "v1-2",
+        "v1-3",
+        "v1-4",
+        "v1-5",
+        "v1-6",
+        "v1-7",
+        "v1-8",
+        "v1-9",
+        "v1-10"
+      ]
+    },
+    {
+      "id": "varianta-2",
+      "number": 2,
+      "title": "Înțelege componentele",
+      "description": "Loadings, semne, cos² și verificarea metodelor.",
+      "minutes": 40,
+      "level": "Consolidare",
+      "questions": [
+        "v2-1",
+        "v2-2",
+        "v2-3",
+        "v2-4",
+        "v2-5",
+        "v2-6",
+        "v2-7",
+        "v2-8",
+        "v2-9",
+        "v2-10"
+      ]
+    },
+    {
+      "id": "varianta-3",
+      "number": 3,
+      "title": "Citește graficele",
+      "description": "Distribuții, cercuri, biploturi și planuri principale.",
+      "minutes": 40,
+      "level": "Vizual",
+      "questions": [
+        "v3-1",
+        "v3-2",
+        "v3-3",
+        "v3-4",
+        "v3-5",
+        "v3-6",
+        "v3-7",
+        "v3-8",
+        "v3-9",
+        "v3-10"
+      ]
+    },
+    {
+      "id": "varianta-4",
+      "number": 4,
+      "title": "Ca la parțial",
+      "description": "Date diferite, concepte amestecate și capcane frecvente.",
+      "minutes": 45,
+      "level": "Mixt",
+      "questions": [
+        "v4-1",
+        "v4-2",
+        "v4-3",
+        "v4-4",
+        "v4-5",
+        "v4-6",
+        "v4-7",
+        "v4-8",
+        "v4-9",
+        "v4-10"
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "card-0",
+      "front": "Ce este un scor?",
+      "back": "Locul unei observații pe o componentă. Poate fi pozitiv, negativ și poate depăși 1 în modul."
+    },
+    {
+      "id": "card-1",
+      "front": "Ce este un loading?",
+      "back": "Coeficientul cu care intră un indicator în combinația liniară. Nu este automat corelație sau procent."
+    },
+    {
+      "id": "card-2",
+      "front": "Ce este matricea factor?",
+      "back": "Tabelul corelațiilor dintre indicatorii inițiali și componente. Îl folosești pentru a denumi axele."
+    },
+    {
+      "id": "card-3",
+      "front": "Ce spune cos²?",
+      "back": "Cât de bine este reprezentată variabila sau observația pe o axă sau într-un plan."
+    },
+    {
+      "id": "card-4",
+      "front": "Ce spune contribuția?",
+      "back": "Cât aduce variabila sau observația la construirea axei. Citești sensul separat, din coordonate."
+    },
+    {
+      "id": "card-5",
+      "front": "Proportion versus Cumulative?",
+      "back": "Proportion este o singură componentă. Cumulative este totalul primelor componente până la acea coloană."
+    },
+    {
+      "id": "card-6",
+      "front": "Ce este lambda?",
+      "back": "Varianța componentei. Este pătratul abaterii standard a componentei."
+    },
+    {
+      "id": "card-7",
+      "front": "Kaiser: ce numeri?",
+      "back": "Valorile proprii peste 1, în contextul ACP pe corelații / date standardizate."
+    },
+    {
+      "id": "card-8",
+      "front": "Ce înseamnă standardizare?",
+      "back": "Medii aproximativ zero și SD unu în convenția folosită. Se schimbă scara, fără a șterge automat extremele."
+    },
+    {
+      "id": "card-9",
+      "front": "Scor pozitiv înseamnă bine?",
+      "back": "Depinde de semnificația axei. O componentă mixtă poate asocia semnul pozitiv și cu șomaj ridicat."
+    },
+    {
+      "id": "card-10",
+      "front": "Săgeată scurtă în cerc?",
+      "back": "Variabila este descrisă incomplet de planul afișat; poate conta pe alte componente."
+    },
+    {
+      "id": "card-11",
+      "front": "Puncte apropiate în plan?",
+      "back": "Au scoruri apropiate pe axele afișate. Pot diferi pe componentele omise."
+    },
+    {
+      "id": "card-12",
+      "front": "Ce este Dist?",
+      "back": "Distanța observației față de centrul datelor în spațiul complet. Nu o confunda cu Dist²."
+    },
+    {
+      "id": "card-13",
+      "front": "Masa unei regiuni?",
+      "back": "Ponderea ei în analiză. În proiect toate masele sunt 1/116, indiferent de populație."
+    },
+    {
+      "id": "card-14",
+      "front": "Inerția 0,6992 înseamnă 69,92%?",
+      "back": "Nu automat. Este aportul la inerția totală, care este 12 în proiect."
+    },
+    {
+      "id": "card-15",
+      "front": "Ce înseamnă r negativ?",
+      "back": "Valori mari ale uneia tind să apară împreună cu valori mici ale celeilalte. Valorile originale nu trebuie să fie negative."
+    },
+    {
+      "id": "card-16",
+      "front": "Ce înseamnă SD pentru o rată?",
+      "back": "Dispersia ratelor, în puncte procentuale. Nu este creștere în timp."
+    },
+    {
+      "id": "card-17",
+      "front": "Semne inversate între programe?",
+      "back": "Pot descrie aceeași axă orientată opus, dacă se inversează împreună coeficienții și scorurile."
+    },
+    {
+      "id": "card-18",
+      "front": "Cât însumează contribuțiile pe o axă?",
+      "back": "100%, adunând toate variabilele sau, separat, toate observațiile."
+    },
+    {
+      "id": "card-19",
+      "front": "Cât însumează cos² pe toate axele?",
+      "back": "1 pentru aceeași variabilă sau pentru o observație cu distanță nenulă față de centru."
+    }
+  ]
+}

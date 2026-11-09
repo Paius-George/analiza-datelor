@@ -1,0 +1,567 @@
+{
+  "modules": [
+    {
+      "id": "start",
+      "title": "Începe de la zero",
+      "eyebrow": "Limbajul outputurilor",
+      "description": "Un punct de pornire clar, chiar dacă termenii par complicați.",
+      "icon": "compass",
+      "lessons": [
+        "start-0",
+        "start-1",
+        "start-2",
+        "start-3",
+        "start-4",
+        "start-5",
+        "start-6"
+      ],
+      "file": "00_INCEPE_AICI.md",
+      "sha256": "9389e572092a70287d3ffbd0d9c611a70b04a75043fc69bcdc6357159314801e"
+    },
+    {
+      "id": "descriptive",
+      "title": "Descriptive și corelații",
+      "eyebrow": "Citește datele",
+      "description": "Medii, distribuții și relațiile dintre indicatori.",
+      "icon": "table",
+      "lessons": [
+        "descriptive-1",
+        "descriptive-2",
+        "descriptive-3",
+        "descriptive-4",
+        "descriptive-5",
+        "descriptive-6",
+        "descriptive-7",
+        "descriptive-8"
+      ],
+      "file": "01_DESCRIPTIVE_SI_CORELATII.md",
+      "sha256": "5fbbb22d6fa47b6e6763f65c11dcc5727f6d5775b5aa93cc0a57412d136820a7"
+    },
+    {
+      "id": "acp",
+      "title": "ACP, pe înțelesul tău",
+      "eyebrow": "Înțelege componentele",
+      "description": "Summary, valori proprii, scoruri și matricea factor.",
+      "icon": "layers",
+      "lessons": [
+        "acp-0",
+        "acp-1",
+        "acp-2",
+        "acp-3",
+        "acp-4",
+        "acp-5",
+        "acp-6",
+        "acp-7",
+        "acp-8",
+        "acp-9",
+        "acp-10"
+      ],
+      "file": "02_ACP_OUTPUTURI_NUMERICE.md",
+      "sha256": "43b6d60e6f202a384fab111930418cf3ca9992e041280d32b6f050a1c2e31e21"
+    },
+    {
+      "id": "pca",
+      "title": "Variabile și regiuni",
+      "eyebrow": "Separă conceptele",
+      "description": "Dim, cos² și contribuții, cu exemple citite pas cu pas.",
+      "icon": "target",
+      "lessons": [
+        "pca-1",
+        "pca-2",
+        "pca-3",
+        "pca-4",
+        "pca-5",
+        "pca-6",
+        "pca-7",
+        "pca-8"
+      ],
+      "file": "03_PCA_VARIABILE_SI_REGIUNI.md",
+      "sha256": "404c11623e0e52716c412d7851ed10929854256b053d39468bf70de1edf93c1c"
+    },
+    {
+      "id": "grafice",
+      "title": "Grafice, fără mister",
+      "eyebrow": "Vezi ce spun datele",
+      "description": "Cercuri, biploturi și regiuni în planurile principale.",
+      "icon": "chart",
+      "lessons": [
+        "grafice-0",
+        "grafice-1",
+        "grafice-2",
+        "grafice-3",
+        "grafice-4",
+        "grafice-5",
+        "grafice-6",
+        "grafice-7",
+        "grafice-8",
+        "grafice-9",
+        "grafice-10",
+        "grafice-11",
+        "grafice-12",
+        "grafice-13",
+        "grafice-14",
+        "grafice-15",
+        "grafice-16"
+      ],
+      "file": "04_GRAFICE_INTERPRETATE.md",
+      "sha256": "88a8fe4b07a3d9501e43152a3fcd4463918833b46a7733846226b284cc429c50"
+    },
+    {
+      "id": "recap",
+      "title": "Recapitulare rapidă",
+      "eyebrow": "Fixează ideile",
+      "description": "Reperele pe care le repeți înainte de parțial.",
+      "icon": "bookmark",
+      "lessons": [
+        "recap-1",
+        "recap-2",
+        "recap-3",
+        "recap-4"
+      ],
+      "file": "05_RECAPITULARE_RAPIDA.md",
+      "sha256": "8120a5979277c8aace32e1b028ffabafbcf52e6e5e1c52d0a3f0faf3aee65888"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "start-0",
+      "module": "start",
+      "title": "Începe aici — explicații de la zero",
+      "html": "<p>Vei vedea la test tabele și grafice. Treaba ta este să spui <strong>ce arată și ce înseamnă</strong>. Fișele sunt despre această interpretare, fără demonstrații sau programare.</p>",
+      "text": "Vei vedea la test tabele și grafice. Treaba ta este să spui ce arată și ce înseamnă . Fișele sunt despre această interpretare, fără demonstrații sau programare.",
+      "minutes": 1
+    },
+    {
+      "id": "start-1",
+      "module": "start",
+      "title": "Mai întâi, traducem cuvintele",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Cuvânt</th>\n<th>În proiectul tău</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Observație / individ / entitate</td>\n<td>O regiune, de exemplu RO11</td>\n</tr>\n<tr>\n<td>Variabilă / indicator</td>\n<td>Ce măsurăm: șomaj, PIB, internet etc.</td>\n</tr>\n<tr>\n<td>Output</td>\n<td>Tabelul sau graficul afișat de R</td>\n</tr>\n<tr>\n<td>Variație / dispersie</td>\n<td>Cât de diferite sunt valorile între regiuni</td>\n</tr>\n<tr>\n<td>Axă / componentă / PC / Dim</td>\n<td>Un nou rezumat construit din indicatori</td>\n</tr>\n<tr>\n<td>Plan PC1–PC2</td>\n<td>Graficul cu PC1 pe o axă și PC2 pe cealaltă</td>\n</tr>\n</tbody>\n</table></div>\n<p>Avem <strong>116 regiuni și 12 indicatori</strong>, toți pentru 2024. Comparăm regiuni în același an; acestea sunt <strong>date de profil</strong>. Codul și anul identifică datele, fără să intre ca indicatori în ACP.</p>",
+      "text": "Cuvânt În proiectul tău Observație / individ / entitate O regiune, de exemplu RO11 Variabilă / indicator Ce măsurăm: șomaj, PIB, internet etc. Output Tabelul sau graficul afișat de R Variație / dispersie Cât de diferite sunt valorile între regiuni Axă / componentă / PC / Dim Un nou rezumat construit din indicatori Plan PC1–PC2 Graficul cu PC1 pe o axă și PC2 pe cealaltă Avem 116 regiuni și 12 indicatori , toți pentru 2024. Comparăm regiuni în același an; acestea sunt date de profil . Codul și anul identifică datele, fără să intre ca indicatori în ACP.",
+      "minutes": 1
+    },
+    {
+      "id": "start-2",
+      "module": "start",
+      "title": "Ce face ACP, în cuvinte simple",
+      "html": "<p>Ai 12 lucruri de urmărit pentru fiecare regiune. ACP le combină în câteva rezumate numite <strong>componente</strong>.</p>\n<ul>\n<li><strong>PC1:</strong> rezumatul care surprinde cele mai mari diferențe dintre regiuni.</li>\n<li><strong>PC2:</strong> surprinde alte diferențe, pe care PC1 nu le-a surprins.</li>\n<li><strong>PC3 și PC4:</strong> adaugă alte detalii.</li>\n</ul>\n<p>Dacă PC1 explică 55,95%, înseamnă că rezumă 55,95% din variația totală a datelor. <strong>Nu înseamnă că 55,95% dintre regiuni sunt bune sau că analiza are o probabilitate de corectitudine de 55,95%.</strong></p>",
+      "text": "Ai 12 lucruri de urmărit pentru fiecare regiune. ACP le combină în câteva rezumate numite componente . PC1: rezumatul care surprinde cele mai mari diferențe dintre regiuni. PC2: surprinde alte diferențe, pe care PC1 nu le-a surprins. PC3 și PC4: adaugă alte detalii. Dacă PC1 explică 55,95%, înseamnă că rezumă 55,95% din variația totală a datelor. Nu înseamnă că 55,95% dintre regiuni sunt bune sau că analiza are o probabilitate de corectitudine de 55,95%.",
+      "minutes": 1
+    },
+    {
+      "id": "start-3",
+      "module": "start",
+      "title": "Cinci lucruri diferite",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Termen</th>\n<th>Gândește-te la…</th>\n<th>Întrebarea simplă</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Loading</td>\n<td>Ingredientele unui rezumat</td>\n<td>Cu ce coeficient intră indicatorul în componentă?</td>\n</tr>\n<tr>\n<td>Matrice factor</td>\n<td>Legăturile indicator–componentă</td>\n<td>Cât de legat este indicatorul de componentă?</td>\n</tr>\n<tr>\n<td>Scor</td>\n<td>Locul regiunii pe o axă</td>\n<td>Unde se află regiunea?</td>\n</tr>\n<tr>\n<td>Cos²</td>\n<td>Cât se vede în rezumat</td>\n<td>Cât de bine este reprezentat indicatorul sau regiunea?</td>\n</tr>\n<tr>\n<td>Contribuție / ctr</td>\n<td>Aportul la construirea axei</td>\n<td>Cât ajută indicatorul sau regiunea la formarea axei?</td>\n</tr>\n</tbody>\n</table></div>\n<p>Explicațiile sunt ajutoare de memorie. Formulările exacte pentru test apar în fiecare fișă.</p>",
+      "text": "Termen Gândește-te la… Întrebarea simplă Loading Ingredientele unui rezumat Cu ce coeficient intră indicatorul în componentă? Matrice factor Legăturile indicator–componentă Cât de legat este indicatorul de componentă? Scor Locul regiunii pe o axă Unde se află regiunea? Cos² Cât se vede în rezumat Cât de bine este reprezentat indicatorul sau regiunea? Contribuție / ctr Aportul la construirea axei Cât ajută indicatorul sau regiunea la formarea axei? Explicațiile sunt ajutoare de memorie. Formulările exacte pentru test apar în fiecare fișă.",
+      "minutes": 1
+    },
+    {
+      "id": "start-4",
+      "module": "start",
+      "title": "Cum citești un exemplu",
+      "html": "<ol>\n<li>Citește <strong>Ce vezi</strong>.</li>\n<li>Citește <strong>Cum înțelegi</strong>.</li>\n<li>Ascunde răspunsul și spune-l singur.</li>\n<li>Compară cu <strong>La test poți spune</strong>.</li>\n</ol>\n<p>Ținta este să înțelegi propoziția, apoi să o spui în cuvintele tale.</p>",
+      "text": "Citește Ce vezi . Citește Cum înțelegi . Ascunde răspunsul și spune-l singur. Compară cu La test poți spune . Ținta este să înțelegi propoziția, apoi să o spui în cuvintele tale.",
+      "minutes": 1
+    },
+    {
+      "id": "start-5",
+      "module": "start",
+      "title": "Ordinea fișelor",
+      "html": "<ol>\n<li><a href=\"#modul/descriptive\">Medii, distribuții și corelații</a>.</li>\n<li><a href=\"#modul/acp\">ACP: tabelele cu numere</a>.</li>\n<li><a href=\"#modul/pca\">Variabile și regiuni: Dim, cos², ctr</a>.</li>\n<li><a href=\"#modul/grafice\">Grafice explicate pe rând</a>.</li>\n<li><a href=\"#modul/recap\">Foaia scurtă pentru repetare</a>.</li>\n</ol>",
+      "text": "Medii, distribuții și corelații . ACP: tabelele cu numere . Variabile și regiuni: Dim, cos², ctr . Grafice explicate pe rând . Foaia scurtă pentru repetare .",
+      "minutes": 1
+    },
+    {
+      "id": "start-6",
+      "module": "start",
+      "title": "Ce înseamnă X1…X12 în exemple",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Cod</th>\n<th>Indicator</th>\n<th>Cod</th>\n<th>Indicator</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>X1</td>\n<td>Internet acasă</td>\n<td>X7</td>\n<td>Șomaj 20–64 ani</td>\n</tr>\n<tr>\n<td>X2</td>\n<td>Internet zilnic</td>\n<td>X8</td>\n<td>Șomaj tineri 15–24 ani</td>\n</tr>\n<tr>\n<td>X3</td>\n<td>Internet banking</td>\n<td>X9</td>\n<td>Studii superioare</td>\n</tr>\n<tr>\n<td>X4</td>\n<td>Cumpărături online</td>\n<td>X10</td>\n<td>Formare adulți</td>\n</tr>\n<tr>\n<td>X5</td>\n<td>PIB/locuitor în PPS</td>\n<td>X11</td>\n<td>NEET</td>\n</tr>\n<tr>\n<td>X6</td>\n<td>Ocupare 20–64 ani</td>\n<td>X12</td>\n<td>Densitate</td>\n</tr>\n</tbody>\n</table></div>\n<p>NEET înseamnă tineri neocupați care nu participă la educație sau formare. PPS permite compararea puterii de cumpărare. Fiecare regiune contează la fel în analiză, indiferent de populația sa.</p>\n<p class=\"model-answer\">La test, profesorul poate schimba numerele și indicatorii. Citești ce primești; nu atribui automat lui X1 aceeași denumire ca aici.</p>",
+      "text": "Cod Indicator Cod Indicator X1 Internet acasă X7 Șomaj 20–64 ani X2 Internet zilnic X8 Șomaj tineri 15–24 ani X3 Internet banking X9 Studii superioare X4 Cumpărături online X10 Formare adulți X5 PIB/locuitor în PPS X11 NEET X6 Ocupare 20–64 ani X12 Densitate NEET înseamnă tineri neocupați care nu participă la educație sau formare. PPS permite compararea puterii de cumpărare. Fiecare regiune contează la fel în analiză, indiferent de populația sa. La test, profesorul poate schimba numerele și indicatorii. Citești ce primești; nu atribui automat lui X1 aceeași denumire ca aici.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-1",
+      "module": "descriptive",
+      "title": "dim și head — câte date ai?",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">[1] 116 12\n</code></pre>\n<p><strong>Cum înțelegi:</strong> primul număr spune câte regiuni sunt; al doilea spune câți indicatori ai pentru fiecare regiune.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Setul conține 116 observații și 12 variabile.”</p>\n<p class=\"remember\"><strong>Reține:</strong> rânduri = regiuni; coloane = indicatori. <code>head</code> arată doar primele rânduri, ca o mostră din tabel. Nu înseamnă că restul au dispărut.</p>",
+      "text": "Ce vezi: [1] 116 12 Cum înțelegi: primul număr spune câte regiuni sunt; al doilea spune câți indicatori ai pentru fiecare regiune. La test poți spune: „Setul conține 116 observații și 12 variabile.” Reține: rânduri = regiuni; coloane = indicatori. head arată doar primele rânduri, ca o mostră din tabel. Nu înseamnă că restul au dispărut.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-2",
+      "module": "descriptive",
+      "title": "Mean, Median, SD — nivelul obișnuit și diferențele",
+      "html": "<p><strong>Ce vezi pentru șomaj:</strong></p>\n<pre><code class=\"language-text\">Mean 6.54    Median 6.30    SD 3.13\n</code></pre>\n<p><strong>Cum înțelegi:</strong></p>\n<ul>\n<li><strong>Mean:</strong> media ratelor din toate regiunile este 6,54%.</li>\n<li><strong>Median:</strong> dacă pui regiunile în ordine, valoarea din mijloc este 6,30%.</li>\n<li><strong>SD:</strong> arată cât de împrăștiate sunt valorile. SD mai mare înseamnă diferențe mai mari, când compari aceeași variabilă sau aceeași scară.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Rata medie a șomajului este 6,54%, mediana este 6,30%, iar abaterea standard este 3,13 puncte procentuale.”</p>\n<p class=\"remember\"><strong>Reține:</strong> medie = nivel mediu; mediană = mijloc; SD = împrăștiere. SD nu spune că șomajul a crescut în timp.</p>",
+      "text": "Ce vezi pentru șomaj: Mean 6.54    Median 6.30    SD 3.13 Cum înțelegi: Mean: media ratelor din toate regiunile este 6,54%. Median: dacă pui regiunile în ordine, valoarea din mijloc este 6,30%. SD: arată cât de împrăștiate sunt valorile. SD mai mare înseamnă diferențe mai mari, când compari aceeași variabilă sau aceeași scară. La test poți spune: „Rata medie a șomajului este 6,54%, mediana este 6,30%, iar abaterea standard este 3,13 puncte procentuale.” Reține: medie = nivel mediu; mediană = mijloc; SD = împrăștiere. SD nu spune că șomajul a crescut în timp.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-3",
+      "module": "descriptive",
+      "title": "Quantile — unde se află partea centrală?",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">Min 1.70   Q1 4.00   Median 6.30   Q3 8.05   Max 16.50\n</code></pre>\n<p><strong>Cum înțelegi:</strong> cea mai mică rată este 1,70%, cea mai mare este 16,50%. Între Q1 și Q3 se află jumătatea centrală a datelor.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Jumătatea centrală a ratelor este între 4,00% și 8,05%; toate valorile se află între 1,70% și 16,50%.”</p>\n<p class=\"remember\"><strong>Reține:</strong> Q1–Q3 = jumătatea din mijloc.</p>",
+      "text": "Ce vezi: Min 1.70   Q1 4.00   Median 6.30   Q3 8.05   Max 16.50 Cum înțelegi: cea mai mică rată este 1,70%, cea mai mare este 16,50%. Între Q1 și Q3 se află jumătatea centrală a datelor. La test poți spune: „Jumătatea centrală a ratelor este între 4,00% și 8,05%; toate valorile se află între 1,70% și 16,50%.” Reține: Q1–Q3 = jumătatea din mijloc.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-4",
+      "module": "descriptive",
+      "title": "Outlieri — valori care ies în evidență",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">X1: 2 valori extreme    X2: 0    X12: 12\n</code></pre>\n<p><strong>Cum înțelegi:</strong> regula boxplotului a semnalat două valori neobișnuite la X1 și 12 la densitate. La X2 nu a semnalat niciuna.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Densitatea are 12 observații potențial atipice. Le verificăm înainte să decidem dacă sunt erori sau particularități reale.”</p>\n<p class=\"remember\"><strong>Reține:</strong> neobișnuit nu înseamnă automat greșit. Numărul nu spune singur dacă sunt valori foarte mari sau foarte mici. Lipsa outlierilor nu dovedește normalitatea.</p>",
+      "text": "Ce vezi: X1: 2 valori extreme    X2: 0    X12: 12 Cum înțelegi: regula boxplotului a semnalat două valori neobișnuite la X1 și 12 la densitate. La X2 nu a semnalat niciuna. La test poți spune: „Densitatea are 12 observații potențial atipice. Le verificăm înainte să decidem dacă sunt erori sau particularități reale.” Reține: neobișnuit nu înseamnă automat greșit. Numărul nu spune singur dacă sunt valori foarte mari sau foarte mici. Lipsa outlierilor nu dovedește normalitatea.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-5",
+      "module": "descriptive",
+      "title": "Correlation / cor — cum se mișcă două variabile împreună?",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">                         Internet zilnic    PIB\nInternet zilnic               1.000        0.585\nPIB                           0.585        1.000\n</code></pre>\n<p>Citești celula de la întâlnirea celor doi indicatori: <strong>0,585</strong>.</p>\n<ul>\n<li><strong>Plus:</strong> valori mari ale unuia tind să apară cu valori mari ale celuilalt.</li>\n<li><strong>Minus:</strong> valori mari ale unuia tind să apară cu valori mici ale celuilalt.</li>\n<li><strong>Aproape de zero:</strong> legătura liniară este slabă.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Corelația 0,585 indică asociere liniară pozitivă între internetul zilnic și PIB/locuitor.”</p>\n<p><strong>Alt exemplu:</strong> ocupare–șomaj = −0,739. Spui: „Ocuparea ridicată tinde să fie asociată cu șomaj redus.” Ratele nu sunt negative; legătura dintre ele este negativă.</p>\n<p class=\"remember\"><strong>Reține:</strong> semnul spune sensul; apropierea de −1 sau +1 spune intensitatea. Diagonala este 1 deoarece fiecare variabilă este perfect corelată cu ea însăși. Tabelul este simetric.</p>\n<p>Dacă r=0,03, spui „legătură liniară foarte slabă”, nu „nicio relație posibilă”. Corelația nu demonstrează că o variabilă o provoacă pe cealaltă. Fără un test sau interval relevant, nu afirmi că este semnificativă statistic.</p>",
+      "text": "Ce vezi: Internet zilnic    PIB\nInternet zilnic               1.000        0.585\nPIB                           0.585        1.000 Citești celula de la întâlnirea celor doi indicatori: 0,585 . Plus: valori mari ale unuia tind să apară cu valori mari ale celuilalt. Minus: valori mari ale unuia tind să apară cu valori mici ale celuilalt. Aproape de zero: legătura liniară este slabă. La test poți spune: „Corelația 0,585 indică asociere liniară pozitivă între internetul zilnic și PIB/locuitor.” Alt exemplu: ocupare–șomaj = −0,739. Spui: „Ocuparea ridicată tinde să fie asociată cu șomaj redus.” Ratele nu sunt negative; legătura dintre ele este negativă. Reține: semnul spune sensul; apropierea de −1 sau +1 spune intensitatea. Diagonala este 1 deoarece fiecare variabilă este perfect corelată cu ea însăși. Tabelul este simetric. Dacă r=0,03, spui „legătură liniară foarte slabă”, nu „nicio relație posibilă”. Corelația nu demonstrează că o variabilă o provoacă pe cealaltă. Fără un test sau interval relevant, nu afirmi că este semnificativă statistic.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-6",
+      "module": "descriptive",
+      "title": "Pearson și Spearman — două moduri de a privi legătura",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">Pearson 0.585    Spearman 0.662\n</code></pre>\n<p><strong>Cum înțelegi:</strong> Pearson urmărește o legătură de tip linie dreaptă. Spearman lucrează cu ordinea valorilor: regiunile aflate mai sus la un indicator tind să fie mai sus și la celălalt?</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Ambele valori indică asociere pozitivă; Pearson măsoară asocierea liniară, iar Spearman asocierea monotonă, folosind rangurile.”</p>",
+      "text": "Ce vezi: Pearson 0.585    Spearman 0.662 Cum înțelegi: Pearson urmărește o legătură de tip linie dreaptă. Spearman lucrează cu ordinea valorilor: regiunile aflate mai sus la un indicator tind să fie mai sus și la celălalt? La test poți spune: „Ambele valori indică asociere pozitivă; Pearson măsoară asocierea liniară, iar Spearman asocierea monotonă, folosind rangurile.”",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-7",
+      "module": "descriptive",
+      "title": "Covarianță — atenție, nu este corelație",
+      "html": "<p><strong>Exemplu didactic:</strong></p>\n<pre><code class=\"language-text\">       A    B\nA      4   -3\nB     -3    9\n</code></pre>\n<p><strong>Cum înțelegi:</strong> pe diagonală sunt varianțele: cât de împrăștiată este fiecare variabilă. În afara diagonalei este covarianța: sensul variației împreună.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „A are varianța 4, B are varianța 9, iar covarianța negativă indică variație în sens opus.”</p>\n<p class=\"remember\"><strong>Reține:</strong> corelația stă între −1 și 1. Covarianța poate fi −3, 9 sau alte valori; depinde de unități.</p>",
+      "text": "Exemplu didactic: A    B\nA      4   -3\nB     -3    9 Cum înțelegi: pe diagonală sunt varianțele: cât de împrăștiată este fiecare variabilă. În afara diagonalei este covarianța: sensul variației împreună. La test poți spune: „A are varianța 4, B are varianța 9, iar covarianța negativă indică variație în sens opus.” Reține: corelația stă între −1 și 1. Covarianța poate fi −3, 9 sau alte valori; depinde de unități.",
+      "minutes": 1
+    },
+    {
+      "id": "descriptive-8",
+      "module": "descriptive",
+      "title": "Medie zero și SD unu — date standardizate",
+      "html": "<p><strong>Exemplu de output:</strong></p>\n<pre><code class=\"language-text\">Medii: 2e-16  -1e-16\nSD:    1       1\n</code></pre>\n<p><strong>Cum înțelegi:</strong> indicatorii au fost aduși la o scară comună. Nu mai compari direct mii de PPS cu câteva procente. Numerele de tip e−16 sunt extrem de mici, practic zero în acest calcul.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Variabilele sunt standardizate: mediile sunt aproximativ zero, iar abaterile standard sunt unu.”</p>\n<p class=\"remember\"><strong>Reține:</strong> aceeași scară nu înseamnă aceeași formă a distribuției. Extremele pot rămâne, iar datele nu devin automat normale.</p>\n<p><a href=\"#modul/start\">Înapoi</a> · <a href=\"#modul/acp\">Urmează: ACP</a></p>",
+      "text": "Exemplu de output: Medii: 2e-16  -1e-16\nSD:    1       1 Cum înțelegi: indicatorii au fost aduși la o scară comună. Nu mai compari direct mii de PPS cu câteva procente. Numerele de tip e−16 sunt extrem de mici, practic zero în acest calcul. La test poți spune: „Variabilele sunt standardizate: mediile sunt aproximativ zero, iar abaterile standard sunt unu.” Reține: aceeași scară nu înseamnă aceeași formă a distribuției. Extremele pot rămâne, iar datele nu devin automat normale. Înapoi · Urmează: ACP",
+      "minutes": 1
+    },
+    {
+      "id": "acp-0",
+      "module": "acp",
+      "title": "ACP — citești numerele fără să le confunzi",
+      "html": "<p><strong>Ideea de bază:</strong> componentele sunt rezumate ale indicatorilor. Vrei să afli cât păstrează fiecare rezumat și ce descrie.</p>",
+      "text": "Ideea de bază: componentele sunt rezumate ale indicatorilor. Vrei să afli cât păstrează fiecare rezumat și ce descrie.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-1",
+      "module": "acp",
+      "title": "summary — cât păstrează fiecare rezumat?",
+      "html": "<p><strong>Ce vezi, rotunjit:</strong></p>\n<pre><code class=\"language-text\">                         PC1     PC2     PC3     PC4\nStandard deviation      2.5911  1.3140  1.0468  0.8188\nProportion of Variance  0.5595  0.1439  0.0913  0.0559\nCumulative Proportion   0.5595  0.7034  0.7947  0.8506\n</code></pre>\n<p>Citești astfel:</p>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Rând</th>\n<th>Traducere simplă</th>\n<th>Exemplu</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Standard deviation</td>\n<td>Abaterea standard a componentei</td>\n<td>PC1 are SD≈2,591</td>\n</tr>\n<tr>\n<td>Proportion of Variance</td>\n<td>Cât explică doar această componentă</td>\n<td>PC2 explică 14,39%</td>\n</tr>\n<tr>\n<td>Cumulative Proportion</td>\n<td>Cât explică toate componentele până aici</td>\n<td>PC1+PC2 explică 70,34%</td>\n</tr>\n</tbody>\n</table></div>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Prima componentă explică 55,95% din variația totală. Primele două explică împreună 70,34%, iar primele patru 85,06%.”</p>\n<p class=\"remember\"><strong>Reține:</strong> Proportion = una singură; Cumulative = toate până aici. 0,5595 înseamnă 55,95%, nu 0,5595%.</p>",
+      "text": "Ce vezi, rotunjit: PC1     PC2     PC3     PC4\nStandard deviation      2.5911  1.3140  1.0468  0.8188\nProportion of Variance  0.5595  0.1439  0.0913  0.0559\nCumulative Proportion   0.5595  0.7034  0.7947  0.8506 Citești astfel: Rând Traducere simplă Exemplu Standard deviation Abaterea standard a componentei PC1 are SD≈2,591 Proportion of Variance Cât explică doar această componentă PC2 explică 14,39% Cumulative Proportion Cât explică toate componentele până aici PC1+PC2 explică 70,34% La test poți spune: „Prima componentă explică 55,95% din variația totală. Primele două explică împreună 70,34%, iar primele patru 85,06%.” Reține: Proportion = una singură; Cumulative = toate până aici. 0,5595 înseamnă 55,95%, nu 0,5595%.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-2",
+      "module": "acp",
+      "title": "Lambda — câtă variație are componenta?",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">       lambda    procent    cumulat\nPC1     6.714     55.95      55.95\nPC2     1.727     14.39      70.34\nPC3     1.096      9.13      79.47\nPC4     0.670      5.59      85.06\n</code></pre>\n<p><strong>Cum înțelegi:</strong> lambda este varianța componentei, adică mărimea variației pe care o preia. PC1 are cea mai mare valoare, apoi valorile scad.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „PC1 preia cea mai mare variație, având lambda≈6,714. Aceasta reprezintă 55,95% din total.”</p>\n<p><strong>Legătura cu SD:</strong> 2,591 × 2,591 ≈ 6,714. Aceeași informație este afișată în două forme: SD și varianță.</p>\n<p>La ACP pe corelații, 12 variabile înseamnă un total lambda de 12. La ACP pe covarianțe, totalul este suma varianțelor originale și poate fi diferit de 12.</p>",
+      "text": "Ce vezi: lambda    procent    cumulat\nPC1     6.714     55.95      55.95\nPC2     1.727     14.39      70.34\nPC3     1.096      9.13      79.47\nPC4     0.670      5.59      85.06 Cum înțelegi: lambda este varianța componentei, adică mărimea variației pe care o preia. PC1 are cea mai mare valoare, apoi valorile scad. La test poți spune: „PC1 preia cea mai mare variație, având lambda≈6,714. Aceasta reprezintă 55,95% din total.” Legătura cu SD: 2,591 × 2,591 ≈ 6,714. Aceeași informație este afișată în două forme: SD și varianță. La ACP pe corelații, 12 variabile înseamnă un total lambda de 12. La ACP pe covarianțe, totalul este suma varianțelor originale și poate fi diferit de 12.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-3",
+      "module": "acp",
+      "title": "Câte componente păstrezi?",
+      "html": "<p>Ai două reguli pe care trebuie să le citești separat:</p>\n<ul>\n<li><strong>Kaiser:</strong> numeri valorile lambda mai mari decât 1. Aici sunt trei.</li>\n<li><strong>Prag de variație:</strong> mergi pe Cumulative până atingi procentul cerut. Pentru 80%, primele trei au numai 79,47%; ai nevoie de a patra.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Kaiser recomandă trei componente, dar pentru pragul de 80% păstrez patru, care explică 85,06%.”</p>\n<p><strong>Dacă vezi TRUE TRUE TRUE FALSE…</strong>, aceleași trei axe au trecut regula lambda&gt;1. Dacă se cer minimum 75%, aici ajung trei axe. Citești pragul primit; 80% nu este o regulă obligatorie pentru orice analiză.</p>\n<p>Kaiser cu pragul 1 se folosește în acest context standardizat; nu îl transferi automat la covarianțe pe unități diferite.</p>",
+      "text": "Ai două reguli pe care trebuie să le citești separat: Kaiser: numeri valorile lambda mai mari decât 1. Aici sunt trei. Prag de variație: mergi pe Cumulative până atingi procentul cerut. Pentru 80%, primele trei au numai 79,47%; ai nevoie de a patra. La test poți spune: „Kaiser recomandă trei componente, dar pentru pragul de 80% păstrez patru, care explică 85,06%.” Dacă vezi TRUE TRUE TRUE FALSE… , aceleași trei axe au trecut regula lambda>1. Dacă se cer minimum 75%, aici ajung trei axe. Citești pragul primit; 80% nu este o regulă obligatorie pentru orice analiză. Kaiser cu pragul 1 se folosește în acest context standardizat; nu îl transferi automat la covarianțe pe unități diferite.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-4",
+      "module": "acp",
+      "title": "Loadings și vectori proprii — rețeta componentei",
+      "html": "<p><strong>Ce vezi pentru PC1:</strong></p>\n<pre><code class=\"language-text\">Ocupare      0.3303\nSomaj       -0.2281\nNEET        -0.3500\n</code></pre>\n<p><strong>Cum înțelegi:</strong> componenta este un amestec de indicatori. Coeficienții arată cum intră aceștia în amestec: ocuparea cu plus, șomajul și NEET cu minus.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „PC1 combină pozitiv ocuparea și negativ șomajul și NEET.”</p>\n<p class=\"remember\"><strong>Reține:</strong> loading = coeficient din rețetă. 0,3303 nu înseamnă automat corelație 0,3303 sau contribuție 33,03%. Spațiile goale din tabel pot ascunde coeficienți mici, fără să fie exact zero.</p>\n<p>Dacă toate semnele unei coloane sunt inversate, axa este orientată opus. Rezultatul rămâne echivalent dacă se inversează și scorurile acelei axe.</p>",
+      "text": "Ce vezi pentru PC1: Ocupare      0.3303\nSomaj       -0.2281\nNEET        -0.3500 Cum înțelegi: componenta este un amestec de indicatori. Coeficienții arată cum intră aceștia în amestec: ocuparea cu plus, șomajul și NEET cu minus. La test poți spune: „PC1 combină pozitiv ocuparea și negativ șomajul și NEET.” Reține: loading = coeficient din rețetă. 0,3303 nu înseamnă automat corelație 0,3303 sau contribuție 33,03%. Spațiile goale din tabel pot ascunde coeficienți mici, fără să fie exact zero. Dacă toate semnele unei coloane sunt inversate, axa este orientată opus. Rezultatul rămâne echivalent dacă se inversează și scorurile acelei axe.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-5",
+      "module": "acp",
+      "title": "SS loadings și crossprod(V) — verificări ale rețetei",
+      "html": "<p><strong>Exemplu de afișare:</strong></p>\n<pre><code class=\"language-text\">SS loadings      1.000  1.000\nProportion Var   0.083  0.083\n</code></pre>\n<p><strong>Cum înțelegi:</strong> acești coeficienți sunt construiți astfel încât suma pătratelor pe fiecare coloană să fie 1. Asta se numește „normă unitară”.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Coloanele coeficienților au normă unu. Procentele variației explicate se citesc în summary sau în tabelul lambda.”</p>\n<p>Nu confunda rândul Proportion Var de aici cu Proportion of Variance din summary.</p>\n<p><strong>Dacă crossprod(V) are 1 pe diagonală și 0 în rest</strong>, spui: „Vectorii proprii sunt unitari și ortogonali.” Simplu: au lungime 1 și direcții perpendiculare. Nu înseamnă că indicatorii inițiali sunt necorelați.</p>",
+      "text": "Exemplu de afișare: SS loadings      1.000  1.000\nProportion Var   0.083  0.083 Cum înțelegi: acești coeficienți sunt construiți astfel încât suma pătratelor pe fiecare coloană să fie 1. Asta se numește „normă unitară”. La test poți spune: „Coloanele coeficienților au normă unu. Procentele variației explicate se citesc în summary sau în tabelul lambda.” Nu confunda rândul Proportion Var de aici cu Proportion of Variance din summary. Dacă crossprod(V) are 1 pe diagonală și 0 în rest , spui: „Vectorii proprii sunt unitari și ortogonali.” Simplu: au lungime 1 și direcții perpendiculare. Nu înseamnă că indicatorii inițiali sunt necorelați.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-6",
+      "module": "acp",
+      "title": "Matricea factor — ce descrie componenta?",
+      "html": "<p><strong>Ce vezi pentru PC1:</strong></p>\n<pre><code class=\"language-text\">Cumparaturi online   0.901\nOcupare              0.856\nSomaj               -0.591\nNEET                -0.907\n</code></pre>\n<p><strong>Cum înțelegi:</strong> acestea sunt legături între indicatori și componentă. Când scorul PC1 este mai mare, profilul tinde să aibă mai multe cumpărături online, ocupare mai mare, șomaj și NEET mai reduse.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „PC1 descrie participarea digitală și integrarea pe piața muncii, în opoziție cu șomajul și NEET.”</p>\n<p class=\"remember\"><strong>Reține:</strong> denumești axa după indicatorii puternic legați de ea. Dacă nu știi ce înseamnă X1, descrii „X1 și X2 se opun lui X3”, fără o denumire economică inventată.</p>\n<p>Pentru ocupare, loading≈0,3303 și corelație≈0,856 sunt valori diferite. Legătura este: coeficientul se înmulțește cu SD a componentei, aici circa 2,591.</p>\n<p><strong>Alt exemplu, PC2:</strong></p>\n<pre><code class=\"language-text\">Somaj +0.694    Studii superioare +0.490    Ocupare -0.378\n</code></pre>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „PC2 descrie un profil mixt: șomajul și studiile superioare sunt în același sens, opus ocupării. Scorul pozitiv nu înseamnă automat situație mai bună.”</p>",
+      "text": "Ce vezi pentru PC1: Cumparaturi online   0.901\nOcupare              0.856\nSomaj               -0.591\nNEET                -0.907 Cum înțelegi: acestea sunt legături între indicatori și componentă. Când scorul PC1 este mai mare, profilul tinde să aibă mai multe cumpărături online, ocupare mai mare, șomaj și NEET mai reduse. La test poți spune: „PC1 descrie participarea digitală și integrarea pe piața muncii, în opoziție cu șomajul și NEET.” Reține: denumești axa după indicatorii puternic legați de ea. Dacă nu știi ce înseamnă X1, descrii „X1 și X2 se opun lui X3”, fără o denumire economică inventată. Pentru ocupare, loading≈0,3303 și corelație≈0,856 sunt valori diferite. Legătura este: coeficientul se înmulțește cu SD a componentei, aici circa 2,591. Alt exemplu, PC2: Somaj +0.694    Studii superioare +0.490    Ocupare -0.378 La test poți spune: „PC2 descrie un profil mixt: șomajul și studiile superioare sunt în același sens, opus ocupării. Scorul pozitiv nu înseamnă automat situație mai bună.”",
+      "minutes": 1
+    },
+    {
+      "id": "acp-7",
+      "module": "acp",
+      "title": "Scores — unde se află regiunea?",
+      "html": "<p><strong>Ce vezi:</strong></p>\n<pre><code class=\"language-text\">          PC1      PC2\nRO11    -2.754   -1.241\nBE10     0.878    6.169\n</code></pre>\n<p><strong>Cum înțelegi:</strong> scorul este locul regiunii pe componentă. Zero este centrul pe acea axă. Plus și minus spun în ce parte se află regiunea.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „RO11 are PC1 negativ. Pe axa care descrie participarea digitală și integrarea, se află sub centrul eșantionului. BE10 are scor pozitiv ridicat pe PC2.”</p>\n<p class=\"remember\"><strong>Reține:</strong> scorul este o poziție, deci poate fi 6,169. Nu este corelație. Scor negativ nu înseamnă PIB sau șomaj negativ.</p>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Tabel</th>\n<th>Rânduri</th>\n<th>Coloane în proiect</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Scoruri</td>\n<td>116 regiuni</td>\n<td>12 axe sau cele 4 păstrate</td>\n</tr>\n<tr>\n<td>Matrice factor</td>\n<td>12 indicatori</td>\n<td>12 axe sau cele 4 păstrate</td>\n</tr>\n</tbody>\n</table></div>\n<p>Dacă vezi doar primele cinci rânduri, restul pot exista în obiect, dar nu sunt afișate.</p>",
+      "text": "Ce vezi: PC1      PC2\nRO11    -2.754   -1.241\nBE10     0.878    6.169 Cum înțelegi: scorul este locul regiunii pe componentă. Zero este centrul pe acea axă. Plus și minus spun în ce parte se află regiunea. La test poți spune: „RO11 are PC1 negativ. Pe axa care descrie participarea digitală și integrarea, se află sub centrul eșantionului. BE10 are scor pozitiv ridicat pe PC2.” Reține: scorul este o poziție, deci poate fi 6,169. Nu este corelație. Scor negativ nu înseamnă PIB sau șomaj negativ. Tabel Rânduri Coloane în proiect Scoruri 116 regiuni 12 axe sau cele 4 păstrate Matrice factor 12 indicatori 12 axe sau cele 4 păstrate Dacă vezi doar primele cinci rânduri, restul pot exista în obiect, dar nu sunt afișate.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-8",
+      "module": "acp",
+      "title": "Mediile și corelațiile scorurilor",
+      "html": "<p><strong>Exemplu:</strong></p>\n<pre><code class=\"language-text\">          PC1 PC2\nPC1        1   0\nPC2        0   1\nMedii:     0   0\n</code></pre>\n<p><strong>Cum înțelegi:</strong> fiecare axă are centrul la zero. Între axele diferite nu există corelație liniară.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Componentele sunt centrate și necorelate între ele.”</p>\n<p>Dacă ți se cere independența, răspunsul este că necorelarea singură nu o demonstrează. Independența este o condiție mai puternică.</p>",
+      "text": "Exemplu: PC1 PC2\nPC1        1   0\nPC2        0   1\nMedii:     0   0 Cum înțelegi: fiecare axă are centrul la zero. Între axele diferite nu există corelație liniară. La test poți spune: „Componentele sunt centrate și necorelate între ele.” Dacă ți se cere independența, răspunsul este că necorelarea singură nu o demonstrează. Independența este o condiție mai puternică.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-9",
+      "module": "acp",
+      "title": "Scoruri manuale, reconstrucție și erori mici",
+      "html": "<p><strong>Exemple de control:</strong></p>\n<pre><code class=\"language-text\">AT12, PC1: manual 0.589    princomp 0.592\nDupa corectie: diferenta maxima 4e-14\nEroare reconstructie: 2e-14\n</code></pre>\n<p><strong>Cum înțelegi:</strong> standardizarea manuală și princomp folosesc inițial convenții ușor diferite, n−1 și n. După corecția de scară, rezultatele practic coincid. e−14 înseamnă un număr extrem de mic.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Diferența inițială provine din convenția de standardizare. După corecție, scorurile coincid la precizia numerică. Cu toate componentele se reconstruiesc datele standardizate.”</p>\n<p>Dacă vezi varianțele scorurilor egale cu lambda, spui: „Varianțele componentelor sunt valorile proprii.” În script, se folosește aceeași convenție a divizorului la comparație.</p>\n<p>Dacă suma lambda este 12, toate cele 12 axe păstrează întreaga variație. Dacă produsul lambda este egal cu determinantul matricei analizate, este verificată și păstrarea varianței generalizate. Nu este o concluzie despre economie, ci despre calcul.</p>",
+      "text": "Exemple de control: AT12, PC1: manual 0.589    princomp 0.592\nDupa corectie: diferenta maxima 4e-14\nEroare reconstructie: 2e-14 Cum înțelegi: standardizarea manuală și princomp folosesc inițial convenții ușor diferite, n−1 și n. După corecția de scară, rezultatele practic coincid. e−14 înseamnă un număr extrem de mic. La test poți spune: „Diferența inițială provine din convenția de standardizare. După corecție, scorurile coincid la precizia numerică. Cu toate componentele se reconstruiesc datele standardizate.” Dacă vezi varianțele scorurilor egale cu lambda, spui: „Varianțele componentelor sunt valorile proprii.” În script, se folosește aceeași convenție a divizorului la comparație. Dacă suma lambda este 12, toate cele 12 axe păstrează întreaga variație. Dacă produsul lambda este egal cu determinantul matricei analizate, este verificată și păstrarea varianței generalizate. Nu este o concluzie despre economie, ci despre calcul.",
+      "minutes": 1
+    },
+    {
+      "id": "acp-10",
+      "module": "acp",
+      "title": "princomp versus PCA",
+      "html": "<p><strong>Exemplu de control:</strong></p>\n<pre><code class=\"language-text\">Diferente maxime: lambda 1e-14, scoruri 4e-14, matrice factor 7e-15\n</code></pre>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Cele două funcții dau rezultate echivalente la precizia numerică, pe aceleași date și după alinierea semnelor.”</p>\n<p>Compari scoruri cu <code>ind$coord</code> și matrice factor cu <code>var$coord</code> în ACP standardizată. O corelație −1 între scorurile aceleiași axe poate însemna doar că una este orientată invers.</p>\n<p><strong>ncp=12</strong> spune că obiectul păstrează coordonate pentru 12 axe. Nu spune că trebuie să le interpretezi pe toate; numărul ales se justifică din variația cumulată și criteriile cerute.</p>\n<p><a href=\"#modul/start\">Înapoi</a> · <a href=\"#modul/pca\">Urmează: cos² și contribuții</a></p>",
+      "text": "Exemplu de control: Diferente maxime: lambda 1e-14, scoruri 4e-14, matrice factor 7e-15 La test poți spune: „Cele două funcții dau rezultate echivalente la precizia numerică, pe aceleași date și după alinierea semnelor.” Compari scoruri cu ind$coord și matrice factor cu var$coord în ACP standardizată. O corelație −1 între scorurile aceleiași axe poate însemna doar că una este orientată invers. ncp=12 spune că obiectul păstrează coordonate pentru 12 axe. Nu spune că trebuie să le interpretezi pe toate; numărul ales se justifică din variația cumulată și criteriile cerute. Înapoi · Urmează: cos² și contribuții",
+      "minutes": 1
+    },
+    {
+      "id": "pca-1",
+      "module": "pca",
+      "title": "Mai întâi: te uiți la indicatori sau la regiuni?",
+      "html": "<ul>\n<li><strong>Variables:</strong> rândurile sunt indicatori: X1, X2, ocupare, PIB etc.</li>\n<li><strong>Individuals:</strong> rândurile sunt regiuni: RO11, BE10 etc.</li>\n</ul>\n<p>Aceeași etichetă <strong>Dim.1</strong> are sens diferit: la Variables este corelație cu PC1, în ACP standardizată; la Individuals este scorul regiunii pe PC1.</p>",
+      "text": "Variables: rândurile sunt indicatori: X1, X2, ocupare, PIB etc. Individuals: rândurile sunt regiuni: RO11, BE10 etc. Aceeași etichetă Dim.1 are sens diferit: la Variables este corelație cu PC1, în ACP standardizată; la Individuals este scorul regiunii pe PC1.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-2",
+      "module": "pca",
+      "title": "Variables — citește un singur rând",
+      "html": "<p><strong>Ce vezi, rotunjit:</strong></p>\n<pre><code class=\"language-text\">Variables\n       Dim.1   ctr    cos2\nX1     0.719   7.69   0.516\n</code></pre>\n<p>Citești fiecare număr separat:</p>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Număr</th>\n<th>Ce îți spune</th>\n<th>Cum îl explici</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Dim.1 = 0,719</td>\n<td>Legătura X1–PC1</td>\n<td>X1 este legat pozitiv de PC1</td>\n</tr>\n<tr>\n<td>cos² = 0,516</td>\n<td>Cât din X1 apare pe această axă</td>\n<td>PC1 arată 51,6% din variația lui X1</td>\n</tr>\n<tr>\n<td>ctr = 7,69</td>\n<td>Cât ajută X1 la construirea axei</td>\n<td>X1 contribuie cu 7,69% la PC1</td>\n</tr>\n</tbody>\n</table></div>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „X1 se corelează pozitiv cu PC1, cu 0,719. PC1 reprezintă 51,6% din variația X1, iar X1 contribuie cu 7,69% la construirea axei.”</p>\n<p class=\"remember\"><strong>Reține:</strong> cos² vorbește despre <strong>cât vezi din X1</strong>. Contribuția vorbește despre <strong>cât aduce X1 la axă</strong>. Sunt două întrebări diferite.</p>\n<p>Nu transforma propoziția în „X1 explică 51,6% din PC1”: ai inversa sensul cos².</p>",
+      "text": "Ce vezi, rotunjit: Variables\n       Dim.1   ctr    cos2\nX1     0.719   7.69   0.516 Citești fiecare număr separat: Număr Ce îți spune Cum îl explici Dim.1 = 0,719 Legătura X1–PC1 X1 este legat pozitiv de PC1 cos² = 0,516 Cât din X1 apare pe această axă PC1 arată 51,6% din variația lui X1 ctr = 7,69 Cât ajută X1 la construirea axei X1 contribuie cu 7,69% la PC1 La test poți spune: „X1 se corelează pozitiv cu PC1, cu 0,719. PC1 reprezintă 51,6% din variația X1, iar X1 contribuie cu 7,69% la construirea axei.” Reține: cos² vorbește despre cât vezi din X1 . Contribuția vorbește despre cât aduce X1 la axă . Sunt două întrebări diferite. Nu transforma propoziția în „X1 explică 51,6% din PC1”: ai inversa sensul cos².",
+      "minutes": 1
+    },
+    {
+      "id": "pca-3",
+      "module": "pca",
+      "title": "Cos² într-un plan — aduni ce vezi pe cele două axe",
+      "html": "<p><strong>Exemplu pentru densitate, X12:</strong></p>\n<pre><code class=\"language-text\">cos2 PC1 = 0.034    cos2 PC2 = 0.266\ncos2 plan 1-2 = 0.300\ncos2 primele 4 = 0.816\n</code></pre>\n<p><strong>Cum înțelegi:</strong> prima axă arată puțin din X12; a doua arată ceva mai mult. Împreună arată aproximativ 30%. Cu patru axe ajungi la 81,6%.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Densitatea este descrisă incomplet în primul plan, care surprinde circa 30% din variația sa. Primele patru axe o descriu mai bine, în proporție de 81,6%.”</p>\n<p class=\"remember\"><strong>Reține:</strong> nu vezi bine variabila în acest plan; asta nu o face inutilă în întreaga analiză.</p>",
+      "text": "Exemplu pentru densitate, X12: cos2 PC1 = 0.034    cos2 PC2 = 0.266\ncos2 plan 1-2 = 0.300\ncos2 primele 4 = 0.816 Cum înțelegi: prima axă arată puțin din X12; a doua arată ceva mai mult. Împreună arată aproximativ 30%. Cu patru axe ajungi la 81,6%. La test poți spune: „Densitatea este descrisă incomplet în primul plan, care surprinde circa 30% din variația sa. Primele patru axe o descriu mai bine, în proporție de 81,6%.” Reține: nu vezi bine variabila în acest plan; asta nu o face inutilă în întreaga analiză.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-4",
+      "module": "pca",
+      "title": "Contribuție mare — cine contează mai mult la axă?",
+      "html": "<p><strong>Ce vezi pentru PC2:</strong></p>\n<pre><code class=\"language-text\">Somaj general 27.91%    Somaj tineri 17.28%    Densitate 15.38%\n</code></pre>\n<p><strong>Cum înțelegi:</strong> acești indicatori au aporturi mari la construirea axei. Dintre cei trei, șomajul general contează cel mai mult.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Șomajul general are cea mai mare contribuție dintre indicatorii prezentați la construirea PC2.”</p>\n<p>La 12 indicatori, dacă ar contribui egal, fiecare ar avea 8,33%. Peste această valoare înseamnă aport peste distribuția egală, nu semnificație statistică. Contribuția nu spune dacă legătura este cu plus sau minus; pentru aceasta citești Dim.</p>",
+      "text": "Ce vezi pentru PC2: Somaj general 27.91%    Somaj tineri 17.28%    Densitate 15.38% Cum înțelegi: acești indicatori au aporturi mari la construirea axei. Dintre cei trei, șomajul general contează cel mai mult. La test poți spune: „Șomajul general are cea mai mare contribuție dintre indicatorii prezentați la construirea PC2.” La 12 indicatori, dacă ar contribui egal, fiecare ar avea 8,33%. Peste această valoare înseamnă aport peste distribuția egală, nu semnificație statistică. Contribuția nu spune dacă legătura este cu plus sau minus; pentru aceasta citești Dim.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-5",
+      "module": "pca",
+      "title": "Individuals — citește o regiune",
+      "html": "<p><strong>Ce vezi pentru BE10:</strong></p>\n<pre><code class=\"language-text\">Dist 9.006    Dim.2 6.169    ctr PC2 19.00%    cos2 PC2 0.469\n</code></pre>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Număr</th>\n<th>Traducere simplă</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Dist 9,006</td>\n<td>Cât de departe este regiunea de centrul datelor, privind toți indicatorii</td>\n</tr>\n<tr>\n<td>Dim.2 6,169</td>\n<td>Unde este regiunea pe PC2: mult în sensul pozitiv</td>\n</tr>\n<tr>\n<td>ctr 19%</td>\n<td>Cât contribuie regiunea la construirea PC2</td>\n</tr>\n<tr>\n<td>cos² 0,469</td>\n<td>Cât de bine este descris profilul său pe PC2</td>\n</tr>\n</tbody>\n</table></div>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „BE10 are scor pozitiv ridicat pe PC2 și contribuie cu aproximativ 19% la această axă. PC2 surprinde circa 46,9% din distanța sa pătratică totală față de centru.”</p>\n<p>Ultima parte este formularea exactă pentru cos² la regiuni. Pentru a o înțelege, gândește-te: <strong>cât din profilul diferit al regiunii se vede pe această axă?</strong></p>\n<p class=\"remember\"><strong>Reține:</strong> regiune bine reprezentată nu înseamnă automat regiune bogată. Scorul 6,169 este permis; scorurile nu au limita ±1 a corelațiilor.</p>",
+      "text": "Ce vezi pentru BE10: Dist 9.006    Dim.2 6.169    ctr PC2 19.00%    cos2 PC2 0.469 Număr Traducere simplă Dist 9,006 Cât de departe este regiunea de centrul datelor, privind toți indicatorii Dim.2 6,169 Unde este regiunea pe PC2: mult în sensul pozitiv ctr 19% Cât contribuie regiunea la construirea PC2 cos² 0,469 Cât de bine este descris profilul său pe PC2 La test poți spune: „BE10 are scor pozitiv ridicat pe PC2 și contribuie cu aproximativ 19% la această axă. PC2 surprinde circa 46,9% din distanța sa pătratică totală față de centru.” Ultima parte este formularea exactă pentru cos² la regiuni. Pentru a o înțelege, gândește-te: cât din profilul diferit al regiunii se vede pe această axă? Reține: regiune bine reprezentată nu înseamnă automat regiune bogată. Scorul 6,169 este permis; scorurile nu au limita ±1 a corelațiilor.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-6",
+      "module": "pca",
+      "title": "Aceeași regiune, cu două sau patru axe",
+      "html": "<p><strong>Ce vezi pentru BE10:</strong></p>\n<pre><code class=\"language-text\">cos2 plan PC1-PC2 = 0.479\ncos2 primele 4 = 0.909\n</code></pre>\n<p><strong>Cum înțelegi:</strong> graficul cu primele două axe arată doar o parte din profil. Cu patru axe, profilul este descris mult mai complet.</p>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „Primul plan surprinde 47,9% din distanța pătratică totală a regiunii față de centru, iar primele patru axe surprind 90,9%.”</p>\n<p>O regiune poate ieși în evidență pe PC2, dar să aibă detalii importante și pe alte axe.</p>",
+      "text": "Ce vezi pentru BE10: cos2 plan PC1-PC2 = 0.479\ncos2 primele 4 = 0.909 Cum înțelegi: graficul cu primele două axe arată doar o parte din profil. Cu patru axe, profilul este descris mult mai complet. La test poți spune: „Primul plan surprinde 47,9% din distanța pătratică totală a regiunii față de centru, iar primele patru axe surprind 90,9%.” O regiune poate ieși în evidență pe PC2, dar să aibă detalii importante și pe alte axe.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-7",
+      "module": "pca",
+      "title": "Dist², masa și inerția",
+      "html": "<p><strong>Ce vezi pentru BE10:</strong></p>\n<pre><code class=\"language-text\">distanta 9.006    distanta2 81.110    masa 0.008621    inertie 0.6992\n</code></pre>\n<p><strong>Cum înțelegi:</strong></p>\n<ul>\n<li><strong>Dist²:</strong> distanța înmulțită cu ea însăși, aproximativ 81,11.</li>\n<li><strong>Masa:</strong> cât contează regiunea în calcul. Aici toate regiunile contează egal: fiecare are 1/116.</li>\n<li><strong>Inerția:</strong> cât aduce regiunea la împrăștierea totală a datelor.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test poți spune:</strong> „BE10 are masa egală cu a celorlalte regiuni și un aport la inerția totală de aproximativ 0,6992.”</p>\n<p class=\"remember\"><strong>Reține:</strong> masa nu este populația regiunii. Inerția 0,6992 nu este automat 69,92%; aici totalul inerției este 12.</p>\n<p>La 116 regiuni, contribuția egală la o axă ar fi aproximativ 0,862% de regiune. BE10, cu 19% pe PC2, este mult peste această referință.</p>",
+      "text": "Ce vezi pentru BE10: distanta 9.006    distanta2 81.110    masa 0.008621    inertie 0.6992 Cum înțelegi: Dist²: distanța înmulțită cu ea însăși, aproximativ 81,11. Masa: cât contează regiunea în calcul. Aici toate regiunile contează egal: fiecare are 1/116. Inerția: cât aduce regiunea la împrăștierea totală a datelor. La test poți spune: „BE10 are masa egală cu a celorlalte regiuni și un aport la inerția totală de aproximativ 0,6992.” Reține: masa nu este populația regiunii. Inerția 0,6992 nu este automat 69,92%; aici totalul inerției este 12. La 116 regiuni, contribuția egală la o axă ar fi aproximativ 0,862% de regiune. BE10, cu 19% pe PC2, este mult peste această referință.",
+      "minutes": 1
+    },
+    {
+      "id": "pca-8",
+      "module": "pca",
+      "title": "Ce înseamnă sumele din output?",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Ce aduni</th>\n<th>Rezultat</th>\n<th>Traducere</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Contribuțiile tuturor indicatorilor la o axă</td>\n<td>100%</td>\n<td>Toate aporturile formează axa</td>\n</tr>\n<tr>\n<td>Cos² pentru același indicator pe toate axele</td>\n<td>1</td>\n<td>Toate axele împreună descriu tot indicatorul</td>\n</tr>\n<tr>\n<td>Cos² pentru toți indicatorii pe aceeași axă</td>\n<td>Lambda</td>\n<td>În ACP standardizată, obții varianța acelei axe</td>\n</tr>\n<tr>\n<td>Contribuțiile tuturor regiunilor la o axă</td>\n<td>100%</td>\n<td>Toate aporturile regiunilor formează axa</td>\n</tr>\n<tr>\n<td>Cos² ale aceleiași regiuni pe toate axele</td>\n<td>1</td>\n<td>Toate axele descriu întregul profil față de centru</td>\n</tr>\n</tbody>\n</table></div>\n<p><strong>Exemplu:</strong> suma cos² a tuturor indicatorilor pe PC1 este 6,714. Spui: „Suma coincide cu lambda1, deci cu varianța primei componente.”</p>\n<p>Regula cos²=1 pentru o regiune presupune că nu se află exact în centrul datelor. Nu aduni contribuțiile aceluiași indicator pe axe presupunând că vor da 100%.</p>\n<p><a href=\"#modul/start\">Înapoi</a> · <a href=\"#modul/grafice\">Urmează: grafice</a></p>",
+      "text": "Ce aduni Rezultat Traducere Contribuțiile tuturor indicatorilor la o axă 100% Toate aporturile formează axa Cos² pentru același indicator pe toate axele 1 Toate axele împreună descriu tot indicatorul Cos² pentru toți indicatorii pe aceeași axă Lambda În ACP standardizată, obții varianța acelei axe Contribuțiile tuturor regiunilor la o axă 100% Toate aporturile regiunilor formează axa Cos² ale aceleiași regiuni pe toate axele 1 Toate axele descriu întregul profil față de centru Exemplu: suma cos² a tuturor indicatorilor pe PC1 este 6,714. Spui: „Suma coincide cu lambda1, deci cu varianța primei componente.” Regula cos²=1 pentru o regiune presupune că nu se află exact în centrul datelor. Nu aduni contribuțiile aceluiași indicator pe axe presupunând că vor da 100%. Înapoi · Urmează: grafice",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-0",
+      "module": "grafice",
+      "title": "Graficele — unde te uiți și ce spui",
+      "html": "<p><strong>De fiecare dată:</strong> citești ce scrie pe axe, apoi legenda culorilor și a mărimilor. Abia după aceea interpretezi. Exemplele de mai jos folosesc datele și orientarea axelor din proiect.</p>",
+      "text": "De fiecare dată: citești ce scrie pe axe, apoi legenda culorilor și a mărimilor. Abia după aceea interpretezi. Exemplele de mai jos folosesc datele și orientarea axelor din proiect.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-1",
+      "module": "grafice",
+      "title": "Histogramă — unde se adună valorile?",
+      "html": "<p><strong>Unde te uiți:</strong> jos sunt intervalele valorilor; înălțimea barelor arată numărul regiunilor sau densitatea, după etichetă.</p>\n<p><strong>Cum înțelegi:</strong> dacă multe valori sunt mici și câteva sunt foarte mari, desenul are o coadă lungă spre dreapta. Aceasta este asimetrie pozitivă.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „PIB-ul și densitatea au distribuții asimetrice pozitiv: câteva regiuni au valori mult mai mari decât restul.”</p>\n<p class=\"remember\"><strong>Reține:</strong> coadă dreapta = câteva valori mari; coadă stânga = câteva valori mici. La ocupare, de exemplu, câteva regiuni au valori mult mai reduse. O histogramă aparent simetrică nu dovedește singură normalitatea.</p>\n<p><img alt=\"Histograme\" aria-label=\"Mărește graficul: Histograme\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/01_histograme.png\" tabindex=\"0\"/></p>",
+      "text": "Unde te uiți: jos sunt intervalele valorilor; înălțimea barelor arată numărul regiunilor sau densitatea, după etichetă. Cum înțelegi: dacă multe valori sunt mici și câteva sunt foarte mari, desenul are o coadă lungă spre dreapta. Aceasta este asimetrie pozitivă. La test: „PIB-ul și densitatea au distribuții asimetrice pozitiv: câteva regiuni au valori mult mai mari decât restul.” Reține: coadă dreapta = câteva valori mari; coadă stânga = câteva valori mici. La ocupare, de exemplu, câteva regiuni au valori mult mai reduse. O histogramă aparent simetrică nu dovedește singură normalitatea.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-2",
+      "module": "grafice",
+      "title": "Boxplot — cutia și punctele din afară",
+      "html": "<p><strong>Unde te uiți:</strong></p>\n<ul>\n<li>Linia din cutie = mediana, adică mijlocul datelor ordonate.</li>\n<li>Cutia = jumătatea centrală a datelor.</li>\n<li>O cutie mai înaltă = valori centrale mai împrăștiate, pe aceeași scară.</li>\n<li>Punctele separate = valori potențial atipice.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test:</strong> „Densitatea prezintă valori extreme ridicate. Acestea trebuie verificate, deoarece pot reflecta regiuni cu particularități reale.”</p>\n<p class=\"remember\"><strong>Reține:</strong> punct separat nu înseamnă automat eroare. Mustățile nu sunt obligatoriu minimul și maximul tuturor valorilor: observațiile din afara lor pot fi outlieri.</p>\n<p>Regula folosește 1,5 ori lățimea intervalului central, pe baza balamalelor Tukey. Aceste limite pot diferi puțin de cuantilele descriptive.</p>\n<p><img alt=\"Boxplot\" aria-label=\"Mărește graficul: Boxplot\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/02_boxplot_original.png\" tabindex=\"0\"/></p>",
+      "text": "Unde te uiți: Linia din cutie = mediana, adică mijlocul datelor ordonate. Cutia = jumătatea centrală a datelor. O cutie mai înaltă = valori centrale mai împrăștiate, pe aceeași scară. Punctele separate = valori potențial atipice. La test: „Densitatea prezintă valori extreme ridicate. Acestea trebuie verificate, deoarece pot reflecta regiuni cu particularități reale.” Reține: punct separat nu înseamnă automat eroare. Mustățile nu sunt obligatoriu minimul și maximul tuturor valorilor: observațiile din afara lor pot fi outlieri. Regula folosește 1,5 ori lățimea intervalului central, pe baza balamalelor Tukey. Aceste limite pot diferi puțin de cuantilele descriptive.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-3",
+      "module": "grafice",
+      "title": "Boxplot standardizat — aceeași scară",
+      "html": "<p><strong>Cum înțelegi:</strong> indicatorii au fost aduși la o scară comună. Acum vezi mai ușor ce valori sunt neobișnuite față de restul valorilor aceluiași indicator.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „După standardizare, indicatorii sunt comparabili ca poziții relative. Densitatea păstrează extreme pozitive puternice.”</p>\n<p class=\"remember\"><strong>Reține:</strong> standardizarea schimbă scara, fără să șteargă extremele.</p>\n<p><img alt=\"Boxplot standardizat\" aria-label=\"Mărește graficul: Boxplot standardizat\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/03_boxplot_standardizat.png\" tabindex=\"0\"/></p>",
+      "text": "Cum înțelegi: indicatorii au fost aduși la o scară comună. Acum vezi mai ușor ce valori sunt neobișnuite față de restul valorilor aceluiași indicator. La test: „După standardizare, indicatorii sunt comparabili ca poziții relative. Densitatea păstrează extreme pozitive puternice.” Reține: standardizarea schimbă scara, fără să șteargă extremele.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-4",
+      "module": "grafice",
+      "title": "plot(X) — multe grafice mici",
+      "html": "<p><strong>Cum înțelegi:</strong> fiecare căsuță compară două variabile. Verifici numele de pe rând și coloană ca să știi care sunt acelea.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Norii de puncte înclinați în sus sugerează asocieri pozitive, iar cei înclinați în jos asocieri negative, pentru perechile respective.”</p>\n<p class=\"remember\"><strong>Reține:</strong> fiecare căsuță are propria pereche de indicatori.</p>\n<p><img alt=\"Perechi de variabile\" aria-label=\"Mărește graficul: Perechi de variabile\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/05_observatii_pairs.png\" tabindex=\"0\"/></p>",
+      "text": "Cum înțelegi: fiecare căsuță compară două variabile. Verifici numele de pe rând și coloană ca să știi care sunt acelea. La test: „Norii de puncte înclinați în sus sugerează asocieri pozitive, iar cei înclinați în jos asocieri negative, pentru perechile respective.” Reține: fiecare căsuță are propria pereche de indicatori.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-5",
+      "module": "grafice",
+      "title": "Scatterplot — un punct pentru fiecare regiune",
+      "html": "<p><strong>Unde te uiți:</strong> pe X este internetul zilnic; pe Y este PIB-ul. Un punct mai sus are PIB mai mare; un punct mai la dreapta are utilizare digitală mai mare.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Tendința ascendentă sugerează că regiunile cu utilizare zilnică mai mare a internetului tind să aibă PIB/locuitor mai ridicat.”</p>\n<p class=\"remember\"><strong>Reține:</strong> „tind să apară împreună”, fără a spune că internetul a provocat acel PIB.</p>\n<p><img alt=\"Internet și PIB\" aria-label=\"Mărește graficul: Internet și PIB\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/06_internet_PIB.png\" tabindex=\"0\"/></p>",
+      "text": "Unde te uiți: pe X este internetul zilnic; pe Y este PIB-ul. Un punct mai sus are PIB mai mare; un punct mai la dreapta are utilizare digitală mai mare. La test: „Tendința ascendentă sugerează că regiunile cu utilizare zilnică mai mare a internetului tind să aibă PIB/locuitor mai ridicat.” Reține: „tind să apară împreună”, fără a spune că internetul a provocat acel PIB.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-6",
+      "module": "grafice",
+      "title": "Corrplot — corelațiile desenate cu culori",
+      "html": "<p><strong>Unde te uiți:</strong> alegi doi indicatori și citești celula lor, exact ca într-un tabel de corelație. Legenda spune ce înseamnă culoarea.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Ocuparea și NEET au corelație negativă puternică, aproximativ −0,839. Ocuparea ridicată tinde să fie asociată cu NEET redus.”</p>\n<p class=\"remember\"><strong>Reține:</strong> culoarea arată legătura; nu clasifică o regiune drept bună sau rea.</p>\n<p><img alt=\"Corelații\" aria-label=\"Mărește graficul: Corelații\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/04_corelatii.png\" tabindex=\"0\"/></p>",
+      "text": "Unde te uiți: alegi doi indicatori și citești celula lor, exact ca într-un tabel de corelație. Legenda spune ce înseamnă culoarea. La test: „Ocuparea și NEET au corelație negativă puternică, aproximativ −0,839. Ocuparea ridicată tinde să fie asociată cu NEET redus.” Reține: culoarea arată legătura; nu clasifică o regiune drept bună sau rea.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-7",
+      "module": "grafice",
+      "title": "Trei variabile — poziție și culoare",
+      "html": "<p><strong>Cum citești:</strong> dreapta = internet zilnic mai mare; sus = PIB mai mare; culoarea = ocupare, potrivit legendei.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Graficul arată simultan internetul zilnic, PIB-ul și ocuparea. Regiuni cu poziții apropiate pot avea ocupări diferite, vizibile prin culoare.”</p>\n<p><img alt=\"Trei variabile\" aria-label=\"Mărește graficul: Trei variabile\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/07_trei_variabile.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: dreapta = internet zilnic mai mare; sus = PIB mai mare; culoarea = ocupare, potrivit legendei. La test: „Graficul arată simultan internetul zilnic, PIB-ul și ocuparea. Regiuni cu poziții apropiate pot avea ocupări diferite, vizibile prin culoare.”",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-8",
+      "module": "grafice",
+      "title": "Patru variabile — adaugi mărimea punctului",
+      "html": "<p><strong>Cum citești:</strong> păstrezi cele trei informații și adaugi aria punctului, care aici arată studiile superioare.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Un punct mare reprezintă o regiune cu pondere ridicată a studiilor superioare. Poziția arată internetul și PIB-ul, iar culoarea ocuparea.”</p>\n<p class=\"remember\"><strong>Reține:</strong> în acest grafic, punct mare = mai multe studii superioare, fără să însemne populație mai mare.</p>\n<p><img alt=\"Patru variabile\" aria-label=\"Mărește graficul: Patru variabile\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/08_patru_variabile.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: păstrezi cele trei informații și adaugi aria punctului, care aici arată studiile superioare. La test: „Un punct mare reprezintă o regiune cu pondere ridicată a studiilor superioare. Poziția arată internetul și PIB-ul, iar culoarea ocuparea.” Reține: în acest grafic, punct mare = mai multe studii superioare, fără să însemne populație mai mare.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-9",
+      "module": "grafice",
+      "title": "Scree plot și fviz_eig — câte axe îți ajung?",
+      "html": "<p><strong>Unde te uiți:</strong> pe X sunt componentele. Pe Y poate fi lambda sau procentul explicat: citești eticheta. Barele sau punctele mai înalte arată componente care explică mai mult.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Prima componentă explică 55,95% din variație. Primele patru explică 85,06%, deci sunt suficiente pentru pragul de 80%. Kaiser recomandă trei.”</p>\n<p class=\"remember\"><strong>Reține:</strong> mai întâi citești ce regulă cere problema. Când curba începe să se aplatizeze, axele următoare aduc mai puțină informație fiecare.</p>\n<p><img alt=\"Variație explicată\" aria-label=\"Mărește graficul: Variație explicată\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/09_variatie.png\" tabindex=\"0\"/></p>",
+      "text": "Unde te uiți: pe X sunt componentele. Pe Y poate fi lambda sau procentul explicat: citești eticheta. Barele sau punctele mai înalte arată componente care explică mai mult. La test: „Prima componentă explică 55,95% din variație. Primele patru explică 85,06%, deci sunt suficiente pentru pragul de 80%. Kaiser recomandă trei.” Reține: mai întâi citești ce regulă cere problema. Când curba începe să se aplatizeze, axele următoare aduc mai puțină informație fiecare.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-10",
+      "module": "grafice",
+      "title": "Cercul corelațiilor PC1–PC2 — săgețile sunt indicatori",
+      "html": "<p><strong>Cum citești:</strong> săgeata arată în ce sens este legat indicatorul de axe.</p>\n<ul>\n<li>Săgeți în direcții apropiate: indicatorii tind să fie asociați pozitiv.</li>\n<li>Săgeți în direcții opuse: tind să fie asociați negativ.</li>\n<li>Săgeți aproape perpendiculare: sugerează legătură liniară slabă, dacă sunt bine reprezentate.</li>\n<li>Săgeată lungă, aproape de cerc: vezi bine indicatorul în acest plan.</li>\n<li>Săgeată scurtă: planul arată doar o parte mică din indicator.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test:</strong> „Planul explică 70,34%. Indicatorii digitali au direcții apropiate, iar NEET este în sens opus. PC1 descrie participarea digitală și integrarea economică și socială.”</p>\n<p class=\"remember\"><strong>Reține:</strong> când săgețile sunt scurte, interpretarea unghiurilor este nesigură. Perpendicular nu demonstrează independență.</p>\n<p><img alt=\"Cercul PC1–PC2\" aria-label=\"Mărește graficul: Cercul PC1–PC2\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/10_cerc_corelatii12.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: săgeata arată în ce sens este legat indicatorul de axe. Săgeți în direcții apropiate: indicatorii tind să fie asociați pozitiv. Săgeți în direcții opuse: tind să fie asociați negativ. Săgeți aproape perpendiculare: sugerează legătură liniară slabă, dacă sunt bine reprezentate. Săgeată lungă, aproape de cerc: vezi bine indicatorul în acest plan. Săgeată scurtă: planul arată doar o parte mică din indicator. La test: „Planul explică 70,34%. Indicatorii digitali au direcții apropiate, iar NEET este în sens opus. PC1 descrie participarea digitală și integrarea economică și socială.” Reține: când săgețile sunt scurte, interpretarea unghiurilor este nesigură. Perpendicular nu demonstrează independență.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-11",
+      "module": "grafice",
+      "title": "Cercul PC3–PC4 — aceeași regulă, alte axe",
+      "html": "<p><strong>Cum înțelegi:</strong> acum vezi alte două rezumate. Dreapta este PC3, nu PC1.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „PC3 opune densitatea și PIB-ul formării adulților. PC4 opune accesul la internet studiilor superioare. Planul explică încă 14,72% din variație.”</p>\n<p><img alt=\"Cercul PC3–PC4\" aria-label=\"Mărește graficul: Cercul PC3–PC4\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/10b_cerc_corelatii34.png\" tabindex=\"0\"/></p>\n<p><strong>Culorile în ambele cercuri:</strong></p>\n<ul>\n<li><code>contrib</code> = cât ajută indicatorul la construirea axelor afișate.</li>\n<li><code>cos2</code> = cât de bine este reprezentat indicatorul în plan.</li>\n</ul>\n<p>Lungimea și culoarea pot arăta lucruri diferite. Citești legenda; o culoare nu înseamnă automat situație favorabilă.</p>",
+      "text": "Cum înțelegi: acum vezi alte două rezumate. Dreapta este PC3, nu PC1. La test: „PC3 opune densitatea și PIB-ul formării adulților. PC4 opune accesul la internet studiilor superioare. Planul explică încă 14,72% din variație.” Culorile în ambele cercuri: contrib = cât ajută indicatorul la construirea axelor afișate. cos2 = cât de bine este reprezentat indicatorul în plan. Lungimea și culoarea pot arăta lucruri diferite. Citești legenda; o culoare nu înseamnă automat situație favorabilă.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-12",
+      "module": "grafice",
+      "title": "Regiunile pe PC1–PC2 — punctele sunt regiuni",
+      "html": "<p><strong>Cum citești:</strong> dreapta = scor PC1 mai mare; sus = scor PC2 mai mare. Dacă un punct este departe de zero, se distinge pe axele afișate.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Regiunile românești incluse au PC1 negativ, în sensul opus profilului favorabil descris de această axă. BE10 se distinge prin PC2 ridicat. Planul explică 70,34% din variație.”</p>\n<p class=\"remember\"><strong>Reține:</strong> punctele apropiate au scoruri apropiate în acest plan; pot diferi pe alte axe. Un punct aproape de zero poate avea totuși scoruri mari pe PC3 sau PC4.</p>\n<p>Cu <code>col.ind=\"cos2\"</code>, culoarea spune cât de bine vezi regiunea în acest plan, fără să spună cât de bogată este.</p>\n<p><img alt=\"Regiuni PC1–PC2\" aria-label=\"Mărește graficul: Regiuni PC1–PC2\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/13_regiuni12.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: dreapta = scor PC1 mai mare; sus = scor PC2 mai mare. Dacă un punct este departe de zero, se distinge pe axele afișate. La test: „Regiunile românești incluse au PC1 negativ, în sensul opus profilului favorabil descris de această axă. BE10 se distinge prin PC2 ridicat. Planul explică 70,34% din variație.” Reține: punctele apropiate au scoruri apropiate în acest plan; pot diferi pe alte axe. Un punct aproape de zero poate avea totuși scoruri mari pe PC3 sau PC4. Cu col.ind=\"cos2\" , culoarea spune cât de bine vezi regiunea în acest plan, fără să spună cât de bogată este.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-13",
+      "module": "grafice",
+      "title": "Regiunile pe PC3–PC4 — detaliile suplimentare",
+      "html": "<p class=\"model-answer\"><strong>La test:</strong> „Acest grafic arată diferențele suplimentare dintre regiuni pe axele 3 și 4. Regiuni apropiate în primul plan se pot separa aici.”</p>\n<p class=\"remember\"><strong>Reține:</strong> când schimbi axele, se schimbă și partea din profil pe care o vezi. Culoarea cos² este calitatea în noul plan.</p>\n<p><img alt=\"Regiuni PC3–PC4\" aria-label=\"Mărește graficul: Regiuni PC3–PC4\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/14_regiuni34.png\" tabindex=\"0\"/></p>",
+      "text": "La test: „Acest grafic arată diferențele suplimentare dintre regiuni pe axele 3 și 4. Regiuni apropiate în primul plan se pot separa aici.” Reține: când schimbi axele, se schimbă și partea din profil pe care o vezi. Culoarea cos² este calitatea în noul plan.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-14",
+      "module": "grafice",
+      "title": "Biplot — puncte și săgeți împreună",
+      "html": "<p><strong>Cum citești:</strong> punctele/codurile sunt regiuni, săgețile sunt indicatori. Verifici ce componentă este pe fiecare axă.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Dreapta corespunde PC1 mai mare, asociat participării digitale și integrării. Regiunile românești incluse se află în sensul negativ al acestei axe.”</p>\n<p>Pentru legătura regiune–indicator, contează cât de mult avansează punctul în direcția săgeții, în scalarea biplotului. Termenul este <strong>proiecție</strong>. Nu alegi regiunea doar după apropierea de vârful săgeții.</p>\n<p class=\"remember\"><strong>Reține:</strong> punctele și săgețile pot avea scări diferite; nu le citești automat ca în cercul corelațiilor.</p>\n<p><img alt=\"Biplot\" aria-label=\"Mărește graficul: Biplot\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/11_biplot.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: punctele/codurile sunt regiuni, săgețile sunt indicatori. Verifici ce componentă este pe fiecare axă. La test: „Dreapta corespunde PC1 mai mare, asociat participării digitale și integrării. Regiunile românești incluse se află în sensul negativ al acestei axe.” Pentru legătura regiune–indicator, contează cât de mult avansează punctul în direcția săgeții, în scalarea biplotului. Termenul este proiecție . Nu alegi regiunea doar după apropierea de vârful săgeții. Reține: punctele și săgețile pot avea scări diferite; nu le citești automat ca în cercul corelațiilor.",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-15",
+      "module": "grafice",
+      "title": "Biplot vertical — ai schimbat locul axelor",
+      "html": "<p><strong>Cum citești:</strong> PC1 este acum pe Y. Ce era „mai mult spre dreapta pe PC1” este acum „mai sus pe PC1”.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Profilul digital și economic mai favorabil este orientat în sus, deoarece PC1 este pe verticală. PC2 este pe orizontală. Rezultatele analizei sunt aceleași.”</p>\n<p><img alt=\"Biplot vertical\" aria-label=\"Mărește graficul: Biplot vertical\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/12_biplot_vertical.png\" tabindex=\"0\"/></p>",
+      "text": "Cum citești: PC1 este acum pe Y. Ce era „mai mult spre dreapta pe PC1” este acum „mai sus pe PC1”. La test: „Profilul digital și economic mai favorabil este orientat în sus, deoarece PC1 este pe verticală. PC2 este pe orizontală. Rezultatele analizei sunt aceleași.”",
+      "minutes": 1
+    },
+    {
+      "id": "grafice-16",
+      "module": "grafice",
+      "title": "Patru componente într-un singur grafic",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Ce privești</th>\n<th>Ce afli aici</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Poziția stânga–dreapta</td>\n<td>Scorul PC1</td>\n</tr>\n<tr>\n<td>Poziția jos–sus</td>\n<td>Scorul PC2</td>\n</tr>\n<tr>\n<td>Culoarea</td>\n<td>Scorul PC3</td>\n</tr>\n<tr>\n<td>Mărimea crescătoare</td>\n<td>Scorul PC4</td>\n</tr>\n</tbody>\n</table></div>\n<p class=\"model-answer\"><strong>La test:</strong> „Graficul reprezintă simultan primele patru componente, care explică 85,06%. Poziția arată PC1 și PC2, culoarea PC3, iar mărimea PC4.”</p>\n<p class=\"remember\"><strong>Reține:</strong> un punct mai mare are PC4 mai mare. Nu înseamnă automat situație mai bună sau populație mai mare. Doar pozițiile punctelor corespund celor 70,34% din primul plan; distanțele de pe ecran nu sunt distanțe complete în patru dimensiuni.</p>\n<p><img alt=\"Patru componente\" aria-label=\"Mărește graficul: Patru componente\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/16_primele_patru_componente.png\" tabindex=\"0\"/></p>\n<p><a href=\"#modul/start\">Înapoi</a> · <a href=\"#modul/recap\">Urmează: repetare</a></p>",
+      "text": "Ce privești Ce afli aici Poziția stânga–dreapta Scorul PC1 Poziția jos–sus Scorul PC2 Culoarea Scorul PC3 Mărimea crescătoare Scorul PC4 La test: „Graficul reprezintă simultan primele patru componente, care explică 85,06%. Poziția arată PC1 și PC2, culoarea PC3, iar mărimea PC4.” Reține: un punct mai mare are PC4 mai mare. Nu înseamnă automat situație mai bună sau populație mai mare. Doar pozițiile punctelor corespund celor 70,34% din primul plan; distanțele de pe ecran nu sunt distanțe complete în patru dimensiuni. Înapoi · Urmează: repetare",
+      "minutes": 1
+    },
+    {
+      "id": "recap-1",
+      "module": "recap",
+      "title": "Cele cinci întrebări",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Vezi</th>\n<th>Te întrebi</th>\n<th>Îți amintești</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Loading</td>\n<td>Cum intră indicatorul în componentă?</td>\n<td>Rețeta</td>\n</tr>\n<tr>\n<td>Matrice factor</td>\n<td>Cât este legat indicatorul de axă?</td>\n<td>Legătura</td>\n</tr>\n<tr>\n<td>Scor</td>\n<td>Unde se află regiunea?</td>\n<td>Locul</td>\n</tr>\n<tr>\n<td>Cos²</td>\n<td>Cât de bine se vede aici?</td>\n<td>Reprezentarea</td>\n</tr>\n<tr>\n<td>Contribuție</td>\n<td>Cât aduce la construirea axei?</td>\n<td>Aportul</td>\n</tr>\n</tbody>\n</table></div>",
+      "text": "Vezi Te întrebi Îți amintești Loading Cum intră indicatorul în componentă? Rețeta Matrice factor Cât este legat indicatorul de axă? Legătura Scor Unde se află regiunea? Locul Cos² Cât de bine se vede aici? Reprezentarea Contribuție Cât aduce la construirea axei? Aportul",
+      "minutes": 1
+    },
+    {
+      "id": "recap-2",
+      "module": "recap",
+      "title": "Citești numărul și spui propoziția",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Număr / desen</th>\n<th>Ce spui</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Mean 6,54%</td>\n<td>Media ratelor este 6,54%</td>\n</tr>\n<tr>\n<td>Median 6,30%</td>\n<td>Valoarea din mijloc este 6,30%</td>\n</tr>\n<tr>\n<td>SD 3,13 pentru o rată</td>\n<td>Abaterea standard este 3,13 puncte procentuale</td>\n</tr>\n<tr>\n<td>Q1=4,00%; Q3=8,05%</td>\n<td>Jumătatea centrală este între 4,00% și 8,05%</td>\n</tr>\n<tr>\n<td>Coadă spre dreapta</td>\n<td>Câteva valori sunt mult mai mari decât restul</td>\n</tr>\n<tr>\n<td>Punct separat în boxplot</td>\n<td>Valoare neobișnuită care trebuie verificată</td>\n</tr>\n<tr>\n<td>r=−0,74</td>\n<td>Când unul este mare, celălalt tinde să fie mic</td>\n</tr>\n<tr>\n<td>Medie≈0, SD=1</td>\n<td>Indicatorul este standardizat</td>\n</tr>\n<tr>\n<td>Proportion=0,56</td>\n<td>Această axă explică aproximativ 56%</td>\n</tr>\n<tr>\n<td>Cumulative=0,85 la PC4</td>\n<td>Primele patru axe explică aproximativ 85%</td>\n</tr>\n<tr>\n<td>Lambda</td>\n<td>Varianța componentei; SD înmulțit cu el însuși</td>\n</tr>\n<tr>\n<td>Variables: Dim=−0,80</td>\n<td>Indicatorul este puternic legat negativ de axă, în ACP standardizată</td>\n</tr>\n<tr>\n<td>Individuals: Dim=3</td>\n<td>Regiunea are scor pozitiv 3 pe axă</td>\n</tr>\n<tr>\n<td>Cos²=0,64</td>\n<td>Axa/planul reprezintă 64% din variația indicatorului sau din distanța pătratică a regiunii</td>\n</tr>\n<tr>\n<td>Ctr=20%</td>\n<td>Obiectul aduce 20% la construirea axei</td>\n</tr>\n<tr>\n<td>Dist mare</td>\n<td>Regiunea este departe de centrul datelor</td>\n</tr>\n<tr>\n<td>Masă=1/116</td>\n<td>Regiunea contează la fel ca fiecare dintre celelalte</td>\n</tr>\n<tr>\n<td>Inerție=0,6992</td>\n<td>Aport la împrăștierea totală, fără procent automat</td>\n</tr>\n<tr>\n<td>Săgeată scurtă în cerc</td>\n<td>Indicatorul se vede incomplet în acest plan</td>\n</tr>\n<tr>\n<td>Puncte apropiate</td>\n<td>Scoruri apropiate pe axele afișate</td>\n</tr>\n<tr>\n<td>Biplot</td>\n<td>Regiuni și indicatori în același desen</td>\n</tr>\n<tr>\n<td>Eroare 1e−14</td>\n<td>Rezultatele comparate practic coincid</td>\n</tr>\n</tbody>\n</table></div>",
+      "text": "Număr / desen Ce spui Mean 6,54% Media ratelor este 6,54% Median 6,30% Valoarea din mijloc este 6,30% SD 3,13 pentru o rată Abaterea standard este 3,13 puncte procentuale Q1=4,00%; Q3=8,05% Jumătatea centrală este între 4,00% și 8,05% Coadă spre dreapta Câteva valori sunt mult mai mari decât restul Punct separat în boxplot Valoare neobișnuită care trebuie verificată r=−0,74 Când unul este mare, celălalt tinde să fie mic Medie≈0, SD=1 Indicatorul este standardizat Proportion=0,56 Această axă explică aproximativ 56% Cumulative=0,85 la PC4 Primele patru axe explică aproximativ 85% Lambda Varianța componentei; SD înmulțit cu el însuși Variables: Dim=−0,80 Indicatorul este puternic legat negativ de axă, în ACP standardizată Individuals: Dim=3 Regiunea are scor pozitiv 3 pe axă Cos²=0,64 Axa/planul reprezintă 64% din variația indicatorului sau din distanța pătratică a regiunii Ctr=20% Obiectul aduce 20% la construirea axei Dist mare Regiunea este departe de centrul datelor Masă=1/116 Regiunea contează la fel ca fiecare dintre celelalte Inerție=0,6992 Aport la împrăștierea totală, fără procent automat Săgeată scurtă în cerc Indicatorul se vede incomplet în acest plan Puncte apropiate Scoruri apropiate pe axele afișate Biplot Regiuni și indicatori în același desen Eroare 1e−14 Rezultatele comparate practic coincid",
+      "minutes": 2
+    },
+    {
+      "id": "recap-3",
+      "module": "recap",
+      "title": "Verificările mai rare",
+      "html": "<ul>\n<li><strong>SS loadings=1:</strong> coeficienții au normă unu. Procentele explicate se citesc în summary.</li>\n<li><strong>crossprod(V) cu 1 pe diagonală și 0 în rest:</strong> direcțiile coeficienților sunt unitare și perpendiculare.</li>\n<li><strong>Suma cos² pe o coloană de variabile:</strong> lambda axei, în ACP standardizată.</li>\n<li><strong>Contribuții pe o axă:</strong> total 100%, adunând toate variabilele sau toate regiunile.</li>\n<li><strong>Cos² pe toate axele pentru același obiect:</strong> total 1, pentru o regiune cu distanță nenulă.</li>\n<li><strong>Scoruri manuale puțin diferite:</strong> verifică standardizarea cu n−1 versus n.</li>\n<li><strong>Suma lambda=12:</strong> păstrarea variației totale a celor 12 indicatori standardizați.</li>\n<li><strong>Produs lambda=determinant:</strong> păstrarea varianței generalizate.</li>\n<li><strong>ncp=12:</strong> coordonate stocate pentru 12 axe; numărul interpretat se alege separat.</li>\n</ul>",
+      "text": "SS loadings=1: coeficienții au normă unu. Procentele explicate se citesc în summary. crossprod(V) cu 1 pe diagonală și 0 în rest: direcțiile coeficienților sunt unitare și perpendiculare. Suma cos² pe o coloană de variabile: lambda axei, în ACP standardizată. Contribuții pe o axă: total 100%, adunând toate variabilele sau toate regiunile. Cos² pe toate axele pentru același obiect: total 1, pentru o regiune cu distanță nenulă. Scoruri manuale puțin diferite: verifică standardizarea cu n−1 versus n. Suma lambda=12: păstrarea variației totale a celor 12 indicatori standardizați. Produs lambda=determinant: păstrarea varianței generalizate. ncp=12: coordonate stocate pentru 12 axe; numărul interpretat se alege separat.",
+      "minutes": 1
+    },
+    {
+      "id": "recap-4",
+      "module": "recap",
+      "title": "Două propoziții pentru orice output",
+      "html": "<blockquote>\n<p>„Acest tabel/grafic arată … . Valoarea/poziția … înseamnă că … .”</p>\n</blockquote>\n<p>Apoi, dacă este cazul: „Mă refer la planul afișat” sau „Este o asociere, fără concluzie cauzală”.</p>\n<p><strong>Ultima verificare:</strong> citesc indicatori sau regiuni? Ce axe sunt afișate? Ce arată culoarea? Ce arată mărimea?</p>\n<p><a href=\"#modul/start\">Înapoi la început</a></p>",
+      "text": "„Acest tabel/grafic arată … . Valoarea/poziția … înseamnă că … .” Apoi, dacă este cazul: „Mă refer la planul afișat” sau „Este o asociere, fără concluzie cauzală”. Ultima verificare: citesc indicatori sau regiuni? Ce axe sunt afișate? Ce arată culoarea? Ce arată mărimea? Înapoi la început",
+      "minutes": 1
+    }
+  ]
+}
