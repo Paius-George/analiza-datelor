@@ -1,0 +1,49 @@
+name: Configurează accesul aprobat
+
+on:
+  workflow_dispatch:
+    inputs:
+      emails:
+        description: Lista completă a adreselor aprobate, separate prin virgulă
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: aplicatie-partial
+
+jobs:
+  configure:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: cloudflare-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: aplicatie-partial/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: npm run build
+      - name: Configurează One-time PIN și lista de e-mailuri
+        id: access
+        run: node scripts/configure-access.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          APPROVED_EMAILS: ${{ inputs.emails }}
+      - name: Publică aplicația autentificată
+        run: npm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ACCESS_TEAM_DOMAIN: ${{ steps.access.outputs.domain }}
+          ACCESS_AUD: ${{ steps.access.outputs.audience }}

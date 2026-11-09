@@ -28,6 +28,18 @@ Workflow-ul testează, construiește și publică Workerul `analiza-datelor`. UR
 
 ## 3. Activează autentificarea și aprobă adresele
 
+### Configurare automată din GitHub
+
+Tokenul de publicare trebuie să aibă și permisiunile de cont **Access: Apps and Policies — Edit/Write** și **Access: Organizations, Identity Providers, and Groups — Edit/Write**. Acestea se adaugă în politica de cont a tokenului existent; secretul GitHub nu trebuie regenerat când se schimbă doar permisiunile.
+
+În **Actions → Configurează accesul aprobat → Run workflow**, introdu **lista completă** a adreselor autorizate, separate prin virgulă, inclusiv adresa proprietarului. Workflow-ul configurează One-time PIN și o politică Allow cu exact aceste adrese, apoi publică aplicația autentificată. Refolosește organizația Zero Trust existentă și creează una numai dacă lipsește. Nu modifică abonamente sau metode de plată. La prima publicare este înregistrat automat un subdomeniu `workers.dev`, dacă nu există deja.
+
+Pasul de configurare afișează `ACCESS_TEAM_DOMAIN` și `ACCESS_AUD`. Salvează-le ca **repository variables** în GitHub pentru publicările automate viitoare, apoi setează `CLOUDFLARE_DEPLOY_ENABLED=true`. Aceste două valori sunt configurație publică, nu tokenuri de autentificare. Workflow-ul de configurare nu modifică singur variabilele repository-ului.
+
+După setup poți gestiona adresele direct în Cloudflare. Rularea din nou a workflow-ului de configurare **înlocuiește lista** cu lista completă introdusă; publicările obișnuite ale aplicației nu modifică lista.
+
+### Configurare din interfața Cloudflare
+
 1. În Cloudflare, deschide **Zero Trust** și finalizează configurarea organizației. Alege planul potrivit numărului tău de utilizatori și verifică limitele afișate înainte să confirmi planul.
 2. În **Settings → Authentication → Login methods**, adaugă **One-time PIN**, dacă nu este deja disponibil.
 3. În **Workers & Pages → analiza-datelor → Access**, alege **Protect this Worker behind Access → All traffic**. Protecția trebuie să includă producția, nu doar preview-urile.
