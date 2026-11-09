@@ -2,7 +2,7 @@
 
 Materiale de curs, seminarii și aplicația de pregătire pentru parțial.
 
-Aplicația este în [`aplicatie-partial/`](aplicatie-partial/README.md). Include 55 de lecții, exerciții cu feedback, cartonașe și patru simulări de parțial. Progresul se păstrează în browserul fiecărui coleg.
+Aplicația este în [`aplicatie-partial/`](aplicatie-partial/README.md). Include 73 de lecții, exerciții cu feedback, cartonașe și patru simulări de parțial. Progresul se păstrează în browserul fiecărui coleg.
 
 ## Acces pentru colegi
 

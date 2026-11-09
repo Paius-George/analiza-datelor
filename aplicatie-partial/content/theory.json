@@ -120,6 +120,46 @@
       ],
       "file": "05_RECAPITULARE_RAPIDA.md",
       "sha256": "8120a5979277c8aace32e1b028ffabafbcf52e6e5e1c52d0a3f0faf3aee65888"
+    },
+    {
+      "id": "corespondente",
+      "title": "Seminarul 7 · Corespondențe",
+      "eyebrow": "Materia nouă",
+      "description": "Tabele de contingență, inerție, categorii și interpretarea outputului ca().",
+      "icon": "chart",
+      "lessons": [
+        "corespondente-0",
+        "corespondente-1",
+        "corespondente-2",
+        "corespondente-3",
+        "corespondente-4",
+        "corespondente-5",
+        "corespondente-6",
+        "corespondente-7",
+        "corespondente-8",
+        "corespondente-9",
+        "corespondente-10"
+      ],
+      "file": "01_SEMINAR7_EXPLICAT_SIMPLU.md",
+      "sha256": "e4a1e61a4024c993935d00c12115f77d2cbc9b34f3f73d1e18951b864b117b75"
+    },
+    {
+      "id": "test-scris",
+      "title": "Testul scris de mână",
+      "eyebrow": "Exersează pe hârtie",
+      "description": "Simulări ACP și analiza corespondențelor, cu răspunsuri-model și barem de antrenament.",
+      "icon": "bookmark",
+      "lessons": [
+        "test-scris-1",
+        "test-scris-2",
+        "test-scris-3",
+        "test-scris-4",
+        "test-scris-5",
+        "test-scris-6",
+        "test-scris-7"
+      ],
+      "file": "02_ANTRENAMENT_SCRIS_DE_MANA.md",
+      "sha256": "0d424e3b67bd77d895c88da0060cc7375f9058491a66c020f6679cc6bf256d8b"
     }
   ],
   "lessons": [
@@ -561,6 +601,150 @@
       "title": "Două propoziții pentru orice output",
       "html": "<blockquote>\n<p>„Acest tabel/grafic arată … . Valoarea/poziția … înseamnă că … .”</p>\n</blockquote>\n<p>Apoi, dacă este cazul: „Mă refer la planul afișat” sau „Este o asociere, fără concluzie cauzală”.</p>\n<p><strong>Ultima verificare:</strong> citesc indicatori sau regiuni? Ce axe sunt afișate? Ce arată culoarea? Ce arată mărimea?</p>\n<p><a href=\"#modul/start\">Înapoi la început</a></p>",
       "text": "„Acest tabel/grafic arată … . Valoarea/poziția … înseamnă că … .” Apoi, dacă este cazul: „Mă refer la planul afișat” sau „Este o asociere, fără concluzie cauzală”. Ultima verificare: citesc indicatori sau regiuni? Ce axe sunt afișate? Ce arată culoarea? Ce arată mărimea? Înapoi la început",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-0",
+      "module": "corespondente",
+      "title": "Seminarul 7 — analiza corespondențelor, explicată simplu",
+      "html": "<p>Sursa: <code>Seminarii/Seminar 7.pdf</code> și <code>Cursuri/cap2 - ACoresp.pdf</code>. Textul profesorului confirmă interpretările scrise de mână pentru materia lucrată. PDF-ul nou trebuie pregătit și el, fără să presupunem că știm exact subiectele de vineri.</p>\n<p><strong>Important:</strong> acesta este exemplul profesorului, cu <strong>179 de observații</strong>, nu o analiză nouă a celor 116 regiuni din proiect. Codurile diferă: internet banking este X8 în exemplul PDF, dar X3 în proiectul nostru. Citești întotdeauna denumirile din subiect.</p>\n<p><a href=\"/materiale/Seminar%207.pdf\">Descarcă PDF-ul original — Seminarul 7</a></p>",
+      "text": "Sursa: Seminarii/Seminar 7.pdf și Cursuri/cap2 - ACoresp.pdf . Textul profesorului confirmă interpretările scrise de mână pentru materia lucrată. PDF-ul nou trebuie pregătit și el, fără să presupunem că știm exact subiectele de vineri. Important: acesta este exemplul profesorului, cu 179 de observații , nu o analiză nouă a celor 116 regiuni din proiect. Codurile diferă: internet banking este X8 în exemplul PDF, dar X3 în proiectul nostru. Citești întotdeauna denumirile din subiect. Descarcă PDF-ul original — Seminarul 7",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-1",
+      "module": "corespondente",
+      "title": "Ce este nou față de ACP?",
+      "html": "<p>La ACP aveai indicatori numerici: de exemplu, procentul utilizării internetului.</p>\n<p>Aici împarți valorile în categorii. De exemplu: nivel ridicat, mediu, redus. Analizezi apoi dacă nivelul unui indicator este asociat cu nivelul celuilalt.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Analiza corespondențelor studiază asocierea dintre două variabile categoriale, pornind de la un tabel de contingență.”</p>\n<p class=\"remember\"><strong>Reține:</strong> ACP = indicatori numerici. Analiza corespondențelor = categorii și număr de observații în combinațiile lor.</p>",
+      "text": "La ACP aveai indicatori numerici: de exemplu, procentul utilizării internetului. Aici împarți valorile în categorii. De exemplu: nivel ridicat, mediu, redus. Analizezi apoi dacă nivelul unui indicator este asociat cu nivelul celuilalt. La test: „Analiza corespondențelor studiază asocierea dintre două variabile categoriale, pornind de la un tabel de contingență.” Reține: ACP = indicatori numerici. Analiza corespondențelor = categorii și număr de observații în combinațiile lor.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-2",
+      "module": "corespondente",
+      "title": "Tabelul de contingență — câte observații sunt în fiecare combinație?",
+      "html": "<p>Tabelul profesorului:</p>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th></th>\n<th style=\"text-align: right;\">Ban_M</th>\n<th style=\"text-align: right;\">Ban_Mij</th>\n<th style=\"text-align: right;\">Ban_P</th>\n<th style=\"text-align: right;\">Total linie</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Acc_M</td>\n<td style=\"text-align: right;\">44</td>\n<td style=\"text-align: right;\">15</td>\n<td style=\"text-align: right;\">2</td>\n<td style=\"text-align: right;\">61</td>\n</tr>\n<tr>\n<td>Acc_Mij</td>\n<td style=\"text-align: right;\">13</td>\n<td style=\"text-align: right;\">37</td>\n<td style=\"text-align: right;\">9</td>\n<td style=\"text-align: right;\">59</td>\n</tr>\n<tr>\n<td>Acc_P</td>\n<td style=\"text-align: right;\">4</td>\n<td style=\"text-align: right;\">7</td>\n<td style=\"text-align: right;\">48</td>\n<td style=\"text-align: right;\">59</td>\n</tr>\n<tr>\n<td>Total coloană</td>\n<td style=\"text-align: right;\">61</td>\n<td style=\"text-align: right;\">59</td>\n<td style=\"text-align: right;\">59</td>\n<td style=\"text-align: right;\">179</td>\n</tr>\n</tbody>\n</table></div>\n<p><strong>37</strong> înseamnă 37 de observații care au simultan categoria <code>Acc_Mij</code> și categoria <code>Ban_Mij</code>. Nu este procent și nu este corelație.</p>\n<p>Etichetele M, Mij, P sunt categoriile folosite de autor; sensul și pragurile se citesc din enunț.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Cele 37 de observații din celula centrală aparțin simultan categoriilor Acc_Mij și Ban_Mij.”</p>",
+      "text": "Tabelul profesorului: Ban_M Ban_Mij Ban_P Total linie Acc_M 44 15 2 61 Acc_Mij 13 37 9 59 Acc_P 4 7 48 59 Total coloană 61 59 59 179 37 înseamnă 37 de observații care au simultan categoria Acc_Mij și categoria Ban_Mij . Nu este procent și nu este corelație. Etichetele M, Mij, P sunt categoriile folosite de autor; sensul și pragurile se citesc din enunț. La test: „Cele 37 de observații din celula centrală aparțin simultan categoriilor Acc_Mij și Ban_Mij.”",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-3",
+      "module": "corespondente",
+      "title": "Observat versus așteptat — apare combinația mai des decât ne-am aștepta?",
+      "html": "<ul>\n<li><strong>Observat:</strong> ce ai numărat în date: 37.</li>\n<li><strong>Așteptat la independență:</strong> cât ar rezulta dacă cele două clasificări nu ar fi asociate.</li>\n</ul>\n<p>Pentru celula centrală, totalul liniei este 59, totalul coloanei este 59, iar totalul general este 179. Valoarea așteptată este <code>59 × 59 / 179 ≈ 19,45</code>.</p>\n<p>PDF-ul afișează 19,44; calculul cu precizie completă este 19,4469. Diferența ultimelor zecimale nu schimbă interpretarea.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Combinația Acc_Mij–Ban_Mij apare de 37 de ori, peste valoarea așteptată de aproximativ 19,45 în condiții de independență. Combinația este supra-reprezentată.”</p>\n<p class=\"remember\"><strong>Reține:</strong> observat &gt; așteptat = combinație mai frecventă decât la independență. Observat &lt; așteptat = combinație mai rară. Nu numești automat orice abatere mică semnificativă statistic.</p>",
+      "text": "Observat: ce ai numărat în date: 37. Așteptat la independență: cât ar rezulta dacă cele două clasificări nu ar fi asociate. Pentru celula centrală, totalul liniei este 59, totalul coloanei este 59, iar totalul general este 179. Valoarea așteptată este 59 × 59 / 179 ≈ 19,45 . PDF-ul afișează 19,44; calculul cu precizie completă este 19,4469. Diferența ultimelor zecimale nu schimbă interpretarea. La test: „Combinația Acc_Mij–Ban_Mij apare de 37 de ori, peste valoarea așteptată de aproximativ 19,45 în condiții de independență. Combinația este supra-reprezentată.” Reține: observat > așteptat = combinație mai frecventă decât la independență. Observat < așteptat = combinație mai rară. Nu numești automat orice abatere mică semnificativă statistic.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-4",
+      "module": "corespondente",
+      "title": "Există legătură între variabile?",
+      "html": "<p>Dacă primești un test chi-pătrat:</p>\n<pre><code class=\"language-text\">p-value &lt; 0.05\n</code></pre>\n<p class=\"model-answer\"><strong>La test:</strong> „La pragul de 5%, respingem ipoteza independenței; există dovezi de asociere între cele două variabile categoriale.”</p>\n<p>Dacă p-value &gt; 0,05: „Nu avem suficiente dovezi pentru a respinge independența la pragul de 5%.” Nu spui că independența este demonstrată.</p>\n<p>Pentru tabelul profesorului, calculul din cele nouă frecvențe dă chi-pătrat ≈130,281, cu 4 grade de libertate și p≈3,39e−27. Rezultă o abatere puternică de la independență. Acest calcul a fost verificat aritmetic, fără executarea unei analize R noi.</p>\n<p class=\"remember\"><strong>Reține:</strong> asociere nu înseamnă cauzalitate. Inerția pozitivă singură nu ține locul unui test de semnificație.</p>",
+      "text": "Dacă primești un test chi-pătrat: p-value < 0.05 La test: „La pragul de 5%, respingem ipoteza independenței; există dovezi de asociere între cele două variabile categoriale.” Dacă p-value > 0,05: „Nu avem suficiente dovezi pentru a respinge independența la pragul de 5%.” Nu spui că independența este demonstrată. Pentru tabelul profesorului, calculul din cele nouă frecvențe dă chi-pătrat ≈130,281, cu 4 grade de libertate și p≈3,39e−27. Rezultă o abatere puternică de la independență. Acest calcul a fost verificat aritmetic, fără executarea unei analize R noi. Reține: asociere nu înseamnă cauzalitate. Inerția pozitivă singură nu ține locul unui test de semnificație.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-5",
+      "module": "corespondente",
+      "title": "Principal inertias — cât explică axele?",
+      "html": "<p>Outputul din PDF:</p>\n<pre><code class=\"language-text\">Principal inertias (eigenvalues)\n       value       %     cum%\n1      0.549751    75.5    75.5\n2      0.178074    24.5   100.0\nTotal  0.727824   100.0\n</code></pre>\n<p><strong>Cum citești:</strong> prima axă preia 75,5% din inerția totală; a doua adaugă 24,5%. Împreună, cele două axe descriu 100% din inerția acestui tabel 3×3.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Prima axă explică 75,5% din inerția totală, iar primele două axe explică împreună 100%.”</p>\n<p><strong>Capcană:</strong> nu spui că lambda trebuie să fie peste 1 pentru a păstra axa. Criteriul Kaiser din ACP standardizată nu se aplică mecanic aici. Inerția totală nu trebuie să fie 12 sau numărul categoriilor.</p>",
+      "text": "Outputul din PDF: Principal inertias (eigenvalues)\n       value       %     cum%\n1      0.549751    75.5    75.5\n2      0.178074    24.5   100.0\nTotal  0.727824   100.0 Cum citești: prima axă preia 75,5% din inerția totală; a doua adaugă 24,5%. Împreună, cele două axe descriu 100% din inerția acestui tabel 3×3. La test: „Prima axă explică 75,5% din inerția totală, iar primele două axe explică împreună 100%.” Capcană: nu spui că lambda trebuie să fie peste 1 pentru a păstra axa. Criteriul Kaiser din ACP standardizată nu se aplică mecanic aici. Inerția totală nu trebuie să fie 12 sau numărul categoriilor.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-6",
+      "module": "corespondente",
+      "title": "Rows și Columns — aici sunt categorii",
+      "html": "<ul>\n<li><strong>Rows:</strong> categoriile variabilei de pe linii: Acc_M, Acc_Mij, Acc_P.</li>\n<li><strong>Columns:</strong> categoriile variabilei de pe coloane: Ban_M, Ban_Mij, Ban_P.</li>\n</ul>\n<p>Nu sunt regiuni individuale și nu sunt loadings de ACP.</p>\n<p><strong>În această afișare a summary(ca), multe numere sunt multiplicate cu 1000.</strong> De aceea trebuie traduse înainte să le interpretezi.</p>\n<p>Pentru Acc_M, PDF-ul arată:</p>\n<pre><code class=\"language-text\">mass 341   qlt 1000   inr 334 | k=1 -739   cor 765   ctr 338\n</code></pre>\n<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Ce vezi</th>\n<th>Cum citești</th>\n<th>Ce înseamnă</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>mass 341</td>\n<td>aproximativ 0,341 = 34,1%</td>\n<td>Categoria cuprinde circa 34,1% dintre observații</td>\n</tr>\n<tr>\n<td>qlt 1000</td>\n<td>1 = 100%</td>\n<td>Axele afișate descriu complet categoria</td>\n</tr>\n<tr>\n<td>inr 334</td>\n<td>aproximativ 33,4%</td>\n<td>Aportul categoriei la inerția totală</td>\n</tr>\n<tr>\n<td>k=1 −739</td>\n<td>coordonata aproximativ −0,739</td>\n<td>Categoria este în sensul negativ al primei axe</td>\n</tr>\n<tr>\n<td>cor 765</td>\n<td>cos²=0,765 = 76,5%</td>\n<td>Prima axă reprezintă 76,5% din distanța pătratică a categoriei față de centru</td>\n</tr>\n<tr>\n<td>ctr 338</td>\n<td>aproximativ 33,8%</td>\n<td>Contribuția categoriei la inerția primei axe</td>\n</tr>\n</tbody>\n</table></div>\n<p class=\"model-answer\"><strong>La test:</strong> „Acc_M reprezintă aproximativ 34,1% dintre observații și contribuie cu 33,4% la inerția totală. Are coordonată negativă pe prima axă, care o reprezintă în proporție de 76,5%, și contribuie cu 33,8% la inerția acelei axe.”</p>\n<p class=\"remember\"><strong>Reține:</strong> <code>cor</code> din acest output este cos², nu coeficient Pearson cu semn. <code>inr</code> privește inerția totală; <code>ctr</code> privește axa. <code>qlt</code> privește calitatea în ansamblul axelor afișate. Nu presupui că orice alt pachet afișează aceiași factori de scalare.</p>",
+      "text": "Rows: categoriile variabilei de pe linii: Acc_M, Acc_Mij, Acc_P. Columns: categoriile variabilei de pe coloane: Ban_M, Ban_Mij, Ban_P. Nu sunt regiuni individuale și nu sunt loadings de ACP. În această afișare a summary(ca), multe numere sunt multiplicate cu 1000. De aceea trebuie traduse înainte să le interpretezi. Pentru Acc_M, PDF-ul arată: mass 341   qlt 1000   inr 334 | k=1 -739   cor 765   ctr 338 Ce vezi Cum citești Ce înseamnă mass 341 aproximativ 0,341 = 34,1% Categoria cuprinde circa 34,1% dintre observații qlt 1000 1 = 100% Axele afișate descriu complet categoria inr 334 aproximativ 33,4% Aportul categoriei la inerția totală k=1 −739 coordonata aproximativ −0,739 Categoria este în sensul negativ al primei axe cor 765 cos²=0,765 = 76,5% Prima axă reprezintă 76,5% din distanța pătratică a categoriei față de centru ctr 338 aproximativ 33,8% Contribuția categoriei la inerția primei axe La test: „Acc_M reprezintă aproximativ 34,1% dintre observații și contribuie cu 33,4% la inerția totală. Are coordonată negativă pe prima axă, care o reprezintă în proporție de 76,5%, și contribuie cu 33,8% la inerția acelei axe.” Reține: cor din acest output este cos², nu coeficient Pearson cu semn. inr privește inerția totală; ctr privește axa. qlt privește calitatea în ansamblul axelor afișate. Nu presupui că orice alt pachet afișează aceiași factori de scalare.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-7",
+      "module": "corespondente",
+      "title": "Cine contribuie cel mai mult?",
+      "html": "<p>Din <code>inr</code>:</p>\n<ul>\n<li>Pe linii: Acc_P are 482 → circa <strong>48,2% din inerția totală</strong>.</li>\n<li>Pe coloane: Ban_P are 490 → circa <strong>49,0% din inerția totală</strong>.</li>\n</ul>\n<p class=\"model-answer\"><strong>La test:</strong> „Categoriile Acc_P și Ban_P au cele mai mari contribuții la inerția totală în seturile lor de categorii.”</p>\n<p>Din <code>ctr</code> pentru axa 1: Acc_P are 623 → <strong>62,3%</strong>; Ban_P are 638 → <strong>63,8%</strong>.</p>\n<p>Din <code>ctr</code> pentru axa 2: Acc_Mij are 631 → <strong>63,1%</strong>; Ban_Mij are 614 → <strong>61,4%</strong>.</p>\n<p class=\"remember\"><strong>Reține:</strong> dacă se cere „totală”, citești inr. Dacă se cere „prima axă”, citești ctr pentru k=1. Verifici separat liniile și coloanele; nu aduni ambele grupuri ca și cum ar forma o singură listă de contribuții.</p>",
+      "text": "Din inr : Pe linii: Acc_P are 482 → circa 48,2% din inerția totală . Pe coloane: Ban_P are 490 → circa 49,0% din inerția totală . La test: „Categoriile Acc_P și Ban_P au cele mai mari contribuții la inerția totală în seturile lor de categorii.” Din ctr pentru axa 1: Acc_P are 623 → 62,3% ; Ban_P are 638 → 63,8% . Din ctr pentru axa 2: Acc_Mij are 631 → 63,1% ; Ban_Mij are 614 → 61,4% . Reține: dacă se cere „totală”, citești inr. Dacă se cere „prima axă”, citești ctr pentru k=1. Verifici separat liniile și coloanele; nu aduni ambele grupuri ca și cum ar forma o singură listă de contribuții.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-8",
+      "module": "corespondente",
+      "title": "Graficul — ce categorii sunt asociate?",
+      "html": "<p>În desen, punctele albastre reprezintă categoriile de pe linii, iar cele roșii categoriile de pe coloane.</p>\n<p>Graficul sugerează asocierile Acc_M–Ban_M, Acc_Mij–Ban_Mij și Acc_P–Ban_P. Tabelul le susține: celulele corespunzătoare au 44, 37 și 48 de observații, peste frecvențele așteptate.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Se observă asocierea categoriilor omoloage ale celor două variabile, susținută de supra-reprezentarea celulelor corespunzătoare în tabel. Prima axă separă mai ales categoriile P de celelalte; axa a doua distinge categoriile M de Mij.”</p>\n<p><strong>Capcană:</strong> apropierea dintre un punct de linie și unul de coloană nu este, singură, o măsură exactă a asocierii. Verifici frecvențele/profilurile și calitatea reprezentării; nu aplici mecanic regula distanței dintre două regiuni din ACP.</p>\n<p><img alt=\"Outputul original din seminarul 7\" aria-label=\"Mărește graficul: Outputul original din seminarul 7\" decoding=\"async\" loading=\"lazy\" role=\"button\" src=\"/theory/images/seminar7-output-ca.png\" tabindex=\"0\"/></p>",
+      "text": "În desen, punctele albastre reprezintă categoriile de pe linii, iar cele roșii categoriile de pe coloane. Graficul sugerează asocierile Acc_M–Ban_M, Acc_Mij–Ban_Mij și Acc_P–Ban_P. Tabelul le susține: celulele corespunzătoare au 44, 37 și 48 de observații, peste frecvențele așteptate. La test: „Se observă asocierea categoriilor omoloage ale celor două variabile, susținută de supra-reprezentarea celulelor corespunzătoare în tabel. Prima axă separă mai ales categoriile P de celelalte; axa a doua distinge categoriile M de Mij.” Capcană: apropierea dintre un punct de linie și unul de coloană nu este, singură, o măsură exactă a asocierii. Verifici frecvențele/profilurile și calitatea reprezentării; nu aplici mecanic regula distanței dintre două regiuni din ACP.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-9",
+      "module": "corespondente",
+      "title": "Contribuția celulei centrale la inerție",
+      "html": "<p>PDF-ul cere și acest calcul. Pentru celula cu 37, contribuția la inerție este aproximativ <strong>0,08851</strong>.</p>\n<p>Se calculează din abaterea pătratică observat–așteptat, împărțită la așteptat și apoi la 179. Cu valoarea așteptată calculată fără rotunjire, rezultatul este aproximativ 0,088512.</p>\n<p class=\"model-answer\"><strong>La test:</strong> „Celula Acc_Mij–Ban_Mij contribuie cu aproximativ 0,08851 la inerția totală de 0,727824.”</p>\n<p>Aceasta este o contribuție absolută. Nu spui automat 8,851% din inerția totală. Pentru pondere în total ai raporta 0,08851 la 0,727824, ceea ce înseamnă aproximativ 12,16%.</p>",
+      "text": "PDF-ul cere și acest calcul. Pentru celula cu 37, contribuția la inerție este aproximativ 0,08851 . Se calculează din abaterea pătratică observat–așteptat, împărțită la așteptat și apoi la 179. Cu valoarea așteptată calculată fără rotunjire, rezultatul este aproximativ 0,088512. La test: „Celula Acc_Mij–Ban_Mij contribuie cu aproximativ 0,08851 la inerția totală de 0,727824.” Aceasta este o contribuție absolută. Nu spui automat 8,851% din inerția totală. Pentru pondere în total ai raporta 0,08851 la 0,727824, ceea ce înseamnă aproximativ 12,16%.",
+      "minutes": 1
+    },
+    {
+      "id": "corespondente-10",
+      "module": "corespondente",
+      "title": "Ce reții prima dată",
+      "html": "<ol>\n<li>Tabelul conține <strong>numere de observații</strong> în combinații de categorii.</li>\n<li>Observat peste așteptat înseamnă <strong>supra-reprezentare</strong>.</li>\n<li>Prima axă explică <strong>75,5%</strong> în exemplul profesorului.</li>\n<li>În acest print, <strong>765 la cor = cos² 0,765</strong>.</li>\n<li><strong>inr = total; ctr = axă</strong>.</li>\n<li>Kaiser cu lambda&gt;1 nu se transferă aici din ACP.</li>\n</ol>",
+      "text": "Tabelul conține numere de observații în combinații de categorii. Observat peste așteptat înseamnă supra-reprezentare . Prima axă explică 75,5% în exemplul profesorului. În acest print, 765 la cor = cos² 0,765 . inr = total; ctr = axă . Kaiser cu lambda>1 nu se transferă aici din ACP.",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-1",
+      "module": "test-scris",
+      "title": "Ce schimbă mesajul profesorului",
+      "html": "<p>Vei vedea outputul pe computer, dar vei scrie interpretarea de mână. Prioritatea este să poți formula singur două-patru propoziții, cu o valoare concretă și sensul ei.</p>\n<p>Profesorul numește explicit: matricea de corelație, Kaiser, matricea factor, interpretarea componentelor și reprezentarea grafică. „Cam tot ce am făcut” înseamnă că nu este prudent să ignori summary, scoruri, cos², contribuții și descriptive.</p>\n<p>Seminarul 7 primit luni adaugă analiza corespondențelor. Îl pregătim și pe acesta; mesajul nu enumeră însă exact ce itemi va conține testul. Nu avem un barem oficial sau o durată confirmată.</p>",
+      "text": "Vei vedea outputul pe computer, dar vei scrie interpretarea de mână. Prioritatea este să poți formula singur două-patru propoziții, cu o valoare concretă și sensul ei. Profesorul numește explicit: matricea de corelație, Kaiser, matricea factor, interpretarea componentelor și reprezentarea grafică. „Cam tot ce am făcut” înseamnă că nu este prudent să ignori summary, scoruri, cos², contribuții și descriptive. Seminarul 7 primit luni adaugă analiza corespondențelor. Îl pregătim și pe acesta; mesajul nu enumeră însă exact ce itemi va conține testul. Nu avem un barem oficial sau o durată confirmată.",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-2",
+      "module": "test-scris",
+      "title": "Cum procedezi la fiecare output",
+      "html": "<ol>\n<li>Scrii ce reprezintă tabelul sau graficul.</li>\n<li>Alegi una-două valori relevante, cu semnul lor.</li>\n<li>Spui ce înseamnă în context.</li>\n<li>Dacă este un grafic ACP, precizezi planul și câtă variație explică.</li>\n</ol>\n<p>Ținta este un răspuns scurt și complet, fără o pagină de definiții.</p>",
+      "text": "Scrii ce reprezintă tabelul sau graficul. Alegi una-două valori relevante, cu semnul lor. Spui ce înseamnă în context. Dacă este un grafic ACP, precizezi planul și câtă variație explică. Ținta este un răspuns scurt și complet, fără o pagină de definiții.",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-3",
+      "module": "test-scris",
+      "title": "Cinci începuturi de răspuns de memorat",
+      "html": "<div class=\"table-scroll\"><table>\n<thead>\n<tr>\n<th>Dacă primești…</th>\n<th>Începi astfel</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Corelații</td>\n<td>„Între … și … există asociere liniară …, cu r=….”</td>\n</tr>\n<tr>\n<td>Lambda / Kaiser</td>\n<td>„… valori proprii depășesc 1, deci Kaiser recomandă … axe.”</td>\n</tr>\n<tr>\n<td>Matrice factor</td>\n<td>„Componenta se corelează pozitiv cu … și negativ cu …; descrie ….”</td>\n</tr>\n<tr>\n<td>Grafic ACP</td>\n<td>„Planul … explică …%; poziția / direcția … indică ….”</td>\n</tr>\n<tr>\n<td>Analiza corespondențelor</td>\n<td>„Categoriile … sunt asociate; interpretarea este susținută de ….”</td>\n</tr>\n</tbody>\n</table></div>",
+      "text": "Dacă primești… Începi astfel Corelații „Între … și … există asociere liniară …, cu r=….” Lambda / Kaiser „… valori proprii depășesc 1, deci Kaiser recomandă … axe.” Matrice factor „Componenta se corelează pozitiv cu … și negativ cu …; descrie ….” Grafic ACP „Planul … explică …%; poziția / direcția … indică ….” Analiza corespondențelor „Categoriile … sunt asociate; interpretarea este susținută de ….”",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-4",
+      "module": "test-scris",
+      "title": "Simulare A — materia ACP, pe hârtie",
+      "html": "<p>Durată propusă: 35 de minute. Barem de antrenament: 1 punct din oficiu și 9 puncte pentru cele patru cerințe. Nu este baremul profesorului.</p>\n<p>Copiază numai răspunsurile tale pe o foaie. Citește baremul abia la final.</p>\n<h3>1. Corelații — 2 puncte</h3>\n<pre><code class=\"language-text\">Internet zilnic – PIB:           0.585\nOcupare – somaj:                -0.739\n</code></pre>\n<p>Scrie câte o propoziție de interpretare pentru fiecare pereche și o limită a concluziilor.</p>\n<h3>2. Alegerea componentelor — 2 puncte</h3>\n<p>Analiză pe corelații:</p>\n<pre><code class=\"language-text\">           PC1     PC2     PC3     PC4\nlambda     6.714   1.727   1.096   0.670\ncumulat%  55.95   70.34   79.47   85.06\n</code></pre>\n<p>Câte axe recomandă Kaiser? Câte alegi pentru minimum 80%? Justifică ambele răspunsuri.</p>\n<h3>3. Interpretarea componentelor — 3 puncte</h3>\n<pre><code class=\"language-text\">Matrice factor                 PC1       PC2\nCumparaturi online             0.901    -0.025\nOcupare                        0.856    -0.378\nSomaj                         -0.591     0.694\nStudii superioare              0.717     0.490\nNEET                          -0.907     0.105\n</code></pre>\n<p>Denumește sau descrie fiecare axă. Explică de ce un scor pozitiv pe PC2 nu este obligatoriu favorabil.</p>\n<h3>4. Regiune și reprezentare — 2 puncte</h3>\n<pre><code class=\"language-text\">BE10: PC1=0.878 | PC2=6.169\ncos2 plan PC1-PC2=0.479 | cos2 primele 4=0.909\n</code></pre>\n<p>Explică scorul PC2 și cele două valori cos². Poate fi reprezentată incomplet în primul plan, chiar dacă se distinge pe PC2?</p>",
+      "text": "Durată propusă: 35 de minute. Barem de antrenament: 1 punct din oficiu și 9 puncte pentru cele patru cerințe. Nu este baremul profesorului. Copiază numai răspunsurile tale pe o foaie. Citește baremul abia la final. 1. Corelații — 2 puncte Internet zilnic – PIB:           0.585\nOcupare – somaj:                -0.739 Scrie câte o propoziție de interpretare pentru fiecare pereche și o limită a concluziilor. 2. Alegerea componentelor — 2 puncte Analiză pe corelații: PC1     PC2     PC3     PC4\nlambda     6.714   1.727   1.096   0.670\ncumulat%  55.95   70.34   79.47   85.06 Câte axe recomandă Kaiser? Câte alegi pentru minimum 80%? Justifică ambele răspunsuri. 3. Interpretarea componentelor — 3 puncte Matrice factor                 PC1       PC2\nCumparaturi online             0.901    -0.025\nOcupare                        0.856    -0.378\nSomaj                         -0.591     0.694\nStudii superioare              0.717     0.490\nNEET                          -0.907     0.105 Denumește sau descrie fiecare axă. Explică de ce un scor pozitiv pe PC2 nu este obligatoriu favorabil. 4. Regiune și reprezentare — 2 puncte BE10: PC1=0.878 | PC2=6.169\ncos2 plan PC1-PC2=0.479 | cos2 primele 4=0.909 Explică scorul PC2 și cele două valori cos². Poate fi reprezentată incomplet în primul plan, chiar dacă se distinge pe PC2?",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-5",
+      "module": "test-scris",
+      "title": "Baremul simulării A",
+      "html": "<p class=\"model-answer\"><strong>1 — model:</strong> „Internetul zilnic și PIB-ul au asociere liniară pozitivă, r=0,585. Ocuparea și șomajul au asociere negativă, r=−0,739: ocuparea mai mare tinde să coexiste cu șomaj mai mic. Aceste asocieri nu demonstrează cauzalitate.” Acordă 0,75p pentru fiecare relație și 0,50p pentru limită.</p>\n<p class=\"model-answer\"><strong>2 — model:</strong> „Kaiser recomandă trei axe, deoarece primele trei lambda depășesc 1. Pentru minimum 80% aleg patru, deoarece trei explică 79,47%, iar patru 85,06%.” Acordă câte 1p pentru fiecare alegere justificată.</p>\n<p class=\"model-answer\"><strong>3 — model:</strong> „PC1 opune digitalizarea, ocuparea și studiile superioare șomajului și NEET și descrie integrarea digitală, economică și socială. PC2 opune mai ales șomajul și studiile superioare ocupării și descrie un profil mixt. De aceea, pozitiv pe PC2 nu înseamnă automat favorabil.” Acordă 1,5p pentru PC1, 1p pentru PC2 și 0,5p pentru precizarea sensului pozitiv.</p>\n<p class=\"model-answer\"><strong>4 — model:</strong> „BE10 are scor ridicat pozitiv pe PC2; acesta este o coordonată, fără limita ±1 a corelațiilor. Primul plan surprinde numai 47,9% din distanța sa pătratică față de centru, iar primele patru axe surprind 90,9%. Există informație importantă pe axele suplimentare.” Acordă 0,5p pentru scor, 1p pentru cele două cos² și 0,5p pentru concluzie.</p>",
+      "text": "1 — model: „Internetul zilnic și PIB-ul au asociere liniară pozitivă, r=0,585. Ocuparea și șomajul au asociere negativă, r=−0,739: ocuparea mai mare tinde să coexiste cu șomaj mai mic. Aceste asocieri nu demonstrează cauzalitate.” Acordă 0,75p pentru fiecare relație și 0,50p pentru limită. 2 — model: „Kaiser recomandă trei axe, deoarece primele trei lambda depășesc 1. Pentru minimum 80% aleg patru, deoarece trei explică 79,47%, iar patru 85,06%.” Acordă câte 1p pentru fiecare alegere justificată. 3 — model: „PC1 opune digitalizarea, ocuparea și studiile superioare șomajului și NEET și descrie integrarea digitală, economică și socială. PC2 opune mai ales șomajul și studiile superioare ocupării și descrie un profil mixt. De aceea, pozitiv pe PC2 nu înseamnă automat favorabil.” Acordă 1,5p pentru PC1, 1p pentru PC2 și 0,5p pentru precizarea sensului pozitiv. 4 — model: „BE10 are scor ridicat pozitiv pe PC2; acesta este o coordonată, fără limita ±1 a corelațiilor. Primul plan surprinde numai 47,9% din distanța sa pătratică față de centru, iar primele patru axe surprind 90,9%. Există informație importantă pe axele suplimentare.” Acordă 0,5p pentru scor, 1p pentru cele două cos² și 0,5p pentru concluzie.",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-6",
+      "module": "test-scris",
+      "title": "Simulare B — seminarul 7, cinci răspunsuri scurte",
+      "html": "<p>Folosește <a href=\"#modul/corespondente\">fișa cu outputul original</a>. Scrie pe hârtie:</p>\n<ol>\n<li>Ce înseamnă frecvența observată 37 și de ce este diferită de valoarea așteptată 19,45?</li>\n<li>Ce procent din inerție preia prima axă? Dar primele două?</li>\n<li>Cum traduci <code>cor=765</code>, <code>ctr=338</code> și <code>inr=334</code> pentru Acc_M?</li>\n<li>Ce categorie de pe linii și ce categorie de pe coloane contribuie cel mai mult la inerția totală?</li>\n<li>Ce asocieri între categorii observi și ce verifici în tabel pentru a le susține?</li>\n</ol>\n<h3>Răspunsurile-model B</h3>\n<ol>\n<li>„37 de observații aparțin simultan Acc_Mij și Ban_Mij, față de circa 19,45 așteptate la independență. Combinația este supra-reprezentată.”</li>\n<li>„Prima axă explică 75,5%, iar primele două împreună 100% din inerția totală.”</li>\n<li>„Acc_M este reprezentată în proporție de 76,5% pe axa 1 și contribuie cu 33,8% la această axă. Categoria aduce 33,4% la inerția totală.”</li>\n<li>„Acc_P, cu aproximativ 48,2%, și Ban_P, cu aproximativ 49,0%, în grupurile lor de categorii.”</li>\n<li>„Acc_M–Ban_M, Acc_Mij–Ban_Mij și Acc_P–Ban_P; celulele corespunzătoare apar mai des decât ar rezulta la independență.”</li>\n</ol>",
+      "text": "Folosește fișa cu outputul original . Scrie pe hârtie: Ce înseamnă frecvența observată 37 și de ce este diferită de valoarea așteptată 19,45? Ce procent din inerție preia prima axă? Dar primele două? Cum traduci cor=765 , ctr=338 și inr=334 pentru Acc_M? Ce categorie de pe linii și ce categorie de pe coloane contribuie cel mai mult la inerția totală? Ce asocieri între categorii observi și ce verifici în tabel pentru a le susține? Răspunsurile-model B „37 de observații aparțin simultan Acc_Mij și Ban_Mij, față de circa 19,45 așteptate la independență. Combinația este supra-reprezentată.” „Prima axă explică 75,5%, iar primele două împreună 100% din inerția totală.” „Acc_M este reprezentată în proporție de 76,5% pe axa 1 și contribuie cu 33,8% la această axă. Categoria aduce 33,4% la inerția totală.” „Acc_P, cu aproximativ 48,2%, și Ban_P, cu aproximativ 49,0%, în grupurile lor de categorii.” „Acc_M–Ban_M, Acc_Mij–Ban_Mij și Acc_P–Ban_P; celulele corespunzătoare apar mai des decât ar rezulta la independență.”",
+      "minutes": 1
+    },
+    {
+      "id": "test-scris-7",
+      "module": "test-scris",
+      "title": "Ultima verificare înainte să predai",
+      "html": "<ul>\n<li>Am scris <strong>ce obiect</strong> interpretez: indicator, regiune sau categorie?</li>\n<li>Am citat <strong>o valoare</strong> și am explicat sensul ei?</li>\n<li>Am separat <strong>corelație, scor, cos² și contribuție</strong>?</li>\n<li>Am citit axele și legenda graficului primit?</li>\n<li>La <code>ca()</code>, am verificat <strong>scalarea cu 1000</strong> și diferența inr/ctr?</li>\n<li>Am evitat să numesc automat „favorabil” un scor pozitiv?</li>\n</ul>\n<p>Pentru a exersa eficient, scrie răspunsul fără fișă, apoi compară-l cu modelul. Corectează propoziția greșită și scrie-o din nou din memorie.</p>",
+      "text": "Am scris ce obiect interpretez: indicator, regiune sau categorie? Am citat o valoare și am explicat sensul ei? Am separat corelație, scor, cos² și contribuție ? Am citit axele și legenda graficului primit? La ca() , am verificat scalarea cu 1000 și diferența inr/ctr? Am evitat să numesc automat „favorabil” un scor pozitiv? Pentru a exersa eficient, scrie răspunsul fără fișă, apoi compară-l cu modelul. Corectează propoziția greșită și scrie-o din nou din memorie.",
       "minutes": 1
     }
   ]

@@ -2,7 +2,7 @@
 
 Aplicație în română pentru Analiza Datelor:
 
-- 55 de lecții, cu text, tabele și grafice originale;
+- 73 de lecții, cu text, tabele și grafice originale;
 - exerciții cu feedback și repetarea greșelilor;
 - 20 de cartonașe și patru variante de parțial;
 - cronometru și progres păstrate pe dispozitiv prin localStorage;

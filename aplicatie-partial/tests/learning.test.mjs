@@ -41,7 +41,9 @@ test('patru variante complete, cu barem si exact doua interpretari fiecare', () 
  assert.equal(flashcards.length,20);
 });
 test('toate lectiile, fisele originale si imaginile sunt incluse in aplicatie', () => {
- assert.equal(theory.modules.length,6); assert.equal(theory.lessons.length,55);
+ assert.equal(theory.modules.length,8); assert.equal(theory.lessons.length,73);
+ assert.ok(theory.modules.some(m=>m.id==='corespondente')); assert.ok(theory.modules.some(m=>m.id==='test-scris'));
+ assert.ok(fs.existsSync(new URL('public/materiale/Seminar%207.pdf',root)));
  for(const m of theory.modules){assert.ok(m.lessons.every(id=>theory.lessons.some(l=>l.id===id)));assert.ok(fs.existsSync(new URL('public/materiale/'+m.file,root)));}
  for(const l of theory.lessons){for(const [,src] of l.html.matchAll(/src="([^"]+)"/g)) assert.ok(fs.existsSync(new URL('public'+src,root)),src);}
  for(const q of questions)if(q.image)assert.ok(fs.existsSync(new URL('public/theory/images/'+q.image,root)));
