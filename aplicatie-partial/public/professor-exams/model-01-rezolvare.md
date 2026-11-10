@@ -85,7 +85,7 @@ X11              -0.907  0.105
 X12              0.184   0.515
 ```
 
-**Răspuns-model:** Componenta 2 opune valorile ridicate pentru Șomaj 20–64 ani (X7, r = 0.694), Șomaj tineri (X8, r = 0.546) valorilor ridicate pentru Ocupare 20–64 ani (X6, r = -0.378), Cumpărături online (X4, r = -0.025). Ea explică 14.39% din variația totală. O numesc „contrastul dintre Șomaj 20–64 ani / Șomaj tineri și Ocupare 20–64 ani / Cumpărături online”. Denumirea este descriptivă; nu presupune că axa măsoară exclusiv un singur fenomen.
+**Răspuns-model:** PC2 explică 14,39% din variația totală. Se corelează pozitiv cu șomajul (X7: 0,694), șomajul tinerilor (X8: 0,546), densitatea populației (X12: 0,515) și studiile superioare (X9: 0,490), și negativ cu ocuparea (X6: −0,378). O denumire posibilă este „Profil mixt de șomaj, urbanizare și educație, în opoziție cu ocuparea”. Este o componentă cu interpretare mixtă: nu presupun că educația ridicată înseamnă automat șomaj redus. Corelația X4–PC2 de −0,025 este aproape nulă; cumpărăturile online nu definesc această componentă.
 
 **Pe înțelesul tău:** Te uiți doar la coloana a doua. Alegi coeficienții cei mai mari în valoare absolută, inclusiv pe cei negativi. Plus înseamnă variație în același sens cu axa, minus în sens opus. Numele componentei trebuie să reflecte indicatorii dominanți, chiar dacă rezultă un profil mixt.
 
