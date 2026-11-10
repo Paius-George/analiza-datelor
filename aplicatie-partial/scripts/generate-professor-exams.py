@@ -18,7 +18,7 @@ themes=[('Digitalizare și piața muncii',names0),('Educație și ocupare',['Stu
 def f(x):return f'{x:.3f}'
 def table(headers, rows):
     widths=[max(len(str(h)),*(len(str(r[i])) for r in rows)) for i,h in enumerate(headers)]
-    return '  '.join(str(h).ljust(w) for h,w in zip(headers,widths))+'\n'+'\n'.join('  '.join(str(v).ljust(w) for v,w in zip(r,widths)) for r in rows)
+    return '  '.join(str(h).ljust(w) for h,w in zip(headers,widths)).rstrip()+'\n'+'\n'.join('  '.join(str(v).ljust(w) for v,w in zip(r,widths)).rstrip() for r in rows)
 def rubric(*pairs):return [{'label':a,'points':b} for a,b in pairs]
 def q(i,output,model,easy,criteria):return dict(number=i+1,points=[1,2,2,2,2][i],prompt=PROMPTS[i],output=output,model=model,explanation=easy,rubric=criteria)
 papers=[]
@@ -70,7 +70,7 @@ for t,(theme,names) in enumerate(themes):
     ax.set(xlabel=f'Componenta 1 ({perc[0]:.2f}%)',ylabel=f'Componenta 2 ({perc[1]:.2f}%)',title=f'Model {t+1:02d} • {theme}\nRegiuni în planul primelor două componente')
     ax.grid(alpha=.12);fig.tight_layout();fig.savefig(OUT/f'{pid}.svg');plt.close(fig)
     with (OUT/f'{pid}.csv').open('w') as stream:
-        writer=csv.writer(stream);writer.writerow(['regiune']+codes);writer.writerows([[label]+list(row) for label,row in zip(labels,X)])
+        writer=csv.writer(stream,lineterminator="\n");writer.writerow(['regiune']+codes);writer.writerows([[label]+list(row) for label,row in zip(labels,X)])
     rscript='''# Date de exercițiu; rulează tu, dacă dorești. Nu necesită pachete externe.
 # Salvează CSV-ul și acest script în același folder; setează acel folder în R.
 d <- read.csv("PID.csv", row.names = 1, check.names = FALSE)

@@ -16,15 +16,15 @@ Variantă de antrenament creată după modelul profesorului. Date sintetice, fă
 ## 1. (1p) Analizați matricea de corelație pentru datele numerice inițiale. Formulați o concluzie privind aplicarea analizei componentelor principale.
 
 ```text
-cor()  X1      X2      X3      X4      X5      X6      X7      X8    
-X1     1.000   -0.693  -0.219  -0.583  -0.572  -0.362  -0.809  0.720 
+cor()  X1      X2      X3      X4      X5      X6      X7      X8
+X1     1.000   -0.693  -0.219  -0.583  -0.572  -0.362  -0.809  0.720
 X2     -0.693  1.000   0.055   0.643   0.577   0.435   0.801   -0.559
 X3     -0.219  0.055   1.000   0.601   0.659   0.682   0.248   -0.621
 X4     -0.583  0.643   0.601   1.000   0.864   0.812   0.655   -0.774
 X5     -0.572  0.577   0.659   0.864   1.000   0.806   0.650   -0.778
 X6     -0.362  0.435   0.682   0.812   0.806   1.000   0.475   -0.687
 X7     -0.809  0.801   0.248   0.655   0.650   0.475   1.000   -0.724
-X8     0.720   -0.559  -0.621  -0.774  -0.778  -0.687  -0.724  1.000 
+X8     0.720   -0.559  -0.621  -0.774  -0.778  -0.687  -0.724  1.000
 ```
 
 **Răspuns-model:** Există asocieri între variabile: X4–X5: r = 0.864; X4–X6: r = 0.812. Sunt 22 perechi cu |r| ≥ 0,50 din 28. Indicatorii conțin informație comună, deci ACP este justificată ca metodă de reducere a dimensionalității; nu deducem cauzalitate din corelații.
@@ -38,14 +38,14 @@ X8     0.720   -0.559  -0.621  -0.774  -0.778  -0.687  -0.724  1.000
 
 ```text
 Componentă  Valoare proprie  % variație  % cumulat
-1           5.338            66.727      66.727   
-2           1.417            17.707      84.434   
-3           0.490            6.130       90.563   
-4           0.185            2.313       92.877   
-5           0.176            2.200       95.077   
-6           0.148            1.850       96.928   
-7           0.132            1.652       98.580   
-8           0.114            1.420       100.000  
+1           5.338            66.727      66.727
+2           1.417            17.707      84.434
+3           0.490            6.130       90.563
+4           0.185            2.313       92.877
+5           0.176            2.200       95.077
+6           0.148            1.850       96.928
+7           0.132            1.652       98.580
+8           0.114            1.420       100.000
 ```
 
 **Răspuns-model:** Prin Kaiser, pentru ACP pe variabile standardizate, păstrez 2 componente cu λ > 1, care explică 84.43% din variație. Prin criteriul variației cumulate, aleg un prag explicit de 80% și păstrez 2 componente (84.43%). Cele două criterii coincid.
@@ -58,13 +58,13 @@ Componentă  Valoare proprie  % variație  % cumulat
 ## 3. (2p) Folosiți matricea factor pentru a interpreta a doua componentă principală.
 
 ```text
-Matricea factor  Dim1    Dim2  
-X1               -0.764  0.468 
+Matricea factor  Dim1    Dim2
+X1               -0.764  0.468
 X2               0.737   -0.539
-X3               0.617   0.693 
-X4               0.917   0.139 
-X5               0.912   0.202 
-X6               0.809   0.412 
+X3               0.617   0.693
+X4               0.917   0.139
+X5               0.912   0.202
+X6               0.809   0.412
 X7               0.828   -0.440
 X8               -0.904  -0.051
 ```
@@ -80,14 +80,14 @@ X8               -0.904  -0.051
 
 ```text
 Variabilă  Dim1    Dim2    ctr1 (%)  ctr2 (%)
-X1         -0.764  0.468   10.943    15.457  
-X2         0.737   -0.539  10.183    20.525  
-X3         0.617   0.693   7.138     33.930  
-X4         0.917   0.139   15.745    1.364   
-X5         0.912   0.202   15.571    2.893   
-X6         0.809   0.412   12.268    11.982  
-X7         0.828   -0.440  12.850    13.664  
-X8         -0.904  -0.051  15.302    0.185   
+X1         -0.764  0.468   10.943    15.457
+X2         0.737   -0.539  10.183    20.525
+X3         0.617   0.693   7.138     33.930
+X4         0.917   0.139   15.745    1.364
+X5         0.912   0.202   15.571    2.893
+X6         0.809   0.412   12.268    11.982
+X7         0.828   -0.440  12.850    13.664
+X8         -0.904  -0.051  15.302    0.185
 ```
 
 **Răspuns-model:** Dim1 și Dim2 sunt corelațiile indicatorilor cu componentele, cu valori între −1 și 1. De exemplu, X4 (Ocupare) are r = 0.917 cu PC1 și r = 0.139 cu PC2. Semnul indică sensul, iar |r| intensitatea. ctr1 și ctr2 arată procentul cu care variabila participă la construirea fiecărei axe. X4 are ctr1 = 15.75%, iar X3 are ctr2 = 33.93%, peste reperul mediu de 12.50% = 100/8. Contribuțiile se adună la 100% separat pe fiecare componentă, înainte de rotunjire.
@@ -101,10 +101,10 @@ X8         -0.904  -0.051  15.302    0.185
 
 ```text
 Regiune  Scor PC1  Scor PC2  cos2 plan
-R07044   6.110     -0.525    0.972    
-R07035   -5.490    0.090     0.973    
-R07084   0.034     2.591     0.805    
-R07011   -1.335    -2.883    0.941    
+R07044   6.110     -0.525    0.972
+R07035   -5.490    0.090     0.973
+R07084   0.034     2.591     0.805
+R07011   -1.335    -2.883    0.941
 ```
 
 **Răspuns-model:** Graficul are PC1 pe orizontală și PC2 pe verticală; planul păstrează 84.43% din variație. Concluzia 1: R07044 este la extrema pozitivă a PC1 (6.110), iar R07035 la extrema negativă (-5.490); au profiluri opuse pe această axă. Capătul pozitiv este asociat mai ales cu Ocupare (X4, r = 0.917), Sărăcie (X5, r = 0.912), iar cel negativ cu Acces la internet (X8, r = -0.904), PIB pe locuitor (X1, r = -0.764). Concluzia 2: R07084 are scorul PC2 maxim (2.591), iar R07011 minim (-2.883); diferența se interpretează prin contrastul PC2 de la cerința 3. cos² în plan pentru aceste două regiuni este 0.805, respectiv 0.941; interpretarea este cu atât mai sigură cu cât cos² este mai mare. Nu afirm că două regiuni sunt identice în toate variabilele doar fiindcă par apropiate în acest plan.
