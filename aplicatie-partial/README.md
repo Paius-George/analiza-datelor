@@ -55,3 +55,13 @@ Fiecare model oferă un mod de studiu cu rezolvări explicate și o simulare cu 
 Surse: `content/professor-exams.json`, `components/ProfessorExams.tsx` și `public/professor-exams/` (fotografie, date CSV, grafice SVG, scripturi R și rezolvări MD). Scripturile R folosesc exclusiv funcții de bază și sunt oferite pentru rulare manuală; nu sunt executate de aplicație.
 
 Pentru regenerarea deterministă a exercițiilor, într-un mediu Python cu `numpy` și `matplotlib`, rulează `python scripts/generate-professor-exams.py`. Generatorul folosește fotografia inclusă în `public/professor-exams/model-profesor-original.png`, citește datele din repo și nu rulează R. Testele verifică baremul și concordanța matematică a valorilor proprii, matricei factor, corelațiilor, contribuțiilor și scorurilor.
+
+### Variantele 11–20: codul profesorului
+
+`content/code-exams.json` adaugă zece variante bazate pe documentul furnizat `Cod test ACP.docx`, fără modificarea primelor zece. În secțiunea cu 20 de teste poți filtra seria nouă; transcrierea comenzilor se găsește în `public/professor-exams/cod-profesor.R`.
+
+Fiecare variantă include cele cinci cerințe originale, comanda corespunzătoare, tabele de tip `summary(acp)` / `summary(acp2)`, scree plot, matrice factor numerică și planul regiunilor. Datele sunt sintetice, iar rezultatele sunt reconstruite în Python după definițiile funcțiilor, fără executarea R. Transcrierea nu conține datele unui viitor test și nu confirmă subiecte viitoare.
+
+Se exersează explicit: `sdev² = λ`, proporții versus procente, diferența dintre `cor(X, scoruri)` și `acp$loadings`, formatul Variables cu grupuri Dim/ctr/cos2, diferența față de Individuals, limita implicită de 10 elemente și 3 axe în summary, ncp=5 implicit și inversarea semnelor între metode. Pentru noile scoruri standardizarea folosește divizorul n, conform princomp și PCA; primele zece modele își păstrează convenția anterioară.
+
+Regenerare: `python scripts/generate-code-exams.py` într-un mediu cu NumPy și Matplotlib. Comanda rescrie doar seria nouă. Scripturile R descărcabile păstrează comenzile profesorului, cu import CSV înainte și instrucțiuni comentate pentru instalarea manuală a pachetelor corrplot, factoextra și FactoMineR.
