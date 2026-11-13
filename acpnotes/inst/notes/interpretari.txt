@@ -8,9 +8,9 @@ Cele 37 de perechi cu |r| > 0,50 indică informație comună și susțin utilita
 
 2. NUMĂRUL DE COMPONENTE
 Kaiser păstrează primele 3 componente, deoarece au valori proprii mai mari decât 1: 6,714, 1,727 și 1,096.
+La pragul de variație cumulată de 70%, păstrăm 2 componente: PC1 explică 55,950%, iar PC1 și PC2 explică împreună 70,339%.
 La pragul de 80%, păstrăm 4 componente: primele 3 explică 79,471%, iar primele 4 explică 85,058%.
-Cele două criterii diferă, iar pentru minimum 80% alegem 4 componente.
-Valoarea proprie este pătratul abaterii standard a componentei; proporția cumulată 0,85058 înseamnă 85,058%.
+Pragurile procentuale aparțin criteriului variației cumulate; Kaiser folosește λ > 1, unde λ este pătratul abaterii standard a componentei.
 
 3. INTERPRETAREA PC2 DIN MATRICEA FACTOR
 PC2 este corelată pozitiv cu șomajul (r = 0,694), șomajul tinerilor (r = 0,546), densitatea (r = 0,515) și studiile superioare (r = 0,490), respectiv negativ cu ocuparea (r = -0,378).

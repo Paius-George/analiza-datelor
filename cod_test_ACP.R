@@ -109,6 +109,11 @@ nr_cumulat <- which(acp2$eig[, 3] >= prag_variatie - 1e-10)[1]
 cat("Kaiser (lambda > 1):", nr_kaiser, "componente.\n")
 cat("Variatie cumulata, prag", prag_variatie, "%:", nr_cumulat,
     "componente; cumul =", round(acp2$eig[nr_cumulat, 3], 3), "%.\n")
+# Compara si cu pragul alternativ cerut, de 70%.
+nr_cumulat_70 <- which(acp2$eig[, 3] >= 70 - 1e-10)[1]
+cat("Variatie cumulata, prag 70 %:", nr_cumulat_70,
+    "componente; cumul =", round(acp2$eig[nr_cumulat_70, 3], 3), "%.\n")
+# Procentele de 70% si 80% apartin variatiei cumulate, nu criteriului Kaiser.
 
 # Salvam toate graficele in acelasi folder.
 director_grafice <- file.path("rezultate", "grafice")

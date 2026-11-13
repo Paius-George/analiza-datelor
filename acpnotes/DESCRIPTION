@@ -1,7 +1,7 @@
 Package: acpnotes
 Type: Package
 Title: Rezumate pentru Interpretarea Outputurilor ACP
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: person("George", "Paius", role = c("aut", "cre"), email = "110635907+Paius-George@users.noreply.github.com")
 Description: Addin RStudio pentru deschiderea si inchiderea unui rezumat
     cu interpretarile celor cinci exercitii ACP din proiect.

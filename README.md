@@ -29,7 +29,8 @@ folosesc date sintetice proprii. Semnele axelor pot diferi între cele două met
 pentru graficul FactoMineR se interpretează corelațiile din `summary(acp2)`.
 
 Scriptul urmează cele cinci cerințe din fotografie: matricea de corelație,
-criteriile Kaiser și variației cumulate (prag implicit 80%), matricea factor,
+criteriile Kaiser și variației cumulate (prag implicit 80%, plus comparație
+la 70%), matricea factor,
 corelațiile și contribuțiile variabilelor, graficul regiunilor și scorurile
 extreme. Graficul se salvează în `rezultate/grafice`, relativ la directorul de
 lucru din R (`getwd()`). Pentru alte date, completează variabila `fisier` cu

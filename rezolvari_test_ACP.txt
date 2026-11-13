@@ -65,6 +65,16 @@ Cele două criterii conduc la recomandări diferite: 3 componente după Kaiser
 și 4 componente pentru atingerea pragului de 80%. Dacă obiectivul este
 păstrarea a minimum 80% din variația totală, alegem 4 componente.
 
+VARIANTA CU PRAG IMPUS DE 70% — RĂSPUNS DE SCRIS:
+
+Conform criteriului variației cumulate explicate, la pragul de 70%, păstrăm
+primele 2 componente. PC1 explică numai 55,950%, sub prag, iar primele două
+componente explică 70,339%, atingând pentru prima dată pragul impus.
+Kaiser recomandă în continuare 3 componente, deoarece regula sa este λ > 1.
+Așadar, Kaiser și pragul de 70% dau recomandări diferite: 3, respectiv 2
+componente; pentru obiectivul de minimum 70%, sunt suficiente 2 componente.
+Pragul de 70% se aplică variației cumulate, nu criteriului Kaiser.
+
 DE REȚINUT:
 - În summary(acp): λ = (Standard deviation)^2.
 - Cumulative Proportion = 0,85058 înseamnă 85,058%.
