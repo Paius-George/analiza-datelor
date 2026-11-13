@@ -33,7 +33,9 @@ criteriile Kaiser și variației cumulate (prag implicit 80%, plus comparație
 la 70%), matricea factor,
 corelațiile și contribuțiile variabilelor, graficul regiunilor și scorurile
 extreme. Graficul se salvează în `rezultate/grafice`, relativ la directorul de
-lucru din R (`getwd()`). Pentru alte date, completează variabila `fisier` cu
+lucru din R (`getwd()`). Graficele sunt salvate întâi la dimensiune fixă;
+dacă panoul Plots este prea mic, deschide imaginile PNG din acel folder.
+Pentru alte date, completează variabila `fisier` cu
 calea Excelului profesorului și verifică foaia, identificatorul regiunilor și
 coloanele numerice de exclus.
 
@@ -46,3 +48,7 @@ Codul se păstrează într-un repository **privat**. Aplicația se publică pe C
 Instrucțiunile de activare sunt în [PUBLICARE.md](aplicatie-partial/docs/PUBLICARE.md). GitHub Actions verifică aplicația la fiecare actualizare și o publică după configurarea contului Cloudflare. Prima publicare este blocată până sunt configurate datele Cloudflare Access.
 
 Repository-ul nu folosește GitHub Pages. Fișierele existente de curs și seminar sunt păstrate.
+
+Verificarea setup-ului este descrisă în [VERIFICARE_SETUP.txt](VERIFICARE_SETUP.txt).
+Testele se pot relua cu `Rscript tests/verifica_final_ACP.R`: analiză reală,
+instalare locală, grafice, erori de previzualizare și toggle cu API simulat.

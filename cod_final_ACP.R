@@ -4,7 +4,7 @@
 # Daca lipsesc pachetele, instaleaza-le o singura data din consola:
 # Deschide instaleaza_final_ACP.R si foloseste Source o singura data.
 
-pachete <- c("readxl", "FactoMineR", "factoextra", "corrplot")
+pachete <- c("readxl", "FactoMineR", "factoextra", "corrplot", "ggplot2")
 lipsa <- pachete[!vapply(pachete, requireNamespace, logical(1), quietly = TRUE)]
 if (length(lipsa) > 0) {
   stop("Foloseste Source pe instaleaza_final_ACP.R. Lipsesc: ", paste(lipsa, collapse = ", "))
@@ -115,25 +115,53 @@ cat("Variatie cumulata, prag 70 %:", nr_cumulat_70,
     "componente; cumul =", round(acp2$eig[nr_cumulat_70, 3], 3), "%.\n")
 # Procentele de 70% si 80% apartin variatiei cumulate, nu criteriului Kaiser.
 
-# Salvam toate graficele in acelasi folder.
+# Salvare independenta de dimensiunea panoului Plots din RStudio.
 director_grafice <- file.path("rezultate", "grafice")
-dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)
-plot(acp, type = "l", main = "Scree plot - valori proprii")
-png(file.path(director_grafice, "final_ACP_scree.png"),
-    width = 1800, height = 1200, res = 160)
-plot(acp, type = "l", main = "Scree plot - valori proprii")
-dev.off()
+if (!dir.exists(director_grafice) &&
+    !dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)) {
+  stop("Nu pot crea folderul de grafice. Alege un director de lucru cu drept de scriere.")
+}
+salveaza_si_afiseaza <- function(fisier_png, deseneaza, latime = 12,
+                                inaltime = 9, afiseaza = interactive()) {
+  # Fisierul este desenat primul, pe un dispozitiv propriu suficient de mare.
+  # Nu inchidem si nu modificam dispozitivele grafice ale utilizatorului.
+  local({
+    png(fisier_png, width = latime, height = inaltime, units = "in", res = 180)
+    dispozitiv <- dev.cur()
+    on.exit(dev.off(dispozitiv), add = TRUE)
+    deseneaza()
+  })
+  if (afiseaza) {
+    tryCatch({
+      # Un panou prea mic nu poate afisa lizibil matricea si etichetele.
+      if (dev.cur() != 1L && any(dev.size("in") < c(7, 5))) {
+        message("Panoul Plots este prea mic. Graficul complet este salvat in: ",
+                normalizePath(fisier_png))
+      } else {
+        deseneaza()
+      }
+    }, error = function(e) {
+      # Erorile de viewport/margini ale previzualizarii nu opresc analiza.
+      message("Previzualizarea nu a putut fi afisata: ", conditionMessage(e),
+              "\nGraficul complet este salvat in: ", normalizePath(fisier_png))
+    })
+  }
+  invisible(fisier_png)
+}
+salveaza_si_afiseaza(
+  file.path(director_grafice, "final_ACP_scree.png"),
+  function() plot(acp, type = "l", main = "Scree plot - valori proprii")
+)
 
 # 3. MATRICEA FACTOR: INTERPRETAREA PC2 (2p) --------------------------------
 scoruri <- acp$scores
 MF <- cor(X, scoruri)
 cat("\n3. Matricea factor (Comp.1, Comp.2, ...)\n")
 print(round(MF, 3))
-corrplot(MF, method = "number")
-png(file.path(director_grafice, "final_ACP_matrice_factor.png"),
-    width = 2200, height = 1800, res = 180)
-corrplot(MF, method = "number")
-dev.off()
+salveaza_si_afiseaza(
+  file.path(director_grafice, "final_ACP_matrice_factor.png"),
+  function() corrplot(MF, method = "number", tl.cex = 0.8, number.cex = 0.7)
+)
 cat("PC2 explica", round(acp2$eig[2, 2], 3), "% din variatia totala.\n")
 # Interpreteaza coloana Comp.2: semne, valori mari in modul, apoi denumire.
 # Ca in codul profesorului, MF provine din princomp; graficul final din PCA.
@@ -162,12 +190,10 @@ grafic_regiuni <- fviz_pca_ind(
   x = sprintf("Componenta 1 (%.2f%%)", acp2$eig[1, 2]),
   y = sprintf("Componenta 2 (%.2f%%)", acp2$eig[2, 2])
 )
-print(grafic_regiuni)  # afisare inclusiv cand folosesti Source
-
-director_grafice <- file.path("rezultate", "grafice")
-dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)
-ggplot2::ggsave(file.path(director_grafice, "final_ACP_regiuni_PC1_PC2.png"),
-                plot = grafic_regiuni, width = 12, height = 9, dpi = 300)
+salveaza_si_afiseaza(
+  file.path(director_grafice, "final_ACP_regiuni_PC1_PC2.png"),
+  function() print(grafic_regiuni)
+)
 cat("\nGrafic salvat in:", normalizePath(director_grafice), "\n")
 
 tabel_ind <- data.frame(

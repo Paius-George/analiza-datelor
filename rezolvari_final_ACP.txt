@@ -5,8 +5,8 @@ Fișier asociat: cod_final_ACP.R. Coloana „an” este exclusă din analiză.
 Aceste răspunsuri se referă la DATELE PROIECTULUI NOSTRU. La testul profesorului
 păstrezi logica formulării și înlocuiești valorile, numele și concluziile cu cele
 susținute de outputul primit. Variantele 11–20 au alte date și alte rezultate.
-Calculele numerice de aici au fost verificate independent în Python; scriptul R
-nu a fost executat. Valorile afișate mai jos sunt rotunjite.
+Calculele numerice au fost verificate independent în Python și prin rularea
+completă a scriptului R. Valorile afișate mai jos sunt rotunjite.
 
 Semnele folosite: PC1 are corelații pozitive cu indicatorii digitali, iar PC2 are
 corelație pozitivă cu șomajul. Verifică semnele în propriul output: dacă o axă

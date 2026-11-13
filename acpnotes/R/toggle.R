@@ -12,7 +12,7 @@ toggle_interpretari <- function() {
   if (!is.null(.stare$id)) {
     cale_deschisa <- tryCatch(rstudioapi::documentPath(.stare$id),
                               error = function(e) "")
-    if (length(cale_deschisa) == 1 && nzchar(cale_deschisa) &&
+    if (length(cale_deschisa) == 1 && !is.na(cale_deschisa) && nzchar(cale_deschisa) &&
         identical(normalizePath(cale_deschisa, winslash = "/", mustWork = FALSE),
                   .stare$cale)) {
       # Salveaza eventualele adnotari personale in copia temporara.
@@ -37,6 +37,12 @@ toggle_interpretari <- function() {
     .stare$cale <- normalizePath(copie, winslash = "/", mustWork = TRUE)
   }
   rstudioapi::documentOpen(.stare$cale)
-  .stare$id <- rstudioapi::documentId(allowConsole = FALSE)
+  id_nou <- rstudioapi::documentId(allowConsole = FALSE)
+  cale_noua <- rstudioapi::documentPath(id_nou)
+  if (!identical(normalizePath(cale_noua, winslash = "/", mustWork = FALSE),
+                 .stare$cale)) {
+    stop("Fila interpretarilor nu a primit focusul. Selecteaz-o si reincearca.")
+  }
+  .stare$id <- id_nou
   invisible(NULL)
 }

@@ -1,0 +1,26 @@
+VERIFICARE SETUP FINAL ACP
+
+Verificari efectuate prin rulare R, pe centralizare.xlsx:
+- Instalator executat cu succes intr-o biblioteca separata.
+- Analiza executata integral dintr-un director de lucru diferit.
+- 116 regiuni, 12 indicatori; coloana an exclusa.
+- Kaiser: 3 componente; prag 70%: 2 componente; prag 80%: 4 componente.
+- Generate cele 3 PNG-uri: scree, matrice factor, regiuni PC1-PC2.
+- Graficul regiunilor a fost inspectat vizual.
+- Analiza ruleaza si cu un dispozitiv grafic foarte mic deja deschis.
+- Previzualizarea pe panou mic este omisa; fisierul PNG ramane disponibil.
+- Erorile "figure margins too large" si "Viewport has zero dimension(s)"
+  simulate la previzualizare nu mai intrerup analiza.
+- O eroare reala la salvare se propaga, iar dispozitivul este inchis corect.
+- Addin: deschidere, inchidere, redeschidere si inchidere manuala verificate
+  cu un API RStudio simulat; nu s-a controlat un RStudio interactiv real.
+
+Mediu verificat:
+R 4.6.1; readxl 1.6.0; FactoMineR 2.18; factoextra 2.2.0;
+corrplot 0.95; ggplot2 4.0.3; rstudioapi 0.19.0.
+
+Pentru reluare: Rscript tests/verifica_final_ACP.R
+Pentru utilizare normala: Source pe cod_final_ACP.R.
+Graficele complete sunt in rezultate/grafice, raportat la getwd().
+Dupa actualizarea addin-ului, reporneste sesiunea R inainte de reinstalare
+(daca addin-ul este deja incarcat). Keybind-ul poate fi pastrat.
