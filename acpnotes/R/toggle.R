@@ -32,7 +32,7 @@ toggle_interpretari <- function() {
     original <- system.file("notes", "interpretari.txt", package = "acpnotes")
     copie <- tempfile(pattern = "Interpretari_ACP_", fileext = ".txt")
     if (!nzchar(original) || !file.copy(original, copie)) {
-      stop("Rezumatul lipseste. Reinstaleaza addin-ul cu instaleaza_test_ACP.R.")
+      stop("Rezumatul lipseste. Reinstaleaza addin-ul cu instaleaza_final_ACP.R.")
     }
     .stare$cale <- normalizePath(copie, winslash = "/", mustWork = TRUE)
   }

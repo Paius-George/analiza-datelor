@@ -2,14 +2,14 @@
 
 Materiale de curs, seminarii și aplicația de pregătire pentru parțial.
 
-[Pachet_test_ACP.zip](Pachet_test_ACP.zip) include codul, instalatorul, Excelul și
+[Pachet_final_ACP.zip](Pachet_final_ACP.zip) include codul, instalatorul, Excelul și
 rezolvările și addin-ul RStudio `acpnotes`. Rezumatele au 3–4 propoziții pentru
 fiecare exercițiu. Același keybind le deschide și le închide; îl atribui o dată
 în **Tools > Modify Keyboard Shortcuts**, căutând **Interpretari ACP**. Pașii de probă sunt în [DEMONSTRATIE_RSTUDIO.txt](DEMONSTRATIE_RSTUDIO.txt).
 
-Pentru modelul de test: deschide [instaleaza_test_ACP.R](instaleaza_test_ACP.R)
+Pentru modelul de test: deschide [instaleaza_final_ACP.R](instaleaza_final_ACP.R)
 în RStudio și apasă **Source** o singură dată, cu internet disponibil. Apoi
-deschide [cod_test_ACP.R](cod_test_ACP.R) și apasă **Source** pentru analiză.
+deschide [cod_final_ACP.R](cod_final_ACP.R) și apasă **Source** pentru analiză.
 Codul găsește automat `Rezolvare Seminar/centralizare.xlsx`, păstrând structura
 folderelor, și exclude coloana cu anul. R și RStudio trebuie să fie instalate.
 Deschiderea unui fișier R afișează codul; **Source** îl execută. Instalatorul
@@ -17,7 +17,7 @@ Deschiderea unui fișier R afișează codul; **Source** îl execută. Instalator
 independent de rularea analizei. Rezumatul este și în
 [interpretari_scurte_ACP.txt](interpretari_scurte_ACP.txt).
 
-[rezolvari_test_ACP.txt](rezolvari_test_ACP.txt) conține răspunsuri complete pentru
+[rezolvari_final_ACP.txt](rezolvari_final_ACP.txt) conține răspunsuri complete pentru
 cele cinci cerințe, cu valorile din `centralizare.xlsx`, interpretări pentru toți
 cei 12 indicatori și două concluzii despre regiuni.
 

@@ -1,6 +1,6 @@
 REZOLVARE COMPLETĂ — MODELUL DE TEST DIN FOTOGRAFIE
 Date: centralizare.xlsx, prima foaie; 116 regiuni, 12 indicatori (X1–X12).
-Fișier asociat: cod_test_ACP.R. Coloana „an” este exclusă din analiză.
+Fișier asociat: cod_final_ACP.R. Coloana „an” este exclusă din analiză.
 
 Aceste răspunsuri se referă la DATELE PROIECTULUI NOSTRU. La testul profesorului
 păstrezi logica formulării și înlocuiești valorile, numele și concluziile cu cele

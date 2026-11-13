@@ -2,12 +2,12 @@
 # Deschide in RStudio si foloseste Source. Datele proiectului sunt gasite automat.
 # Prima linie din Excel trebuie sa contina numele coloanelor.
 # Daca lipsesc pachetele, instaleaza-le o singura data din consola:
-# Deschide instaleaza_test_ACP.R si foloseste Source o singura data.
+# Deschide instaleaza_final_ACP.R si foloseste Source o singura data.
 
 pachete <- c("readxl", "FactoMineR", "factoextra", "corrplot")
 lipsa <- pachete[!vapply(pachete, requireNamespace, logical(1), quietly = TRUE)]
 if (length(lipsa) > 0) {
-  stop("Foloseste Source pe instaleaza_test_ACP.R. Lipsesc: ", paste(lipsa, collapse = ", "))
+  stop("Foloseste Source pe instaleaza_final_ACP.R. Lipsesc: ", paste(lipsa, collapse = ", "))
 }
 library(readxl)
 library(FactoMineR)
@@ -23,7 +23,7 @@ if (is.null(fisier)) {
     cale_script <- tryCatch(rstudioapi::getSourceEditorContext()$path,
                             error = function(e) "")
   }
-  # Compatibil si cu source(".../cod_test_ACP.R") in afara RStudio.
+  # Compatibil si cu source(".../cod_final_ACP.R") in afara RStudio.
   for (cadru in sys.frames()) {
     if (!is.null(cadru$ofile)) cale_script <- cadru$ofile
   }
@@ -35,7 +35,7 @@ if (is.null(fisier)) {
   )), use.names = FALSE)
   gasite <- candidati[file.exists(candidati)]
   if (!length(gasite)) {
-    stop("Pastreaza cod_test_ACP.R langa folderul Rezolvare Seminar cu centralizare.xlsx, sau completeaza fisier cu calea Excelului.")
+    stop("Pastreaza cod_final_ACP.R langa folderul Rezolvare Seminar cu centralizare.xlsx, sau completeaza fisier cu calea Excelului.")
   }
   fisier <- gasite[1]
 }
@@ -119,7 +119,7 @@ cat("Variatie cumulata, prag 70 %:", nr_cumulat_70,
 director_grafice <- file.path("rezultate", "grafice")
 dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)
 plot(acp, type = "l", main = "Scree plot - valori proprii")
-png(file.path(director_grafice, "test_ACP_scree.png"),
+png(file.path(director_grafice, "final_ACP_scree.png"),
     width = 1800, height = 1200, res = 160)
 plot(acp, type = "l", main = "Scree plot - valori proprii")
 dev.off()
@@ -130,7 +130,7 @@ MF <- cor(X, scoruri)
 cat("\n3. Matricea factor (Comp.1, Comp.2, ...)\n")
 print(round(MF, 3))
 corrplot(MF, method = "number")
-png(file.path(director_grafice, "test_ACP_matrice_factor.png"),
+png(file.path(director_grafice, "final_ACP_matrice_factor.png"),
     width = 2200, height = 1800, res = 180)
 corrplot(MF, method = "number")
 dev.off()
@@ -166,7 +166,7 @@ print(grafic_regiuni)  # afisare inclusiv cand folosesti Source
 
 director_grafice <- file.path("rezultate", "grafice")
 dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)
-ggplot2::ggsave(file.path(director_grafice, "test_ACP_regiuni_PC1_PC2.png"),
+ggplot2::ggsave(file.path(director_grafice, "final_ACP_regiuni_PC1_PC2.png"),
                 plot = grafic_regiuni, width = 12, height = 9, dpi = 300)
 cat("\nGrafic salvat in:", normalizePath(director_grafice), "\n")
 

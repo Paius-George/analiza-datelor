@@ -1,11 +1,11 @@
 DEMONSTRATIE - O SINGURA SCURTATURA PENTRU INTERPRETARI
 
-1. Dezarhiveaza tot Pachet_test_ACP.zip, inclusiv folderul acpnotes.
-2. Deschide instaleaza_test_ACP.R in RStudio si apasa Source o singura data.
+1. Dezarhiveaza tot Pachet_final_ACP.zip, inclusiv folderul acpnotes.
+2. Deschide instaleaza_final_ACP.R in RStudio si apasa Source o singura data.
 3. In Tools > Modify Keyboard Shortcuts cauta Interpretari ACP.
 4. Asociaza o combinatie libera, de exemplu Ctrl+Shift+F12, si apasa Apply.
    Daca RStudio indica un conflict, alege alta combinatie libera.
-5. Deschide cod_test_ACP.R. Nu trebuie sa rulezi analiza pentru proba.
+5. Deschide cod_final_ACP.R. Nu trebuie sa rulezi analiza pentru proba.
 6. Apasa combinatia: se deschide fila Interpretari_ACP cu cele cinci rezumate.
 7. Apasa ACEEASI combinatie: fila se inchide si revii la fisierul anterior.
 8. Apasa din nou: fila se redeschide.
@@ -18,5 +18,5 @@ add-inul reincepe apoi alternarea cu o fila noua.
 
 Fiecare exercitiu are 3-4 propozitii pentru datele din centralizare.xlsx.
 Rezumatul este si in interpretari_scurte_ACP.txt; raspunsurile lungi sunt in
-rezolvari_test_ACP.txt. Copia deschisa de addin este temporara; pentru pastrarea
+rezolvari_final_ACP.txt. Copia deschisa de addin este temporara; pentru pastrarea
 adnotarilor intre sesiuni, salveaza o copie personala separat.

@@ -1,4 +1,4 @@
-# INSTALARE TEST ACP: deschide in RStudio si apasa Source o singura data.
+# INSTALARE FINAL ACP: deschide in RStudio si apasa Source o singura data.
 # Necesita internet. Instaleaza pachetele; nu executa analiza.
 # Se foloseste o singura data pe calculator sau dupa schimbarea versiunii R.
 pachete <- c("readxl", "ggplot2", "FactoMineR", "factoextra", "rstudioapi", "corrplot")
