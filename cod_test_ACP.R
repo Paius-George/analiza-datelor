@@ -1,24 +1,48 @@
 # COD ACP - cele 5 cerinte din fotografia modelului de test
-# Deschide fisierul in RStudio. Selecteaza Excelul profesorului la import.
+# Deschide in RStudio si foloseste Source. Datele proiectului sunt gasite automat.
 # Prima linie din Excel trebuie sa contina numele coloanelor.
 # Daca lipsesc pachetele, instaleaza-le o singura data din consola:
-# install.packages(c("readxl", "FactoMineR", "factoextra"))
+# Deschide instaleaza_test_ACP.R si foloseste Source o singura data.
 
 pachete <- c("readxl", "FactoMineR", "factoextra")
 lipsa <- pachete[!vapply(pachete, requireNamespace, logical(1), quietly = TRUE)]
 if (length(lipsa) > 0) {
-  stop("Instaleaza mai intai pachetele: ", paste(lipsa, collapse = ", "))
+  stop("Foloseste Source pe instaleaza_test_ACP.R. Lipsesc: ", paste(lipsa, collapse = ", "))
 }
 library(readxl)
 library(FactoMineR)
 library(factoextra)
 
 # 0. IMPORT SI SETARI ------------------------------------------------------
-fisier <- file.choose()  # sau: "nume_fisier_profesor.xlsx"
+# Pentru Excelul profesorului, scrie aici calea lui; NULL foloseste proiectul.
+fisier <- NULL
+if (is.null(fisier)) {
+  cale_script <- ""
+  if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+    cale_script <- tryCatch(rstudioapi::getSourceEditorContext()$path,
+                            error = function(e) "")
+  }
+  # Compatibil si cu source(".../cod_test_ACP.R") in afara RStudio.
+  for (cadru in sys.frames()) {
+    if (!is.null(cadru$ofile)) cale_script <- cadru$ofile
+  }
+  directoare <- unique(c(if (nzchar(cale_script)) dirname(cale_script), getwd()))
+  for (i in seq_len(4)) directoare <- unique(c(directoare, dirname(directoare)))
+  candidati <- unlist(lapply(directoare, function(d) c(
+    file.path(d, "Rezolvare Seminar", "centralizare.xlsx"),
+    file.path(d, "centralizare.xlsx")
+  )), use.names = FALSE)
+  gasite <- candidati[file.exists(candidati)]
+  if (!length(gasite)) {
+    stop("Pastreaza cod_test_ACP.R langa folderul Rezolvare Seminar cu centralizare.xlsx, sau completeaza fisier cu calea Excelului.")
+  }
+  fisier <- gasite[1]
+}
+cat("Date importate din:", normalizePath(fisier, mustWork = TRUE), "\n")
 foaie <- 1
 prag_variatie <- 80
 coloana_regiune <- NULL  # NULL = prima coloana text; sau numele exact, ex. "Cod"
-coloane_de_exclus <- character(0)  # ex. c("ID", "An") daca sunt coduri numerice
+coloane_de_exclus <- c("an", "An", "AN")  # anul este metadatum; adauga aici ID-uri numerice
 
 date <- as.data.frame(read_excel(fisier, sheet = foaie))
 if (is.null(coloana_regiune)) {
