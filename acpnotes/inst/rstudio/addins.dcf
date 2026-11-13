@@ -1,0 +1,4 @@
+Name: Interpretari ACP - deschide/inchide
+Description: Afiseaza sau inchide rezumatul celor cinci exercitii ACP.
+Binding: toggle_interpretari
+Interactive: false

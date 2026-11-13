@@ -1,0 +1,31 @@
+INTERPRETĂRI ACP — ESENȚIALUL PENTRU CELE 5 EXERCIȚII
+Exemple pentru centralizare.xlsx; adaptează valorile și semnele la alte date.
+
+1. MATRICEA DE CORELAȚIE
+X1–X2 au o corelație pozitivă puternică (r = 0,732), iar ocuparea și șomajul au o corelație negativă puternică (r = -0,739).
+Regiunile cu ocupare mai mare tind să aibă șomaj mai redus, fără ca asocierea să demonstreze cauzalitate.
+Cele 37 de perechi cu |r| > 0,50 indică informație comună și susțin utilitatea ACP pentru sintetizarea indicatorilor în mai puține componente.
+
+2. NUMĂRUL DE COMPONENTE
+Kaiser păstrează primele 3 componente, deoarece au valori proprii mai mari decât 1: 6,714, 1,727 și 1,096.
+La pragul de 80%, păstrăm 4 componente: primele 3 explică 79,471%, iar primele 4 explică 85,058%.
+Cele două criterii diferă, iar pentru minimum 80% alegem 4 componente.
+Valoarea proprie este pătratul abaterii standard a componentei; proporția cumulată 0,85058 înseamnă 85,058%.
+
+3. INTERPRETAREA PC2 DIN MATRICEA FACTOR
+PC2 este corelată pozitiv cu șomajul (r = 0,694), șomajul tinerilor (r = 0,546), densitatea (r = 0,515) și studiile superioare (r = 0,490), respectiv negativ cu ocuparea (r = -0,378).
+Un scor pozitiv mare sugerează valori mai ridicate ale primilor indicatori și ocupare mai redusă, iar pentru un scor negativ sensul se inversează.
+O denumire potrivită este „Contrast între șomaj, densitate, educație și ocupare”.
+Componenta explică 14,389% din variația totală, iar semnul pozitiv nu înseamnă automat o situație mai bună.
+
+4. Dim, ctr ȘI cos2 ÎN TABELUL VARIABILELOR
+Dim reprezintă corelația indicatorului cu o componentă, ctr contribuția procentuală la construirea ei, iar cos2 calitatea reprezentării pe acea axă.
+Internetul acasă are corelațiile r = 0,719 cu PC1 și r = 0,131 cu PC2, contribuind cu 7,691% la PC1 și 0,999% la PC2.
+Pentru 12 indicatori, reperul contribuției medii este 8,333%, iar contribuțiile tuturor indicatorilor însumează 100% pe fiecare axă.
+În tabelul Individuals, Dim reprezintă scorul regiunii, iar calitatea reprezentării în plan se citește din suma cos2 pe PC1 și PC2.
+
+5. GRAFICUL REGIUNILOR — DOUĂ CONCLUZII
+Planul PC1–PC2 explică 70,339% din variația totală, iar coordonatele regiunilor sunt scoruri.
+NL35 (PC1 = 5,117) se opune regiunii ITF6 (PC1 = -7,916), sugerând un profil cu digitalizare și ocupare mai ridicate, respectiv șomaj și NEET mai reduse; ambele sunt bine reprezentate în plan, cu cos2 cumulat de 0,977 și 0,931.
+DK01 (PC2 = 1,631) și RO21 (PC2 = -2,030) au profiluri opuse pe PC2, conform corelațiilor axei, și au cos2 cumulat de 0,923, respectiv 0,834.
+BE10 are PC2 = 6,169, dar cos2 în plan de numai 0,479, deci poziția sa cere prudență chiar dacă planul explică o proporție mai mare din variația întregului set.

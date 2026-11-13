@@ -1,21 +1,22 @@
-DEMONSTRATIE - INTERPRETARI PLIABILE IN RSTUDIO
+DEMONSTRATIE - O SINGURA SCURTATURA PENTRU INTERPRETARI
 
-1. Dezarhiveaza Pachet_test_ACP.zip complet.
-2. Deschide cod_test_ACP.R in RStudio.
-3. Nu trebuie sa executi analiza pentru aceasta demonstratie.
-4. Apasa Ctrl+F si cauta: INTERPRETARI COMPLETE
-5. La finalul scriptului sunt sectiuni pentru cele cinci cerinte, plus explicatii.
-6. Apasa pe sageata din stanga titlului unei sectiuni pentru a restrange textul.
-   Apasa din nou pentru a-l afisa.
-7. Pentru tastatura: selecteaza comentariile dintr-o sectiune si apasa Alt+L.
-   Pentru redeschidere, pune cursorul pe zona pliata si apasa Shift+Alt+L.
-   Aceste scurtaturi sunt cele implicite RStudio pentru Windows/Linux.
-8. Alternativ: Edit > Folding > Collapse / Expand.
+1. Dezarhiveaza tot Pachet_test_ACP.zip, inclusiv folderul acpnotes.
+2. Deschide instaleaza_test_ACP.R in RStudio si apasa Source o singura data.
+3. In Tools > Modify Keyboard Shortcuts cauta Interpretari ACP.
+4. Asociaza o combinatie libera, de exemplu Ctrl+Shift+F12, si apasa Apply.
+   Daca RStudio indica un conflict, alege alta combinatie libera.
+5. Deschide cod_test_ACP.R. Nu trebuie sa rulezi analiza pentru proba.
+6. Apasa combinatia: se deschide fila Interpretari_ACP cu cele cinci rezumate.
+7. Apasa ACEEASI combinatie: fila se inchide si revii la fisierul anterior.
+8. Apasa din nou: fila se redeschide.
 
-Exemplu: cauta "1. MATRICEA DE CORELAȚIE" in blocul de interpretari.
-Dupa redeschidere vei vedea explicatiile pentru r = 0,732 si r = -0,739.
-Comentariile incep cu # si nu apar in output cand rulezi Source.
-Plierea restrange textul vizual; continutul ramane in fisier.
+Scurtatura se configureaza o singura data pe calculator, in RStudio.
+Addin-ul apare si in meniul Addins, cu numele Interpretari ACP - deschide/inchide.
+Daca nu apare imediat dupa instalare, reporneste RStudio.
+Dupa o repornire a sesiunii R cu fila ramasa deschisa, inchide-o manual o data;
+add-inul reincepe apoi alternarea cu o fila noua.
 
-Pentru analiza, foloseste separat Source, dupa instalarea pachetelor.
-Raspunsurile numerice se refera la centralizare.xlsx din pachet.
+Fiecare exercitiu are 3-4 propozitii pentru datele din centralizare.xlsx.
+Rezumatul este si in interpretari_scurte_ACP.txt; raspunsurile lungi sunt in
+rezolvari_test_ACP.txt. Copia deschisa de addin este temporara; pentru pastrarea
+adnotarilor intre sesiuni, salveaza o copie personala separat.
