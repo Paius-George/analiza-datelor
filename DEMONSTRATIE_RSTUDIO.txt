@@ -1,0 +1,21 @@
+DEMONSTRATIE - INTERPRETARI PLIABILE IN RSTUDIO
+
+1. Dezarhiveaza Pachet_test_ACP.zip complet.
+2. Deschide cod_test_ACP.R in RStudio.
+3. Nu trebuie sa executi analiza pentru aceasta demonstratie.
+4. Apasa Ctrl+F si cauta: INTERPRETARI COMPLETE
+5. La finalul scriptului sunt sectiuni pentru cele cinci cerinte, plus explicatii.
+6. Apasa pe sageata din stanga titlului unei sectiuni pentru a restrange textul.
+   Apasa din nou pentru a-l afisa.
+7. Pentru tastatura: selecteaza comentariile dintr-o sectiune si apasa Alt+L.
+   Pentru redeschidere, pune cursorul pe zona pliata si apasa Shift+Alt+L.
+   Aceste scurtaturi sunt cele implicite RStudio pentru Windows/Linux.
+8. Alternativ: Edit > Folding > Collapse / Expand.
+
+Exemplu: cauta "1. MATRICEA DE CORELAȚIE" in blocul de interpretari.
+Dupa redeschidere vei vedea explicatiile pentru r = 0,732 si r = -0,739.
+Comentariile incep cu # si nu apar in output cand rulezi Source.
+Plierea restrange textul vizual; continutul ramane in fisier.
+
+Pentru analiza, foloseste separat Source, dupa instalarea pachetelor.
+Raspunsurile numerice se refera la centralizare.xlsx din pachet.

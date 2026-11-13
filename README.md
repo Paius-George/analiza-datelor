@@ -2,6 +2,10 @@
 
 Materiale de curs, seminarii și aplicația de pregătire pentru parțial.
 
+[Pachet_test_ACP.zip](Pachet_test_ACP.zip) include codul, instalatorul, Excelul și
+rezolvările. Interpretările sunt și comentarii în secțiuni pliabile la finalul
+scriptului R. Pașii de probă sunt în [DEMONSTRATIE_RSTUDIO.txt](DEMONSTRATIE_RSTUDIO.txt).
+
 Pentru modelul de test: deschide [instaleaza_test_ACP.R](instaleaza_test_ACP.R)
 în RStudio și apasă **Source** o singură dată, cu internet disponibil. Apoi
 deschide [cod_test_ACP.R](cod_test_ACP.R) și apasă **Source** pentru analiză.
