@@ -1,7 +1,7 @@
 # INSTALARE TEST ACP: deschide in RStudio si apasa Source o singura data.
 # Necesita internet. Instaleaza pachetele; nu executa analiza.
 # Se foloseste o singura data pe calculator sau dupa schimbarea versiunii R.
-pachete <- c("readxl", "ggplot2", "FactoMineR", "factoextra", "rstudioapi")
+pachete <- c("readxl", "ggplot2", "FactoMineR", "factoextra", "rstudioapi", "corrplot")
 lipsa <- pachete[!vapply(pachete, requireNamespace, logical(1), quietly = TRUE)]
 
 if (length(lipsa)) {

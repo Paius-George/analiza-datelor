@@ -9,6 +9,13 @@ Codul găsește automat `Rezolvare Seminar/centralizare.xlsx`, păstrând struct
 folderelor, și exclude coloana cu anul. R și RStudio trebuie să fie instalate.
 Deschiderea unui fișier R afișează codul; **Source** îl execută.
 
+Outputurile folosesc formatul standard din codul profesorului și testele 11–20:
+`summary(acp)` din `princomp`, `MF = cor(X, acp$scores)`, `corrplot`,
+`summary(acp2)` cu secțiunile Eigenvalues, Individuals și Variables și graficul
+`fviz_pca_ind(acp2)`. Numerele depind de datele încărcate; variantele de pe site
+folosesc date sintetice proprii. Semnele axelor pot diferi între cele două metode;
+pentru graficul FactoMineR se interpretează corelațiile din `summary(acp2)`.
+
 Scriptul urmează cele cinci cerințe din fotografie: matricea de corelație,
 criteriile Kaiser și variației cumulate (prag implicit 80%), matricea factor,
 corelațiile și contribuțiile variabilelor, graficul regiunilor și scorurile

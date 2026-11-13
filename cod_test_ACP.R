@@ -4,7 +4,7 @@
 # Daca lipsesc pachetele, instaleaza-le o singura data din consola:
 # Deschide instaleaza_test_ACP.R si foloseste Source o singura data.
 
-pachete <- c("readxl", "FactoMineR", "factoextra")
+pachete <- c("readxl", "FactoMineR", "factoextra", "corrplot")
 lipsa <- pachete[!vapply(pachete, requireNamespace, logical(1), quietly = TRUE)]
 if (length(lipsa) > 0) {
   stop("Foloseste Source pe instaleaza_test_ACP.R. Lipsesc: ", paste(lipsa, collapse = ", "))
@@ -12,6 +12,7 @@ if (length(lipsa) > 0) {
 library(readxl)
 library(FactoMineR)
 library(factoextra)
+library(corrplot)
 
 # 0. IMPORT SI SETARI ------------------------------------------------------
 # Pentru Excelul profesorului, scrie aici calea lui; NULL foloseste proiectul.
@@ -75,69 +76,86 @@ if (length(prag_variatie) != 1 || !is.finite(prag_variatie) ||
 cat("Indicatori inclusi in ACP:\n")
 print(names(X))
 
+# Formatul outputurilor urmeaza comenzile profesorului, ca in testele 11-20.
+# Optiunile sunt restaurate la sfarsit; precizia nu modifica analiza.
+optiuni_initiale <- options(width = 160, digits = 7)
+
 # 1. MATRICEA DE CORELATIE (1p) --------------------------------------------
 cat("\n1. Matricea de corelatie\n")
-R <- cor(X)
+R <- cor(scale(X, center = TRUE, scale = TRUE))
 print(round(R, 3))
-# Alege exemple de corelatii pozitive/negative si explica sensul lor.
-# Corelatii puternice in valoare absoluta -> informatie comuna -> ACP utila.
-# Corelatia nu dovedeste o relatie cauza-efect.
 
-# O singura analiza pentru toate tabelele si graficul: semne consecvente.
-# ncp stabileste cate axe au scoruri calculate; NU este decizia de la ex. 2.
-acp <- PCA(X, scale.unit = TRUE,
-           ncp = min(5, ncol(X), nrow(X) - 1), graph = FALSE)
-if (acp$eig[2, 1] <= .Machine$double.eps * acp$eig[1, 1]) {
+# 2. DOUA CRITERII: OUTPUTUL summary(acp) (2p) -------------------------------
+if (nrow(X) < ncol(X)) {
+  stop("princomp, folosit de profesor, necesita cel putin atatea regiuni cat indicatori.")
+}
+acp <- princomp(X, cor = TRUE, scores = TRUE)
+cat("\n2. Standard deviation / Proportion of Variance / Cumulative Proportion\n")
+print(summary(acp))
+# Standard deviation la patrat = lambda.
+# Proportion of Variance si Cumulative Proportion sunt PROPORTII (0.80 = 80%).
+# In tabelul Eigenvalues din summary(acp2), aceleasi informatii sunt procente.
+
+# Pastreaza si obiectul FactoMineR pentru outputul standard de la exercitiul 4.
+acp2 <- PCA(X, scale.unit = TRUE,
+            ncp = min(5, ncol(X), nrow(X) - 1), graph = FALSE)
+if (acp2$eig[2, 1] <= .Machine$double.eps * acp2$eig[1, 1]) {
   stop("Datele nu permit interpretarea unei a doua componente cu variatie pozitiva.")
 }
 
-# 2. NUMARUL DE COMPONENTE: DOUA CRITERII (2p) ------------------------------
-cat("\n2. Valori proprii, variatie explicata (%), variatie cumulata (%)\n")
-print(round(acp$eig, 3))
-# Coloana 1 = lambda (valoare proprie), egala cu abaterea standard la patrat.
-# Coloana 2 = procentul explicat de fiecare componenta separat.
-# Coloana 3 = procentul cumulat de la PC1 pana la componenta respectiva.
-
-nr_kaiser <- sum(acp$eig[, 1] > 1)
-nr_cumulat <- which(acp$eig[, 3] >= prag_variatie - 1e-10)[1]
+# Pentru verificarea raspunsului, fara rotunjire inainte de selectie:
+nr_kaiser <- sum(acp$sdev^2 > 1)
+nr_cumulat <- which(acp2$eig[, 3] >= prag_variatie - 1e-10)[1]
 cat("Kaiser (lambda > 1):", nr_kaiser, "componente.\n")
 cat("Variatie cumulata, prag", prag_variatie, "%:", nr_cumulat,
-    "componente; cumul =", round(acp$eig[nr_cumulat, 3], 3), "%.\n")
-# Decizia foloseste valorile nerotunjite. Cele doua criterii pot diferi!
-# Pentru prag: alegi primul rand care atinge/depaseste procentul impus.
+    "componente; cumul =", round(acp2$eig[nr_cumulat, 3], 3), "%.\n")
+
+# Salvam toate graficele in acelasi folder.
+director_grafice <- file.path("rezultate", "grafice")
+dir.create(director_grafice, recursive = TRUE, showWarnings = FALSE)
+plot(acp, type = "l", main = "Scree plot - valori proprii")
+png(file.path(director_grafice, "test_ACP_scree.png"),
+    width = 1800, height = 1200, res = 160)
+plot(acp, type = "l", main = "Scree plot - valori proprii")
+dev.off()
 
 # 3. MATRICEA FACTOR: INTERPRETAREA PC2 (2p) --------------------------------
-cat("\n3. Matricea factor = corelatii indicatori-componente\n")
-MF <- cor(X, acp$ind$coord)
+scoruri <- acp$scores
+MF <- cor(X, scoruri)
+cat("\n3. Matricea factor (Comp.1, Comp.2, ...)\n")
 print(round(MF, 3))
-cat("PC2 explica", round(acp$eig[2, 2], 3), "% din variatia totala.\n")
-# Foloseste coloana Dim.2: alege corelatiile cele mai mari in modul.
-# Scor mare pe PC2 -> tendinta de valori mari pentru indicatorii cu semn +
-# si mici pentru cei cu semn -. Da o denumire care rezuma acest profil.
+corrplot(MF, method = "number")
+png(file.path(director_grafice, "test_ACP_matrice_factor.png"),
+    width = 2200, height = 1800, res = 180)
+corrplot(MF, method = "number")
+dev.off()
+cat("PC2 explica", round(acp2$eig[2, 2], 3), "% din variatia totala.\n")
+# Interpreteaza coloana Comp.2: semne, valori mari in modul, apoi denumire.
+# Ca in codul profesorului, MF provine din princomp; graficul final din PCA.
+# Semnele unei axe pot fi opuse intre metode. Pentru profilul regiunilor din
+# grafic foloseste corelatiile Dim.1 / Dim.2 din summary(acp2), de mai jos.
 
-# 4. OUTPUTUL VARIABILELOR: Dim1, Dim2 SI ctr (2p) --------------------------
-cat("\n4. Corelatii si contributii ale tuturor indicatorilor\n")
-tabel_var <- cbind(
-  Dim1 = acp$var$coord[, 1],
-  Dim2 = acp$var$coord[, 2],
-  `ctr1 (%)` = acp$var$contrib[, 1],
-  `ctr2 (%)` = acp$var$contrib[, 2]
-)
-print(round(tabel_var, 3))
-cat("Contributie medie de referinta (100 / numarul indicatorilor):",
+# 4. OUTPUTUL STANDARD FactoMineR (2p) -------------------------------------
+cat("\n4. Outputul FactoMineR, ca in variantele de test\n")
+print(acp2)
+summary(acp2)
+# Afiseaza Eigenvalues, Individuals si Variables, cu Dim, ctr si cos2.
+# Implicit vezi primele 10 elemente si primele 3 axe disponibile.
+# Pentru TOATE variabilele si numai primele doua axe, optional:
+# summary(acp2, nbelements = ncol(X), ncp = 2)
+# Variables: Dim = corelatie; ctr = contributie (%); cos2 = calitatea reprezentarii.
+# Individuals: Dim = SCOR al regiunii; ctr si cos2 au sens pentru regiuni.
+cat("Contributia medie (100 / numarul TOTAL al indicatorilor):",
     round(100 / ncol(X), 3), "% pe componenta.\n")
-# Dim1/Dim2 = corelatia indicatorului cu PC1/PC2 (intre -1 si +1).
-# ctr1/ctr2 = cat contribuie indicatorul la construirea componentei (%).
-# Suma contributiilor TUTUROR indicatorilor pe fiecare componenta = 100%.
 
 # 5. GRAFICUL REGIUNILOR SI DOUA CONCLUZII (2p) -----------------------------
 grafic_regiuni <- fviz_pca_ind(
-  acp, axes = c(1, 2), repel = TRUE, col.ind = "cos2",
+  acp2, axes = c(1, 2), repel = TRUE, col.ind = "cos2",
   gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
   title = "Reprezentarea regiunilor in planul PC1 - PC2"
 ) + ggplot2::labs(
-  x = sprintf("Componenta 1 (%.2f%%)", acp$eig[1, 2]),
-  y = sprintf("Componenta 2 (%.2f%%)", acp$eig[2, 2])
+  x = sprintf("Componenta 1 (%.2f%%)", acp2$eig[1, 2]),
+  y = sprintf("Componenta 2 (%.2f%%)", acp2$eig[2, 2])
 )
 print(grafic_regiuni)  # afisare inclusiv cand folosesti Source
 
@@ -148,9 +166,9 @@ ggplot2::ggsave(file.path(director_grafice, "test_ACP_regiuni_PC1_PC2.png"),
 cat("\nGrafic salvat in:", normalizePath(director_grafice), "\n")
 
 tabel_ind <- data.frame(
-  Scor_PC1 = acp$ind$coord[, 1],
-  Scor_PC2 = acp$ind$coord[, 2],
-  cos2_plan = rowSums(acp$ind$cos2[, 1:2, drop = FALSE])
+  Scor_PC1 = acp2$ind$coord[, 1],
+  Scor_PC2 = acp2$ind$coord[, 2],
+  cos2_plan = rowSums(acp2$ind$cos2[, 1:2, drop = FALSE])
 )
 cat("\n5. Cele mai mari doua scoruri pe PC1\n")
 print(round(head(tabel_ind[order(-tabel_ind$Scor_PC1), ], 2), 3))
@@ -163,7 +181,9 @@ print(round(head(tabel_ind[order(tabel_ind$Scor_PC2), ], 2), 3))
 # Scorurile regiunilor sunt coordonate, NU corelatii.
 # cos2_plan = calitatea reprezentarii regiunii in planul PC1-PC2.
 # Exemplu: 0.90 = 90% din distanta patrata fata de origine este surprinsa aici.
-# Concluzia 1: compara regiuni pe PC1 si explica profilul folosind MF[, 1].
-# Concluzia 2: compara regiuni pe PC2 si explica profilul folosind MF[, 2].
+# Concluzia 1: compara regiuni pe PC1 folosind acp2$var$coord[, 1].
+# Concluzia 2: compara regiuni pe PC2 folosind acp2$var$coord[, 2].
 # Verifica cos2_plan inainte sa formulezi concluzii ferme despre o regiune.
 # Pentru o regiune anume: tabel_ind["numele_regiunii", , drop = FALSE]
+
+options(optiuni_initiale)
