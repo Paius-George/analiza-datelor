@@ -9,6 +9,10 @@ Codul găsește automat `Rezolvare Seminar/centralizare.xlsx`, păstrând struct
 folderelor, și exclude coloana cu anul. R și RStudio trebuie să fie instalate.
 Deschiderea unui fișier R afișează codul; **Source** îl execută.
 
+[rezolvari_test_ACP.txt](rezolvari_test_ACP.txt) conține răspunsuri complete pentru
+cele cinci cerințe, cu valorile din `centralizare.xlsx`, interpretări pentru toți
+cei 12 indicatori și două concluzii despre regiuni.
+
 Outputurile folosesc formatul standard din codul profesorului și testele 11–20:
 `summary(acp)` din `princomp`, `MF = cor(X, acp$scores)`, `corrplot`,
 `summary(acp2)` cu secțiunile Eigenvalues, Individuals și Variables și graficul

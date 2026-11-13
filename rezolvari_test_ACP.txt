@@ -1,0 +1,281 @@
+REZOLVARE COMPLETĂ — MODELUL DE TEST DIN FOTOGRAFIE
+Date: centralizare.xlsx, prima foaie; 116 regiuni, 12 indicatori (X1–X12).
+Fișier asociat: cod_test_ACP.R. Coloana „an” este exclusă din analiză.
+
+Aceste răspunsuri se referă la DATELE PROIECTULUI NOSTRU. La testul profesorului
+păstrezi logica formulării și înlocuiești valorile, numele și concluziile cu cele
+susținute de outputul primit. Variantele 11–20 au alte date și alte rezultate.
+Calculele numerice de aici au fost verificate independent în Python; scriptul R
+nu a fost executat. Valorile afișate mai jos sunt rotunjite.
+
+Semnele folosite: PC1 are corelații pozitive cu indicatorii digitali, iar PC2 are
+corelație pozitivă cu șomajul. Verifică semnele în propriul output: dacă o axă
+este inversată, inversezi și sensul interpretării, păstrând procentele explicate.
+
+============================================================
+1. MATRICEA DE CORELAȚIE ȘI JUSTIFICAREA ACP — 1 punct
+============================================================
+Enunț: Analizați matricea de corelație pentru datele numerice inițiale.
+Formulați o concluzie privind aplicarea analizei componentelor principale.
+
+RĂSPUNS DE SCRIS:
+
+Între internetul acasă (X1) și internetul zilnic (X2) există o corelație pozitivă
+puternică, r = 0,732. Regiunile cu o pondere mai mare a accesului la internet
+acasă tind să aibă și o pondere mai mare a utilizării zilnice a internetului.
+
+Între ocupare (X6) și șomaj (X7) există o corelație negativă puternică,
+r = -0,739. Regiunile cu o rată a ocupării mai ridicată tind să aibă o rată
+a șomajului mai redusă.
+
+Matricea conține 37 de perechi distincte cu |r| > 0,50, din 66 de perechi
+posibile. Existența mai multor corelații ridicate în valoare absolută indică
+informație comună între indicatori și susține utilitatea ACP pentru reducerea
+dimensionalității, prin sintetizarea informației în mai puține componente.
+Corelațiile descriu asocieri și nu demonstrează relații de cauzalitate.
+
+============================================================
+2. DOUĂ CRITERII PENTRU NUMĂRUL DE COMPONENTE — 2 puncte
+============================================================
+Enunț: Folosiți două criterii pentru a decide numărul de componente păstrate
+în analiză.
+
+VALORILE PE CARE LE CITEȘTI:
+
+Componenta    Valoare proprie    Variație explicată (%)    Cumulat (%)
+PC1           6,714              55,950                    55,950
+PC2           1,727              14,389                    70,339
+PC3           1,096              9,132                     79,471
+PC4           0,670              5,587                     85,058
+PC5           0,539              4,492                     89,550
+
+RĂSPUNS DE SCRIS:
+
+Conform criteriului Kaiser, aplicat ACP pe indicatori standardizați, păstrăm
+componentele cu valori proprii strict mai mari decât 1. PC1 are λ = 6,714,
+PC2 are λ = 1,727, iar PC3 are λ = 1,096. PC4 are λ = 0,670 < 1, iar valorile
+următoare sunt și mai mici. Prin urmare, criteriul Kaiser recomandă păstrarea
+primelor 3 componente, care explică împreună 79,471% din variația totală.
+
+Conform criteriului variației cumulate explicate, la un prag ales de 80%,
+păstrăm primele 4 componente. Primele 3 explică numai 79,471%, sub prag, iar
+primele 4 explică 85,058%, depășind pentru prima dată pragul impus.
+
+Cele două criterii conduc la recomandări diferite: 3 componente după Kaiser
+și 4 componente pentru atingerea pragului de 80%. Dacă obiectivul este
+păstrarea a minimum 80% din variația totală, alegem 4 componente.
+
+DE REȚINUT:
+- În summary(acp): λ = (Standard deviation)^2.
+- Cumulative Proportion = 0,85058 înseamnă 85,058%.
+- În Eigenvalues: Variance înseamnă λ; Cumulative % of var. este deja procent.
+- ncp = 5 din cod nu este criteriu de selecție.
+- Păstrăm componente, nu indicatorii inițiali.
+
+============================================================
+3. MATRICEA FACTOR: INTERPRETAREA COMPONENTEI A DOUA — 2 puncte
+============================================================
+Enunț: Folosiți matricea factor pentru a interpreta a doua componentă principală.
+
+RĂSPUNS DE SCRIS:
+
+Matricea factor conține corelațiile dintre indicatorii inițiali și componente.
+Componenta a doua este corelată pozitiv, în principal, cu șomajul (X7,
+r = 0,694), șomajul tinerilor (X8, r = 0,546), densitatea populației (X12,
+r = 0,515) și studiile superioare (X9, r = 0,490). Ea este corelată negativ
+cu ocuparea (X6, r = -0,378). PIB-ul pe locuitor are o asociere pozitivă
+mai redusă, r = 0,348.
+
+Un scor pozitiv ridicat pe PC2 sugerează un profil cu șomaj general și al
+tinerilor mai ridicat, densitate și pondere a studiilor superioare mai mari,
+în opoziție cu o rată a ocupării mai redusă. Pentru un scor negativ, sensul
+profilului se inversează. Acestea sunt tendințe ale profilului, nu condiții
+obligatorii pentru fiecare regiune și fiecare indicator.
+
+Componenta poate fi numită „Contrast între șomaj, densitate, educație și ocupare”.
+Ea explică 14,389% din variația totală, valoare citită pentru PC2 în rândul
+% of var. din Eigenvalues, respectiv 0,14389 în Proportion of Variance.
+Un scor pozitiv pe această componentă nu înseamnă automat o situație mai bună.
+
+IMPORTANT: Faptul că șomajul și studiile superioare au același semn pe PC2
+nu dovedește singur o corelație pozitivă globală între cei doi indicatori.
+Corelația globală se citește din matricea de corelație a indicatorilor.
+
+============================================================
+4. INTERPRETAREA COLOANELOR Dim.1, Dim.2 ȘI ctr — 2 puncte
+============================================================
+Enunț: Din outputul numeric privind variabilele interpretați coloanele Dim1,
+Dim2 (corelații) și ctr (contribuții) pentru primele două componente principale.
+
+RĂSPUNS DE SCRIS — INTRODUCERE:
+
+În secțiunea Variables, Dim.1 și Dim.2 reprezintă corelațiile indicatorului
+cu PC1, respectiv PC2. Semnul arată sensul asocierii, iar valoarea absolută
+arată intensitatea. Corelația se exprimă ca r între -1 și 1.
+
+Coloana ctr reprezintă contribuția procentuală a indicatorului la construirea
+componentei respective. Pentru fiecare componentă, contribuțiile tuturor celor
+12 indicatori însumează 100%. Reperul contribuției medii este 100/12 = 8,333%.
+Contribuția este pozitivă chiar dacă indicatorul are corelație negativă cu axa.
+
+INTERPRETĂRI COMPLETE, PENTRU ORICARE INDICATOR CERUT:
+
+X1 — Internet acasă:
+Corelația cu PC1 este r = 0,719, iar corelația cu PC2 este
+r = 0,131. Indicatorul contribuie cu 7,691% la construirea PC1
+și cu 0,999% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Asocierea cu PC2 este foarte slabă; evităm concluzii ferme pe această axă.
+
+X2 — Internet zilnic:
+Corelația cu PC1 este r = 0,819, iar corelația cu PC2 este
+r = 0,199. Indicatorul contribuie cu 9,992% la construirea PC1
+și cu 2,283% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Asocierea cu PC2 este foarte slabă; evităm concluzii ferme pe această axă.
+
+X3 — Internet banking:
+Corelația cu PC1 este r = 0,885, iar corelația cu PC2 este
+r = 0,106. Indicatorul contribuie cu 11,665% la construirea PC1
+și cu 0,655% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Asocierea cu PC2 este foarte slabă; evităm concluzii ferme pe această axă.
+
+X4 — Cumpărături online:
+Corelația cu PC1 este r = 0,901, iar corelația cu PC2 este
+r = -0,025. Indicatorul contribuie cu 12,094% la construirea PC1
+și cu 0,036% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Asocierea cu PC2 este foarte slabă; evităm concluzii ferme pe această axă.
+
+X5 — PIB pe locuitor (PPS):
+Corelația cu PC1 este r = 0,654, iar corelația cu PC2 este
+r = 0,348. Indicatorul contribuie cu 6,374% la construirea PC1
+și cu 7,009% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+X6 — Ocupare 20–64 ani:
+Corelația cu PC1 este r = 0,856, iar corelația cu PC2 este
+r = -0,378. Indicatorul contribuie cu 10,907% la construirea PC1
+și cu 8,293% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai reduse ale indicatorului.
+
+X7 — Șomaj 20–64 ani:
+Corelația cu PC1 este r = -0,591, iar corelația cu PC2 este
+r = 0,694. Indicatorul contribuie cu 5,202% la construirea PC1
+și cu 27,906% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai reduse ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+X8 — Șomaj în rândul tinerilor:
+Corelația cu PC1 este r = -0,729, iar corelația cu PC2 este
+r = 0,546. Indicatorul contribuie cu 7,909% la construirea PC1
+și cu 17,276% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai reduse ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+X9 — Studii superioare:
+Corelația cu PC1 este r = 0,717, iar corelația cu PC2 este
+r = 0,490. Indicatorul contribuie cu 7,657% la construirea PC1
+și cu 13,896% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+X10 — Formare adulți:
+Corelația cu PC1 este r = 0,721, iar corelația cu PC2 este
+r = 0,312. Indicatorul contribuie cu 7,752% la construirea PC1
+și cu 5,628% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+X11 — NEET:
+Corelația cu PC1 este r = -0,907, iar corelația cu PC2 este
+r = 0,105. Indicatorul contribuie cu 12,250% la construirea PC1
+și cu 0,638% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai reduse ale indicatorului.
+Asocierea cu PC2 este foarte slabă; evităm concluzii ferme pe această axă.
+
+X12 — Densitatea populației:
+Corelația cu PC1 este r = 0,184, iar corelația cu PC2 este
+r = 0,515. Indicatorul contribuie cu 0,506% la construirea PC1
+și cu 15,381% la construirea PC2.
+Scorurile mari pe PC1 se asociază cu valori mai ridicate ale indicatorului.
+Scorurile mari pe PC2 se asociază cu valori mai ridicate ale indicatorului.
+
+CONCLUZIE PENTRU CERINȚA 4:
+
+De exemplu, șomajul contribuie cu 27,906% la PC2, mult peste reperul de 8,333%,
+și are corelația r = 0,694 cu această componentă. NEET contribuie cu 12,250%
+la PC1, având corelația negativă r = -0,907. Așadar, un indicator poate avea
+contribuție importantă atât cu o corelație pozitivă, cât și cu una negativă.
+
+Dacă apare și cos2: acesta măsoară calitatea reprezentării, nu contribuția.
+Pentru variabilele din această ACP standardizată, cos2 pe o axă este r^2.
+În secțiunea Individuals, Dim este scorul regiunii, nu o corelație.
+summary(acp2) arată implicit primele 10 variabile, dar reperul rămâne 100/12.
+
+============================================================
+5. GRAFICUL REGIUNILOR ÎN PLANUL PC1–PC2. DOUĂ CONCLUZII — 2 puncte
+============================================================
+Enunț: Reprezentați grafic regiunile într-un spațiu definit de primele două
+componente principale. Extrageți 2 concluzii.
+
+REPREZENTAREA CERUTĂ:
+
+În R, graficul este produs de fviz_pca_ind(acp2). Axa orizontală reprezintă
+PC1, iar axa verticală PC2. Primele două componente explică împreună 70,339%
+din variația totală (55,950% + 14,389%). Scorurile sunt coordonate ale
+regiunilor și pot depăși intervalul [-1, 1].
+
+VALORI UTILE DIN GRAFIC ȘI TABELUL SCORURILOR:
+
+Regiune    Scor PC1    Scor PC2    cos2 în planul PC1–PC2
+NL35       5,117       0,586       0,977
+ITF6       -7,916      1,544       0,931
+DK01       4,129       1,631       0,923
+RO21       -3,705      -2,030      0,834
+BE10       0,878       6,169       0,479
+CZ05       0,294       -2,587      0,756
+
+RĂSPUNS DE SCRIS — CELE DOUĂ CONCLUZII:
+
+1) NL35 se află mult în dreapta originii, având scorul PC1 = 5,117, în timp ce
+ITF6 se află mult în stânga, cu PC1 = -7,916. Având în vedere corelațiile PC1,
+NL35 tinde să aibă un profil cu digitalizare și ocupare mai ridicate, respectiv
+șomaj și NEET mai reduse, în comparație cu profilul opus al ITF6. Cele două
+regiuni sunt bine reprezentate în plan: cos2 cumulat este 0,977 pentru NL35
+și 0,931 pentru ITF6, adică aproximativ 97,7% și 93,1% din distanța pătratică
+față de centru sunt surprinse de planul PC1–PC2.
+
+2) DK01 are un scor pozitiv pe PC2 (1,631), iar RO21 are un scor negativ
+(-2,030). Pe această axă, profilul DK01 este orientat spre valori mai ridicate
+ale șomajului, densității și studiilor superioare, în opoziție cu ocuparea,
+iar profilul RO21 este orientat în sens invers. Formularea exprimă tendința
+sintetizată de PC2; nu afirmă că fiecare indicator al DK01 este obligatoriu
+mai mare sau mai mic decât cel al RO21. Calitatea reprezentării în plan este
+bună pentru ambele: cos2 cumulat = 0,923 pentru DK01 și 0,834 pentru RO21.
+
+OBSERVAȚIE SUPLIMENTARĂ, DACĂ ÎȚI ESTE CERUTĂ REGIUNEA BE10:
+
+BE10 se distinge printr-un scor PC2 foarte ridicat (6,169), dar cos2 cumulat
+în plan este numai 0,479. Planul surprinde aproximativ 47,9% din distanța sa
+pătratică față de centru, deci interpretarea profilului numai pe aceste două
+axe trebuie făcută prudent. Faptul că planul explică 70,339% din variația
+totală a setului nu garantează aceeași calitate pentru fiecare regiune.
+
+============================================================
+CUM ADAPTEZI ACESTE RĂSPUNSURI LA ALTE DATE
+============================================================
+1) Corelații: citează două perechi, semnul și sensul asocierii; justifică ACP.
+2) Kaiser: numără lambda > 1. Prag: primul cumul care atinge procentul ales.
+3) PC2: selectează corelațiile mari în modul, explică semnele, dă o denumire
+   și citează procentul explicat NUMAI de componenta a doua.
+4) Variabile: Dim = corelație; ctr = contribuție procentuală; cos2 = calitatea
+   reprezentării. Citează valori pentru ambele componente cerute.
+5) Regiuni: identifică poziția prin scor, explică profilul prin corelațiile
+   componentei și verifică suma cos2 pentru plan. Scrie două concluzii concrete.
+
+Nu transfera automat valorile, denumirile componentelor sau profilurile de mai
+sus într-o variantă cu alte date. Interpretează semnele efectiv afișate.
