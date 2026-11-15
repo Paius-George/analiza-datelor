@@ -1,5 +1,10 @@
 # Fișele 80/20 — două materii
 
+Pe desktop, **Scală: 70% / 80% / 90% / 100%** micșorează proporțional întreaga
+interfață, independent de zoom-ul browserului. Valoarea implicită este 100%,
+pentru a nu schimba celelalte dispozitive; preferința se salvează în browser.
+Pe mobil și la imprimare se păstrează scala normală.
+
 Pe desktop, selectorul **Aspect: Compact / Aerisit** reglează spațierea și
 bannerele; alegerea se salvează separat în browser, fără a modifica progresul
 sau dimensiunea textului lecțiilor. Modul Compact este implicit de la 1024 px;

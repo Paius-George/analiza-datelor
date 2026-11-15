@@ -47,3 +47,15 @@ html[data-density=compact] .prof-home-banner{padding:17px 20px;margin-bottom:20p
 }
 @media(max-width:1100px){.cse-top-note{display:none}.subject-header-actions{gap:15px}}
 @media(max-width:1023px){.display-density{display:none}}
+
+/* Scala intregii interfete, independenta de zoomul browserului si de densitate. */
+.display-options{display:flex;align-items:center;gap:14px;flex-shrink:0}.topbar>.display-options{margin-left:auto}
+@media screen and (min-width:1024px){
+  html{zoom:var(--ui-scale,1)}
+  .sidebar{height:calc(100dvh / var(--ui-scale,1))}
+  .subject-home{min-height:calc(100dvh / var(--ui-scale,1))}
+  .modal{max-height:calc((100dvh - 40px) / var(--ui-scale,1))}
+}
+@media screen and (min-width:1024px) and (max-width:1280px){.display-options .density-choice{display:none}.subject-top-note{display:none}}
+@media(max-width:1023px){.display-options{display:none}}
+@media print{html{zoom:1}.display-options{display:none!important}}
