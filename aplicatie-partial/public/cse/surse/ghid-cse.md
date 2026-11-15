@@ -421,4 +421,3 @@ Capcană: PD de 0,15% se introduce în formulă ca **0,0015**.
 - [Studiul de caz Cakes explicat](Seminar/Seminar_3_VSM_Cakes_explicat.pdf)
 - [Seminarul despre bancă și probleme](Seminar/Seminar_4-5_CSE_2026.pdf)
 - [Fișierul de probleme rezolvat](Seminar/Seminar%204_p1_CSE%20-%20rezolvat.xlsx)
-

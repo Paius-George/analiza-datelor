@@ -137,4 +137,3 @@ Rezultat: **Verde — diversificare ridicată**.
 13. **Galben** — schimbare relevantă/moderată; se investighează segmentele și variabilele.
 14. **Roșu** — concentrare ridicată; analiză aprofundată și plan de acțiune.
 15. **Verde** — diversificare ridicată; monitorizare obișnuită.
-
