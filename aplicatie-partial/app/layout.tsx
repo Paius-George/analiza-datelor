@@ -8,5 +8,5 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.svg" },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ro"><body>{children}</body></html>;
+  return <html lang="ro" data-density="compact"><body>{children}</body></html>;
 }

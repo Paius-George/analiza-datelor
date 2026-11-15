@@ -1,5 +1,10 @@
 # Fișele 80/20 — două materii
 
+Pe desktop, selectorul **Aspect: Compact / Aerisit** reglează spațierea și
+bannerele; alegerea se salvează separat în browser, fără a modifica progresul
+sau dimensiunea textului lecțiilor. Modul Compact este implicit de la 1024 px;
+pe mobil se păstrează layoutul dedicat.
+
 Homepage-ul `/` permite alegerea materiei. **Analiza Datelor** este la
 `/analiza-datelor/`; vechile linkuri `/#lectii`, `/#modele-profesor/...` etc.
 funcționează prin redirecționare cu păstrarea hash-ului. **Cibernetica sistemelor

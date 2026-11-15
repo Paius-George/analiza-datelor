@@ -4,3 +4,46 @@
 @media(max-width:1050px){.cse-hero{grid-template-columns:1fr;padding:30px}.cse-vsm-map{grid-template-columns:repeat(3,1fr);transform:none}.cse-vsm-map>div{flex-direction:column;text-align:center}.cse-indicators{grid-template-columns:1fr}.cse-stats{grid-template-columns:1fr 1fr}.cse-stats span:nth-child(2){border:0}.cse-section-head{align-items:flex-start;flex-direction:column}.cse-module-grid{grid-template-columns:1fr}.subject-main{padding-top:45px}.subject-card{padding:27px 25px 0}.subject-course-tag{font-size:7px}.subject-card h2{font-size:27px}}
 @media(max-width:760px){.subject-top{padding:21px 23px}.subject-top-note{display:none}.subject-main{padding:35px 20px 28px}.subject-intro{margin-bottom:28px}.subject-intro h1{font-size:36px;letter-spacing:-1.5px;margin-top:20px}.subject-intro>p{font-size:13px;line-height:1.9}.subject-cards{grid-template-columns:1fr;gap:20px}.subject-card{padding:25px 25px 0}.subject-card h2{min-height:0;font-size:29px;margin-top:22px}.subject-card>p{min-height:0}.subject-course-tag{font-size:8px}.subject-chips{margin:18px 0}.subject-progress{margin-bottom:20px}.subject-method{gap:10px;align-items:flex-start;flex-direction:column;padding:0 8px}.subject-method i{display:none}.subject-method>span{margin-bottom:5px}.subject-footer{padding:20px;gap:15px;font-size:9px}.cse-menu-close{display:grid!important;position:absolute;right:15px;top:15px}.cse-sidebar{z-index:60}.cse-top-note{display:none}.cse-hero{padding:25px;gap:25px}.cse-hero h1{font-size:30px;letter-spacing:-1.1px}.cse-vsm-map{gap:8px}.cse-vsm-map>div{padding:11px 7px}.cse-vsm-map span{font-size:9px}.cse-vsm-map b{font-size:13px}.cse-hero>div>p:not(.eyebrow){font-size:12px}.cse-app .cse-card{padding:21px;margin-bottom:18px}.cse-stats{gap:7px;padding:0;margin:20px 0}.cse-stats span{font-size:10px;padding:7px 12px}.cse-stats b{font-size:21px}.cse-roadmap{font-size:12px;line-height:2.2}.cse-module-grid{gap:0}.cse-section-head h2{font-size:21px}.cse-source-note{font-size:10px}.cse-filter{width:100%}.cse-filter select,.cse-filter input{min-width:0;width:100%}.cse-filters{gap:0}.cse-lesson-list>button{gap:12px}.cse-lesson-list h2{font-size:17px}.cse-lesson-list p{font-size:11px}.cse-lesson-check{width:31px;height:31px}.cse-lesson h1{font-size:26px}.cse-lesson>p{font-size:14px}.cse-essence{padding:17px}.cse-essence p{font-size:16px}.cse-lesson>h2{font-size:18px}.cse-practice h2{font-size:21px}.cse-practice .choice{font-size:12px}.cse-practice textarea{font-size:13px}.cse-question-prompt{font-size:13px}.cse-flash{padding:25px;min-height:310px}.cse-flash h2{font-size:21px}.cse-flash p{font-size:13px}.cse-input-grid,.cse-input-grid.three{grid-template-columns:1fr}.cse-source-grid{grid-template-columns:1fr;gap:0}.cse-exam-header{align-items:flex-start}.cse-exam-header h1{font-size:22px}.cse-exam-header .timer{font-size:16px;padding:10px}.cse-source-grid h2{font-size:17px}.cse-history>button{flex-wrap:wrap}.cse-history strong{font-size:11px}.cse-submit{bottom:5px;padding:14px}.cse-card .button{font-size:11px}.cse-ecl{font-size:12px;line-height:2}.cse-ecl strong{font-size:23px}.cse-card .cse-muted{font-size:12px}}
 @media print{.subject-top-note,.subject-enter,.subject-progress,.cse-action-row,.cse-reader-nav,.cse-submit,.cse-top-note,.cse-filter{display:none!important}.cse-app .cse-card{break-inside:avoid;box-shadow:none}.cse-model>p{display:block!important}.cse-hero{display:block}.cse-vsm-map{display:none}.cse-app .main-shell{margin:0}}
+
+/* Densitate pentru desktop: spatii si bannere compacte, fara scalarea textului lectiilor. */
+.subject-header-actions{display:flex;align-items:center;gap:24px}.display-density{display:flex;align-items:center;gap:8px;font-size:10px;color:#7b7a8c;flex-shrink:0}.display-density select{border:1px solid #e0e2eb;background:#fff;color:#605c76;border-radius:7px;font-size:11px;padding:7px 9px;cursor:pointer;max-width:110px}.topbar>.display-density{margin-left:auto}
+@media screen and (min-width:1024px){
+html[data-density=compact] .subject-top{padding-top:18px;padding-bottom:18px}
+html[data-density=compact] .subject-main{padding-top:32px;padding-bottom:24px}
+html[data-density=compact] .subject-intro{margin-bottom:28px}
+html[data-density=compact] .subject-intro h1{font-size:42px;letter-spacing:-1.8px;margin:16px 0 14px}
+html[data-density=compact] .subject-intro>p{font-size:14px;line-height:1.8}
+html[data-density=compact] .subject-pill{padding:6px 11px}
+html[data-density=compact] .subject-card{padding:24px 27px 0;border-radius:18px}
+html[data-density=compact] .subject-icon{width:47px;height:47px;border-radius:13px}
+html[data-density=compact] .subject-card h2{font-size:27px;min-height:66px;margin:19px 0 12px}
+html[data-density=compact] .subject-card>p{min-height:48px}
+html[data-density=compact] .subject-chips{margin:15px 0}
+html[data-density=compact] .subject-progress{margin:18px 0 20px}
+html[data-density=compact] .subject-enter{padding:16px 0}
+html[data-density=compact] .subject-method{margin:24px 0 12px}
+html[data-density=compact] .subject-footer{padding-top:18px;padding-bottom:21px}
+html[data-density=compact] .main-content{padding-top:24px;padding-left:28px;padding-right:28px}
+html[data-density=compact] .topbar{height:60px;min-height:60px;padding-top:10px;padding-bottom:10px}
+html[data-density=compact] .sidebar{padding-top:20px}
+html[data-density=compact] .sidebar .brand{padding-bottom:22px}
+html[data-density=compact] .sidebar nav button{padding-top:10px;padding-bottom:10px}
+html[data-density=compact] .sidebar-progress{padding:13px 12px;margin-bottom:16px}
+html[data-density=compact] .subject-back{padding-bottom:14px}
+html[data-density=compact] .cse-hero{padding:27px;gap:26px;margin-bottom:20px}
+html[data-density=compact] .cse-hero h1{font-size:32px;letter-spacing:-1.2px;margin:12px 0}
+html[data-density=compact] .cse-action-row{margin-top:18px}
+html[data-density=compact] .cse-vsm-map>div{padding:12px 10px}
+html[data-density=compact] .cse-stats{margin:18px 0;gap:10px}
+html[data-density=compact] .cse-stats b{font-size:21px}
+html[data-density=compact] .cse-card{padding:21px;margin-bottom:18px}
+html[data-density=compact] .cse-roadmap{margin:18px 0 14px;line-height:2}
+html[data-density=compact] .cse-section-head h2{font-size:21px}
+html[data-density=compact] .cse-module-grid{gap:15px}
+html[data-density=compact] .cse-module{gap:11px}
+html[data-density=compact] .cse-module h2{font-size:19px}
+html[data-density=compact] .cse-flash{min-height:280px;padding:30px}
+html[data-density=compact] .prof-home-banner{padding:17px 20px;margin-bottom:20px}
+}
+@media(max-width:1100px){.cse-top-note{display:none}.subject-header-actions{gap:15px}}
+@media(max-width:1023px){.display-density{display:none}}
