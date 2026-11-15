@@ -1,0 +1,21 @@
+"use client";
+import { useEffect, useState } from "react";
+import { ArrowRight, BookOpen, ChartNoAxesCombined, CheckCircle2, GraduationCap, Network, Sparkles } from "lucide-react";
+import { STORAGE_KEY, readProgress } from "../lib/learning.mjs";
+import { CSE_STORAGE_KEY } from "../lib/cse.mjs";
+type Props = { adLessons: number; cseLessons: number; cseQuestions: number; cseExams: number };
+export default function SubjectHome({adLessons,cseLessons,cseQuestions,cseExams}: Props) {
+  const [done,setDone]=useState([0,0]);
+  useEffect(()=>{
+    const legacy=window.location.hash.slice(1).split("/")[0];
+    if (["acasa","lectii","lectie","modul","antrenament","modele-profesor","simulari","examen","rezultat","greseli"].includes(legacy)) { window.location.replace("/analiza-datelor/"+window.location.hash); return; }
+    try { setDone([readProgress(localStorage.getItem(STORAGE_KEY)).completed.length,readProgress(localStorage.getItem(CSE_STORAGE_KEY)).completed.length]); } catch { /* Alegerea materiei ramane disponibila fara localStorage. */ }
+  },[]);
+  return <div className="subject-home"><a className="skip-link" href="#materii">Sari la materii</a>
+    <header className="subject-top"><a className="subject-logo" href="/" aria-label="Fișele 80/20, pagina principală"><span className="brand-mark"><GraduationCap size={23}/></span><span>Fișele <strong>80/20</strong><small>ÎNVAȚĂ CU SENS</small></span></a><span className="subject-top-note"><CheckCircle2 size={16}/> Pas cu pas, în ritmul tău</span></header>
+    <main className="subject-main" id="materii"><div className="subject-intro"><span className="subject-pill"><Sparkles size={14}/> IDEILE CARE CONTEAZĂ</span><h1>Mai puțin de memorat.<br/><em>Mai mult de înțeles.</em></h1><p>Alege materia. Înțelege ideea, vezi un exemplu și încearcă singur. Construiește-ți încrederea înainte de parțial.</p></div>
+      <div className="subject-cards"><a href="/analiza-datelor/" className="subject-card subject-ad"><div className="subject-card-top"><span className="subject-icon"><ChartNoAxesCombined size={28}/></span><span className="subject-course-tag">OUTPUTURI & INTERPRETARE</span></div><h2>Analiza<br/>Datelor</h2><p>De la matricea de corelație la o interpretare clară. Citești outputul R și explici ce înseamnă.</p><div className="subject-chips"><span>ACP & analiză factorială</span><span>Grafice explicate</span></div><div className="subject-counts"><span><BookOpen size={15}/>{adLessons} lecții</span><span>20 modele de test</span></div><div className="subject-progress"><span>{done[0] ? `${Math.min(done[0],adLessons)} lecții parcurse` : "Începe cu o idee simplă"}</span><i><b style={{width:`${Math.min(100,done[0]/adLessons*100)}%`}}/></i></div><div className="subject-enter">Învață Analiza Datelor <ArrowRight size={19}/></div></a>
+      <a href="/cibernetica/" className="subject-card subject-cse"><div className="subject-card-top"><span className="subject-icon"><Network size={28}/></span><span className="subject-course-tag">SISTEME & APLICAȚII</span></div><h2>Cibernetica<br/>sistemelor economice</h2><p>Recunoști sistemele în exemple și explici legăturile. De la VSM și feedback la tehnica semaforului.</p><div className="subject-chips"><span>VSM & sisteme adaptive</span><span>PSI · HHI · Entropie</span></div><div className="subject-counts"><span><BookOpen size={15}/>{cseLessons} lecții</span><span>{cseQuestions} exerciții · {cseExams} simulări</span></div><div className="subject-progress"><span>{done[1] ? `${Math.min(done[1],cseLessons)} lecții parcurse` : "Începe cu diferența S2–S3"}</span><i><b style={{width:`${Math.min(100,done[1]/cseLessons*100)}%`}}/></i></div><div className="subject-enter">Învață Cibernetică <ArrowRight size={19}/></div></a></div>
+      <div className="subject-method"><span>METODA 80/20</span><p><b>1.</b> Înțelege esențialul</p><i>→</i><p><b>2.</b> Explică fără ajutor</p><i>→</i><p><b>3.</b> Verifică și repetă</p></div><p className="subject-footnote">Progresul fiecărei materii se păstrează separat, în acest browser. Prioritizarea te ajută să înveți; nu garantează subiectele de examen.</p>
+    </main><footer className="subject-footer"><span>Fișele 80/20</span><span>Înțelege ideea. Explică în cuvintele tale.</span></footer></div>;
+}

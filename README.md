@@ -39,7 +39,13 @@ Pentru alte date, completează variabila `fisier` cu
 calea Excelului profesorului și verifică foaia, identificatorul regiunilor și
 coloanele numerice de exclus.
 
-Aplicația este în [`aplicatie-partial/`](aplicatie-partial/README.md). Include 73 de lecții, exerciții cu feedback, cartonașe și patru simulări de parțial. Progresul se păstrează în browserul fiecărui coleg.
+Aplicația este în [`aplicatie-partial/`](aplicatie-partial/README.md). Homepage-ul
+permite alegerea între **Analiza Datelor** (`/analiza-datelor/`) și **Cibernetica
+sistemelor economice** (`/cibernetica/`). Analiza Datelor păstrează cele 73 de
+lecții și cele 20 de modele. CSE adaugă 35 de lecții 80/20, 53 de întrebări,
+cartonașe, 4 simulări cu barem și un calculator PSI/HHI/entropie/ECL. Progresul
+se păstrează separat pentru fiecare materie, în browser. Linkurile vechi cu
+hash către Analiza Datelor sunt redirecționate către secțiunea sa.
 
 ## Acces pentru colegi
 

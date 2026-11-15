@@ -1,3 +1,38 @@
+# Fișele 80/20 — două materii
+
+Homepage-ul `/` permite alegerea materiei. **Analiza Datelor** este la
+`/analiza-datelor/`; vechile linkuri `/#lectii`, `/#modele-profesor/...` etc.
+funcționează prin redirecționare cu păstrarea hash-ului. **Cibernetica sistemelor
+economice** este la `/cibernetica/`.
+
+CSE include 35 de lecții, 53 de întrebări (grile, calcule și interpretări),
+cartonașe, repetarea greșelilor, planuri de 30/60/120 de minute și 4 simulări.
+Simulările sunt didactice, de 10 întrebări și 40 de minute: 7 răspunsuri automate,
+3 răspunsuri scrise autoevaluate, 1 punct din oficiu și 9 puncte de lucru.
+Nu reproduc un format oficial confirmat pentru CSE. Progresul și răspunsurile
+sunt locale, în cheia `cibernetica-sistemelor-economice-8020-v1`, separată de AD.
+
+Conținut CSE: `content/cse.json`. Fiecare lecție are esențialul, explicație,
+exemplu, răspuns-model, capcană și surse. Fișele noi pot fi descărcate din
+`public/cse/fise-80-20.md`; ghidurile originale sunt păstrate separat. Materialele
+locale provin din folderul Cibernetica sistemelor economice: ghidul existent,
+cursuri și seminarii (VSM, firma adaptivă, banca și cursul 5 despre ERP/CRM/SCM).
+Pentru shadow banking, prezentarea specifică lipsește: sinteza este completată
+cu surse instituționale FSB/RBI, etichetate ca atare. Bibliografia este accesibilă
+în secțiunea Materiale originale; PDF-urile și descărcările rămân protejate de
+același Cloudflare Access.
+
+Calculatorul normalizează separat cele două distribuții. PSI cu ponderi zero
+este semnalat explicit, fără regularizare tacită; HHI și entropia rămân
+calculabile. Pragurile sunt cele orientative din seminarul 4–5: PSI 0,10/0,25;
+HHI normalizat 0,10/0,20; entropie 0,60/0,90, cu granițele în galben.
+ECL este aproximația didactică PD × LGD × EAD, cu procente convertite corect.
+
+Verificare: `npm test` (35 teste), `npm run typecheck`, `npm run build`.
+Verificarea în Chromium a inclus desktop și mobil, homepage, progres separat,
+lecții, cartonașe, calculator, antrenament, reluarea simulării după refresh,
+predare și autoevaluare, plus compatibilitatea unui link vechi către modelul 16.
+
 # Laboratorul de parțial
 
 Aplicație în română pentru Analiza Datelor:

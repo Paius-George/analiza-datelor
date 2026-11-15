@@ -1,0 +1,1623 @@
+{
+  "title": "Cibernetica sistemelor economice",
+  "modules": [
+    {
+      "id": "vsm",
+      "title": "VSM: cine face ce?",
+      "description": "Șase verbe și diferența S2–S3.",
+      "priority": "Prioritatea 1",
+      "minutes": 20,
+      "lessons": [
+        "vsm-harta",
+        "vsm-s1",
+        "vsm-s2",
+        "vsm-s3",
+        "vsm-s3audit",
+        "vsm-s4s5",
+        "vsm-recursivitate"
+      ]
+    },
+    {
+      "id": "cas",
+      "title": "CAS și feedback",
+      "description": "Recunoști proprietatea și o legi de dovada din caz.",
+      "priority": "Prioritatea 1",
+      "minutes": 20,
+      "lessons": [
+        "cas-definitie",
+        "cas-conectivitate",
+        "cas-feedback",
+        "cas-coevolutie",
+        "cas-emergenta",
+        "cas-traiectorie",
+        "cas-neliniaritate",
+        "cas-raspuns"
+      ]
+    },
+    {
+      "id": "semafor",
+      "title": "PSI, HHI și entropie",
+      "description": "Alegi formula, calculezi și interpretezi culoarea.",
+      "priority": "Prioritatea 1",
+      "minutes": 25,
+      "lessons": [
+        "psi-scop",
+        "psi-praguri",
+        "psi-zerouri",
+        "hhi-formula",
+        "hhi-praguri",
+        "entropie-formula",
+        "entropie-praguri",
+        "semafor-comparatie"
+      ]
+    },
+    {
+      "id": "firma",
+      "title": "Firma adaptivă",
+      "description": "Cele cinci subsisteme, în situații concrete.",
+      "priority": "Prioritatea 2",
+      "minutes": 15,
+      "lessons": [
+        "firma-subsisteme",
+        "firma-piata",
+        "firma-costfinantare",
+        "firma-proprietati"
+      ]
+    },
+    {
+      "id": "banca",
+      "title": "Banca și riscul",
+      "description": "Banca drept CAS, ECL și RWA.",
+      "priority": "Prioritatea 2",
+      "minutes": 15,
+      "lessons": [
+        "banca-cas",
+        "banca-bucla",
+        "ecl",
+        "ecl-rwa"
+      ]
+    },
+    {
+      "id": "shadow",
+      "title": "Shadow banking",
+      "description": "Definiție, exemple și comparația cu banca.",
+      "priority": "Prioritatea 2",
+      "minutes": 8,
+      "lessons": [
+        "shadow-definitie",
+        "shadow-comparatie"
+      ]
+    },
+    {
+      "id": "it",
+      "title": "ERP, CRM și SCM",
+      "description": "Extindere din cursul 5: alegi soluția potrivită.",
+      "priority": "Extindere",
+      "minutes": 7,
+      "lessons": [
+        "erp",
+        "crm-scm"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "vsm-harta",
+      "module": "vsm",
+      "title": "VSM în șase verbe",
+      "core": "S1 produce; S2 coordonează; S3 optimizează; S3* verifică; S4 anticipează; S5 definește identitatea.",
+      "explanation": "Modelul Sistemului Viabil descrie funcțiile necesare pentru continuitatea unei organizații într-un mediu schimbător. Viabilitatea cere atât operațiuni curente funcționale, cât și adaptare la viitor.",
+      "example": "O brutărie produce, sincronizează comenzile, alocă resurse și decide cum se dezvoltă.",
+      "model": "VSM cuprinde operațiunile S1, coordonarea S2, controlul intern S3, auditul S3*, inteligența S4 și politica S5. Acestea sunt funcții, nu obligatoriu departamente separate.",
+      "pitfall": "Nu confunda sistemele VSM cu cele cinci subsisteme cibernetice ale firmei.",
+      "recall": "Numește funcțiile S1–S5 și explică rolul S3*.",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-s1",
+      "module": "vsm",
+      "title": "S1: operațiunile",
+      "core": "S1 realizează activitatea pentru care există organizația.",
+      "explanation": "Unitățile operaționale au autonomie locală în limitele obiectivelor comune. Într-o analiză, identifici întâi organizația și nivelul ei, apoi unitățile care livrează valoare.",
+      "example": "Într-o fabrică de prăjituri, secțiile care realizează produsele sunt unități S1.",
+      "model": "Activitatea descrisă aparține S1 deoarece produce efectiv bunul sau serviciul oferit de organizație.",
+      "pitfall": "La alt nivel de analiză, o unitate S1 poate avea la rândul ei propriul VSM.",
+      "recall": "O echipă execută efectiv serviciul vândut clientului; ce funcție are?",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-s2",
+      "module": "vsm",
+      "title": "S2: coordonează și stabilizează",
+      "core": "S2 evită ca unitățile să se încurce reciproc.",
+      "explanation": "El sincronizează programe și reguli, atenuează oscilațiile și conflictele dintre S1. Nu înlocuiește autonomia operațională cu un control central asupra fiecărui detaliu.",
+      "example": "Două secții folosesc același utilaj la aceeași oră: un program comun elimină blocajul.",
+      "model": "Se identifică S2 deoarece programarea comună coordonează unitățile S1 și reduce conflictele, stabilizând operațiunile.",
+      "pitfall": "Cuvântul „program” nu înseamnă automat strategie: urmărește scopul acțiunii.",
+      "recall": "Programele incompatibile ale secțiilor produc blocaje; ce sistem este deficitar?",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-s3",
+      "module": "vsm",
+      "title": "S3: optimizează întregul",
+      "core": "S3 alocă resurse pentru performanța ansamblului, aici și acum.",
+      "explanation": "Managementul intern urmărește rezultatele, distribuie bugete și personal și obține sinergie. Performanța maximă a fiecărei secții separat nu garantează rezultatul maxim al întregii firme.",
+      "example": "Conducerea mută personalul între secții ca să livreze toate comenzile la timp.",
+      "model": "Acțiunea aparține S3: redistribuie resurse și optimizează ansamblul operațional pentru eficiență și sinergie.",
+      "pitfall": "S2 reduce conflictele; S3 decide folosirea resurselor pentru rezultatul global.",
+      "recall": "Realocarea bugetelor pentru performanța totală este o funcție de:",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-s3audit",
+      "module": "vsm",
+      "title": "S3*: verifică realitatea",
+      "core": "S3* verifică direct dacă rapoartele reflectă operațiunile reale.",
+      "explanation": "Canalul de audit completează informarea obișnuită a managementului. Verificarea directă poate descoperi diferențe între indicatorii raportați și situația din teren.",
+      "example": "O vizită neanunțată constată că stocul fizic diferă de cel raportat.",
+      "model": "Este S3*, deoarece controlul direct verifică realitatea operațională și completează rapoartele standard.",
+      "pitfall": "Auditul nu este anticiparea pieței din S4.",
+      "recall": "Ce funcție verifică direct stocul raportat, printr-o inspecție?",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-s4s5",
+      "module": "vsm",
+      "title": "S4 privește înainte; S5 spune cine suntem",
+      "core": "S4 construiește adaptarea la viitor; S5 stabilește misiunea și identitatea.",
+      "explanation": "S4 urmărește mediul, tehnologiile și oportunitățile. S5 definește politica și echilibrează nevoile operațiunilor actuale din S3 cu adaptarea propusă de S4.",
+      "example": "Analiza unui nou segment de piață este S4; alegerea valorilor și scopului firmei este S5.",
+      "model": "S4 analizează mediul și viitorul, iar S5 definește identitatea și arbitrează între prezentul operațional și adaptare.",
+      "pitfall": "O cercetare pentru strategie viitoare nu este același lucru cu preluarea comenzilor curente.",
+      "recall": "Ce sistem echilibrează S3 și S4 și definește misiunea?",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "vsm-recursivitate",
+      "module": "vsm",
+      "title": "Autonomie, recursivitate și echilibru",
+      "core": "Un sistem viabil se poate regăsi în interiorul altui sistem viabil.",
+      "explanation": "Recursivitatea înseamnă repetarea funcțiilor VSM la niveluri diferite. Autonomia permite decizii locale, iar coordonarea menține coerența; adaptabilitatea și echilibrul asigură continuitatea.",
+      "example": "Un grup are filiale; fiecare filială are operațiuni, coordonare, conducere și strategie proprie.",
+      "model": "Se observă recursivitatea: unitățile operaționale au la propriul nivel funcțiile unui sistem viabil. Autonomia lor este corelată cu obiectivele ansamblului.",
+      "pitfall": "Recursivitatea nu înseamnă copierea identică a organigramei.",
+      "recall": "O filială cu propriile funcții S1–S5 ilustrează:",
+      "sources": [
+        "vsm",
+        "cakes"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-definitie",
+      "module": "cas",
+      "title": "CAS pe înțelesul tău",
+      "core": "Mulți agenți diferiți se influențează și se adaptează: întregul are comportamente noi.",
+      "explanation": "Agenții au reguli locale, resurse și strategii diferite. Complexitatea vine din interacțiuni și efecte agregate, nu doar din numărul mare de părți.",
+      "example": "Deciziile fiecărei bănci pot fi prudente individual, dar interacțiunile pot produce contagiune.",
+      "model": "Un CAS este format din agenți eterogeni, conectați și interdependenți, care se adaptează prin feedback și generează comportamente emergente.",
+      "pitfall": "Nu răspunde doar „este complex”: numește proprietatea și dovada din caz.",
+      "recall": "Definește un CAS și oferă un exemplu de proprietate observabilă.",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-conectivitate",
+      "module": "cas",
+      "title": "Conectivitate versus interdependență",
+      "core": "Conectivitate = există legătura; interdependență = schimbarea se transmite.",
+      "explanation": "Legăturile sunt fluxuri de informație, bani, bunuri sau decizii. Interdependența explică de ce o schimbare într-o parte modifică rezultatele și opțiunile altor părți.",
+      "example": "Creditarea este legată de trezorerie; creșterea creditării schimbă necesarul de finanțare.",
+      "model": "Se observă conectivitatea prin fluxurile dintre subsisteme și interdependența deoarece decizia de creditare schimbă lichiditatea și capitalul.",
+      "pitfall": "Nu enumera două sinonime: arată separat legătura și efectul ei.",
+      "recall": "Creșterea creditării modifică lichiditatea și capitalul. Ce evidențiază?",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-feedback",
+      "module": "cas",
+      "title": "Feedback: negativ corectează, pozitiv amplifică",
+      "core": "Pozitiv și negativ descriu efectul buclei, nu cât de bună este.",
+      "explanation": "În feedback negativ, rezultatul reduce abaterea inițială. În feedback pozitiv, reacțiile o amplifică; o buclă pozitivă poate susține creșterea sau o criză.",
+      "example": "Panică → retrageri → vânzări forțate → scăderea prețurilor → panică mai mare.",
+      "model": "Bucla este feedback pozitiv deoarece reacțiile amplifică șocul inițial. O măsură care reduce abaterea ar reprezenta feedback negativ.",
+      "pitfall": "„Negativ” nu înseamnă dăunător și „pozitiv” nu înseamnă benefic.",
+      "recall": "Panica produce retrageri care amplifică panica. Ce feedback este?",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-coevolutie",
+      "module": "cas",
+      "title": "Coevoluție: adaptare reciprocă",
+      "core": "Eu mă schimb, tu reacționezi, iar reacția ta mă schimbă din nou.",
+      "explanation": "Nu este doar adaptarea unilaterală la un mediu fix. Coevoluția endogenă privește entități din sistem, iar cea exogenă implică relații cu mediul sau alte sisteme.",
+      "example": "Banca schimbă creditarea; firmele caută finanțare alternativă; se schimbă cererea și banca își adaptează din nou politica.",
+      "model": "Este coevoluție deoarece banca și firmele se influențează și se adaptează reciproc, modificând contextul deciziilor viitoare.",
+      "pitfall": "O singură reacție la un șoc extern nu dovedește automat coevoluție.",
+      "recall": "Ce exemplu arată coevoluție?",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-emergenta",
+      "module": "cas",
+      "title": "Emergență versus auto-organizare",
+      "core": "Emergența este rezultatul global nou; auto-organizarea este ordinea apărută local.",
+      "explanation": "Un fenomen emergent nu aparține unui agent izolat. Auto-organizarea apare când interacțiunile și regulile locale produc o structură fără coordonare centrală completă.",
+      "example": "Angajații își repartizează spontan sarcinile; din interacțiuni apare un ritm colectiv de lucru.",
+      "model": "Repartizarea spontană arată auto-organizare, iar apariția unui comportament colectiv nou ilustrează emergența.",
+      "pitfall": "Nu orice schimbare decisă de conducere este auto-organizare.",
+      "recall": "Ordinea apare din reguli locale fără repartizare centrală completă. Este:",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-traiectorie",
+      "module": "cas",
+      "title": "Trecutul schimbă opțiunile de azi",
+      "core": "Istoricitate = trecutul contează; dependență de traiectorie = contează drumul urmat.",
+      "explanation": "Deciziile trecute creează resurse, constrângeri și costuri de schimbare. Două sisteme cu obiective similare pot evolua diferit din cauza istoriilor lor.",
+      "example": "O bancă nu poate renunța instantaneu la creditele deja acordate sau la o tehnologie veche.",
+      "model": "Se observă dependența de traiectorie: deciziile anterioare limitează opțiunile și influențează evoluția ulterioară.",
+      "pitfall": "Nu descrie trecutul ca simplă dată calendaristică; explică efectul lui actual.",
+      "recall": "Costurile mari de schimbare ale tehnologiei istorice indică:",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-neliniaritate",
+      "module": "cas",
+      "title": "Neliniaritate și funcționare departe de echilibru",
+      "core": "Efectul poate fi disproporționat față de cauză; sistemul trăiește din fluxuri și schimbări.",
+      "explanation": "Eterogenitatea înseamnă agenți diferiți. Neliniaritatea și sensibilitatea pot amplifica șocuri mici; funcționarea departe de echilibru presupune fluxuri și perturbări persistente, din care poate apărea ordine nouă.",
+      "example": "Un zvon mic produce retrageri masive din cauza relațiilor dintre deponenți.",
+      "model": "Se observă neliniaritate deoarece perturbarea inițială are un efect disproporționat, amplificat de interacțiuni și feedback.",
+      "pitfall": "Departe de echilibru nu înseamnă automat colaps sau lipsă totală de ordine.",
+      "recall": "Un șoc mic produce o reacție foarte mare. Ce proprietate evidențiază?",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-raspuns",
+      "module": "cas",
+      "title": "Cum scrii răspunsul la studiul de caz",
+      "core": "Proprietate → dovadă concretă → efect asupra sistemului.",
+      "explanation": "Alege numai proprietățile susținute de text. Pentru adaptare precizează ce comportament se modifică; pentru învățare, ce se schimbă datorită experienței.",
+      "example": "O echipă își schimbă procedura după analiza erorilor; competența se îmbunătățește.",
+      "model": "Se observă învățarea, deoarece experiența erorilor modifică procedura și competențele, îmbunătățind deciziile viitoare.",
+      "pitfall": "O listă de termeni fără exemple nu constituie o interpretare completă.",
+      "recall": "Cum legi o proprietate CAS de dovezile dintr-un studiu de caz?",
+      "sources": [
+        "ghid",
+        "intro",
+        "teorie"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "psi-scop",
+      "module": "semafor",
+      "title": "PSI: compară două momente",
+      "core": "PSI măsoară schimbarea distribuției, nu concentrarea ei.",
+      "explanation": "Compară aceleași categorii în baza de referință și în baza curentă. Normalizează separat fiecare distribuție: pᵢ = xᵢ / Σx, qᵢ = yᵢ / Σy.",
+      "example": "Bază: 50, 30, 20; curent: 40, 35, 25; obții p = 0,50; 0,30; 0,20 și q = 0,40; 0,35; 0,25.",
+      "model": "PSI = Σ(pᵢ − qᵢ) × ln(pᵢ/qᵢ). Pentru exemplu rezultă aproximativ 0,04118: verde, distribuție relativ stabilă.",
+      "pitfall": "Nu folosi numărul brut al clienților în locul ponderilor.",
+      "recall": "Ce indicator compară distribuția de bază cu cea curentă?",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "psi-praguri",
+      "module": "semafor",
+      "title": "PSI: culoare și acțiune",
+      "core": "Sub 0,10 verde; de la 0,10 la 0,25 inclusiv galben; peste 0,25 roșu.",
+      "explanation": "Pragurile sunt cele orientative din seminar. Scrie indicatorul, culoarea, sensul economic și acțiunea, fără să transformi un singur semnal într-o decizie automată.",
+      "example": "PSI = 0,18 → galben → schimbare relevantă → investighezi segmentele și variabilele.",
+      "model": "PSI de 0,18 se încadrează în zona galbenă, indicând o schimbare relevantă a distribuției; se investighează cauzele și segmentele afectate.",
+      "pitfall": "0,18 este valoarea comparată cu pragul; nu o trata ca 0,18%.",
+      "recall": "Ce culoare are PSI = 0,25, după pragurile seminarului?",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "psi-zerouri",
+      "module": "semafor",
+      "title": "PSI: normalizare și valori zero",
+      "core": "Logaritmul cere ponderi strict pozitive; nu înlocui zerourile pe ascuns.",
+      "explanation": "Dacă numărul total diferă, normalizezi fiecare coloană cu totalul ei. O categorie nulă necesită o convenție explicită de regularizare sau regrupare; rezultatul depinde de această alegere.",
+      "example": "Bază 100 de clienți, curent 200: numărul poate crește fără schimbarea ponderilor și PSI poate rămâne zero.",
+      "model": "Distribuțiile se normalizează separat. Dacă există ponderi nule, precizez convenția folosită înainte de a calcula PSI.",
+      "pitfall": "Calculatorul din site refuză PSI cu zerouri, în loc să modifice tacit datele.",
+      "recall": "Două distribuții proporționale, cu totaluri diferite, au PSI:",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "hhi-formula",
+      "module": "semafor",
+      "title": "HHI brut și HHI normalizat",
+      "core": "HHI mare înseamnă concentrare; semaforul seminarului folosește forma normalizată.",
+      "explanation": "HHI = Σzᵢ². HHI_norm = (n × HHI − 1)/(n − 1), pentru n ≥ 2; cu ponderi egale HHI brut = 1/n și forma normalizată = 0.",
+      "example": "Pentru 0,50; 0,30; 0,20: HHI = 0,38 și HHI_norm = 0,07.",
+      "model": "HHI normalizat de 0,07 indică o concentrare redusă și se încadrează în zona verde a seminarului.",
+      "pitfall": "Nu compara HHI brut de 0,38 cu pragurile pentru HHI normalizat.",
+      "recall": "Ce valoare are HHI normalizat pentru ponderi egale?",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "hhi-praguri",
+      "module": "semafor",
+      "title": "HHI: detectează concentrarea",
+      "core": "Sub 0,10 verde; între 0,10 și 0,20 inclusiv galben; peste 0,20 roșu.",
+      "explanation": "Interpretarea privește concentrarea pe categorii. Indicatorul singur nu demonstrează profitabilitatea sau calitatea creditelor.",
+      "example": "HHI_norm = 0,23 → roșu: concentrare ridicată, analiză aprofundată și plan de acțiune.",
+      "model": "Portofoliul este concentrat pe câteva clase, deoarece HHI normalizat depășește 0,20; este necesară analiza structurii expunerilor.",
+      "pitfall": "Concentrare mică nu înseamnă automat risc mic în toate privințele.",
+      "recall": "HHI normalizat = 0,20 are culoarea:",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "entropie-formula",
+      "module": "semafor",
+      "title": "Entropia: câtă varietate există?",
+      "core": "Entropie mare = distribuție mai uniformă; sensul este invers față de concentrare.",
+      "explanation": "H = −Σzᵢ ln(zᵢ), iar H_norm = H/ln(n), pentru n ≥ 2. Un termen cu zᵢ = 0 contribuie cu zero, prin limita matematică.",
+      "example": "La 0,50; 0,30; 0,20, H ≈ 1,02965 și H_norm ≈ 0,93723.",
+      "model": "Entropia normalizată de aproximativ 0,937 indică diversificare ridicată și este în zona verde.",
+      "pitfall": "H brut este în nats și nu se compară direct cu pragurile normalizate.",
+      "recall": "Distribuția uniformă are entropia normalizată:",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "entropie-praguri",
+      "module": "semafor",
+      "title": "Entropia: sensul invers al culorilor",
+      "core": "Peste 0,90 verde; de la 0,60 la 0,90 inclusiv galben; sub 0,60 roșu.",
+      "explanation": "La entropie, o valoare mai mare arată mai multă varietate. În seminar, H_norm ≈ 0,866766 este galben, chiar dacă HHI normalizat din aceeași aplicație este verde.",
+      "example": "H_norm = 0,90 → galben, nu verde; valoarea de graniță contează.",
+      "model": "Entropia de 0,90 indică diversificare moderată conform pragurilor seminarului; se investighează structura categoriilor.",
+      "pitfall": "Nu aplica mecanic regula „mai mic este mai bine” tuturor indicatorilor.",
+      "recall": "H normalizată = 0,90 are culoarea:",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "semafor-comparatie",
+      "module": "semafor",
+      "title": "Trei întrebări, trei indicatori",
+      "core": "PSI: s-a schimbat? HHI: este concentrată? Entropie: câtă varietate are?",
+      "explanation": "PSI cere două distribuții. HHI și entropia descriu câte o distribuție și surprind aspecte complementare; pragurile lor nu trebuie să producă aceeași culoare.",
+      "example": "Dacă schimbi între ele două clase cu ponderi diferite, concentrarea rămâne aceeași, dar distribuția pe clase se schimbă.",
+      "model": "O modificare a PSI poate apărea fără schimbarea HHI și a entropiei: stabilitatea în timp și structura distribuției sunt întrebări diferite.",
+      "pitfall": "Semaforul este o convenție de interpretare, nu o lege universală.",
+      "recall": "Poate PSI să crească în timp ce HHI rămâne egal?",
+      "sources": [
+        "banca",
+        "excel"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "firma-subsisteme",
+      "module": "firma",
+      "title": "Firma: cinci întrebări de recunoaștere",
+      "core": "Piață → SRPB; producție → SP-T; cost/preț/profit → SPCP; factori → SAFP; bani → SF.",
+      "explanation": "Alege subsistemul după funcția acțiunii. Aceste cinci subsisteme sunt o altă clasificare decât funcțiile S1–S5 din VSM.",
+      "example": "Firma cumpără materii prime: SAFP; obține credit: SF; fabrică: SP-T.",
+      "model": "Acțiunea este atribuită subsistemului care îndeplinește funcția descrisă, nu după o asemănare între acronime.",
+      "pitfall": "SPCP nu este S3 și SRPB nu este automat S4.",
+      "recall": "Achiziția și sincronizarea materiilor prime aparțin:",
+      "sources": [
+        "firma",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "firma-piata",
+      "module": "firma",
+      "title": "SRPB și SP-T: cererea versus realizarea",
+      "core": "SRPB află și deservește cererea; SP-T produce efectiv.",
+      "explanation": "SRPB include analiza pieței, comenzile, prognoza, promovarea și livrarea. SP-T combină inputuri și tehnologie pentru realizarea bunului sau serviciului.",
+      "example": "Colectarea comenzilor și reclama sunt SRPB; fabricarea produselor comandate este SP-T.",
+      "model": "Se identifică SRPB prin analiza cererii și promovare, respectiv SP-T prin transformarea inputurilor în produse.",
+      "pitfall": "Aceeași firmă are toate aceste funcții: citează acțiunea precisă.",
+      "recall": "O firmă estimează cererea și face reclamă. Ce subsistem este?",
+      "sources": [
+        "firma",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "firma-costfinantare",
+      "module": "firma",
+      "title": "SPCP, SAFP și SF: diferența practică",
+      "core": "SPCP urmărește eficiența; SAFP procură factorii; SF gestionează finanțarea.",
+      "explanation": "Analiza costurilor și marjelor intră la SPCP. Procurarea muncii și materialelor este SAFP; creditele, numerarul, taxele și dividendele țin de SF.",
+      "example": "Creșterea prețului după analiza marjei: SPCP; credit pentru stocuri: SF.",
+      "model": "SPCP analizează costuri, prețuri și profitabilitate, SAFP asigură factorii de producție, iar SF obține și gestionează resursele financiare.",
+      "pitfall": "Nu orice operațiune exprimată în bani se clasifică automat la SF.",
+      "recall": "Analiza marjei de profit și ajustarea prețurilor aparțin:",
+      "sources": [
+        "firma",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "firma-proprietati",
+      "module": "firma",
+      "title": "Firma ca CAS: varietate și reguli locale",
+      "core": "O firmă viabilă trebuie să poată răspunde varietății mediului.",
+      "explanation": "Pe lângă conectivitate și coevoluție, firma ilustrează varietatea necesară, reguli simple, ierarhizare, suboptimalitate și sensibilitate. O soluție globală bună poate presupune compromisuri între rezultate locale.",
+      "example": "O secție reduce ritmul pentru a elimina blocajul altei secții și a îmbunătăți livrarea totală.",
+      "model": "Firma este un CAS deoarece părțile sale se influențează, se adaptează mediului și produc rezultate emergente; performanța întregului nu se obține întotdeauna maximizând fiecare parte.",
+      "pitfall": "Nu presupune că performanța locală maximă este identică cu cea globală.",
+      "recall": "De ce poate o firmă reduce performanța unei secții?",
+      "sources": [
+        "firma",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "banca-cas",
+      "module": "banca",
+      "title": "Banca drept CAS: răspuns în trei idei",
+      "core": "Creditare, depozite, trezorerie, risc, capital și lichiditate se influențează.",
+      "explanation": "Descrie întâi fluxurile, apoi un efect transmis și o adaptare. Riscul agregat și contagiunea pot apărea din interacțiuni, nu doar dintr-o expunere individuală.",
+      "example": "Creșterea creditelor schimbă veniturile, finanțarea, riscul și necesarul de capital.",
+      "model": "Banca este un CAS deoarece subsistemele sunt conectate și interdependente, iar politicile se adaptează prin feedback; la nivel agregat poate apărea contagiunea.",
+      "pitfall": "O enumerare de departamente fără legături și efecte este incompletă.",
+      "recall": "Ce exemplu arată emergență în sistemul bancar?",
+      "sources": [
+        "banca",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "banca-bucla",
+      "module": "banca",
+      "title": "Bucla de creditare: rezultatul revine în decizie",
+      "core": "Cerere → evaluare → decizie → monitorizare → recalibrare.",
+      "explanation": "Separă fluxurile financiare, precum creditul și rambursarea, de cele informaționale, precum scoringul și întârzierile. Autoreglarea există dacă informația monitorizată schimbă decizia.",
+      "example": "Crește PD → cresc pierderile estimate → scade apetitul pentru risc → se restrânge expunerea viitoare.",
+      "model": "Bucla are rol de feedback negativ asupra expunerii: deteriorarea riscului conduce la corectarea politicii de creditare.",
+      "pitfall": "Un raport ignorat nu asigură singur autoreglarea; explică utilizarea lui.",
+      "recall": "O creștere a PD urmată de reducerea expunerii viitoare ilustrează:",
+      "sources": [
+        "banca",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "ecl",
+      "module": "banca",
+      "title": "ECL simplificat: probabilitate × pierdere × expunere",
+      "core": "ECL ≈ PD × LGD × EAD; procentele se transformă în numere zecimale.",
+      "explanation": "PD este probabilitatea de nerambursare, LGD proporția pierdută în default, EAD expunerea la default. Formula este o aproximare didactică, nu întreaga metodologie de provizionare.",
+      "example": "PD = 0,15%, LGD = 60%, EAD = 1.100 mil. RON: 0,0015 × 0,60 × 1.100 = 0,99 mil. RON.",
+      "model": "Pierderea așteptată simplificată este 0,99 mil. RON, în aceeași unitate monetară ca EAD.",
+      "pitfall": "0,15% se introduce ca 0,0015; nu ca 0,15.",
+      "recall": "Cum introduci PD = 0,15% în formulă?",
+      "sources": [
+        "banca",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "ecl-rwa",
+      "module": "banca",
+      "title": "ECL și RWA nu măsoară același lucru",
+      "core": "ECL estimează pierderea; RWA este baza ponderată la risc pentru capital.",
+      "explanation": "Nu le aduni și nu le substitui. O schimbare a riscului poate afecta ambele mărimi prin mecanisme diferite.",
+      "example": "Un analist nu folosește ECL drept total al activelor ponderate la risc.",
+      "model": "ECL aproximează pierderea așteptată, iar RWA exprimă activele ponderate la risc pentru determinarea cerințelor de capital.",
+      "pitfall": "Aceasta este o distincție de curs, nu o regulă completă pentru calculul reglementat.",
+      "recall": "Explică diferența dintre ECL și RWA.",
+      "sources": [
+        "banca",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "shadow-definitie",
+      "module": "shadow",
+      "title": "Shadow banking: ideea și exemplele",
+      "core": "Intermediere a creditului prin entități și activități din afara sistemului bancar regulat.",
+      "explanation": "Termenul este asociat lui Paul McCulley, în 2007. Exemple includ fonduri monetare, companii financiare și vehicule de securitizare, când participă la intermedierea creditului.",
+      "example": "Un vehicul finanțat prin titluri de piață participă la un lanț de intermediere a creditului.",
+      "model": "Shadow banking desemnează intermedierea creditului din afara sistemului bancar regulat; nu înseamnă automat activitate ilegală.",
+      "pitfall": "Nu clasifica orice fond de investiții ca shadow banking indiferent de activitatea sa.",
+      "recall": "Shadow banking înseamnă automat activitate ilegală?",
+      "sources": [
+        "fsb",
+        "rbi",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "shadow-comparatie",
+      "module": "shadow",
+      "title": "Comparația cu banca tradițională",
+      "core": "Compară finanțarea, regimul de supraveghere și mecanismele de protecție.",
+      "explanation": "Banca tradițională folosește depozite și alte resurse în cadrul reglementării bancare. Intermedierea nebancară poate folosi fonduri și titluri de piață, cu regimuri diferite; nu este sinonimă cu absența oricărei reglementări.",
+      "example": "Retragerea rapidă a finanțării de piață poate forța vânzări de active și amplifica instabilitatea.",
+      "model": "Diferențele privesc sursa finanțării și cadrul instituțional; pot apărea riscuri de lichiditate, levier și contagiune, iar protecțiile bancare nu se transferă automat.",
+      "pitfall": "Prezentarea specifică de shadow banking lipsește din materialele locale; aici sunt completări FSB și RBI.",
+      "recall": "Ce risc poate amplifica retragerea finanțării pe termen scurt?",
+      "sources": [
+        "fsb",
+        "rbi",
+        "ghid"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "erp",
+      "module": "it",
+      "title": "ERP: date comune între funcțiile firmei",
+      "core": "ERP integrează informațiile și procesele interne.",
+      "explanation": "Financiarul, aprovizionarea, producția și resursele umane folosesc date și fluxuri integrate. Beneficiile depind de implementare, calitatea datelor și adaptarea proceselor.",
+      "example": "O comandă actualizează stocul, planificarea producției și situația financiară.",
+      "model": "ERP susține integrarea proceselor și a datelor interne, reducând redundanța și întârzierile informaționale.",
+      "pitfall": "ERP nu elimină automat erorile și nu este același lucru cu CRM.",
+      "recall": "Integrarea financiarului, stocurilor și producției se asociază în primul rând cu:",
+      "sources": [
+        "it"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "crm-scm",
+      "module": "it",
+      "title": "CRM și SCM: clientul versus lanțul de aprovizionare",
+      "core": "CRM gestionează relația cu clienții; SCM coordonează lanțul de aprovizionare.",
+      "explanation": "CRM sprijină informațiile despre clienți, vânzări și servicii. SCM urmărește fluxurile de bunuri, informații și resurse între furnizori, producție, distribuție și client.",
+      "example": "Istoricul cererilor unui client: CRM; coordonarea furnizorilor și distribuției: SCM.",
+      "model": "CRM susține relația cu clientul, iar SCM coordonează fluxurile lanțului de aprovizionare; ambele pot fi integrate cu ERP.",
+      "pitfall": "Soluțiile IT sunt instrumente pentru funcții economice, nu înlocuitori ai funcțiilor VSM.",
+      "recall": "Coordonarea furnizorilor, stocurilor și distribuției se asociază cu:",
+      "sources": [
+        "it"
+      ],
+      "minutes": 3
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-vsm-harta",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "VSM în șase verbe",
+      "prompt": "Care asociere este corectă?",
+      "choices": [
+        "S2 coordonează, S3 optimizează",
+        "S2 definește misiunea, S3 produce",
+        "S4 auditează, S5 livrează",
+        "S1 elaborează politica, S3* anticipează"
+      ],
+      "correct": 0,
+      "explanation": "VSM cuprinde operațiunile S1, coordonarea S2, controlul intern S3, auditul S3*, inteligența S4 și politica S5. Acestea sunt funcții, nu obligatoriu departamente separate.",
+      "lesson": "vsm-harta"
+    },
+    {
+      "id": "q-vsm-s1",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "S1: operațiunile",
+      "prompt": "O echipă execută efectiv serviciul vândut clientului; ce funcție are?",
+      "choices": [
+        "S5",
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "correct": 1,
+      "explanation": "Activitatea descrisă aparține S1 deoarece produce efectiv bunul sau serviciul oferit de organizație.",
+      "lesson": "vsm-s1"
+    },
+    {
+      "id": "q-vsm-s2",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "S2: coordonează și stabilizează",
+      "prompt": "Programele incompatibile ale secțiilor produc blocaje; ce sistem este deficitar?",
+      "choices": [
+        "S4",
+        "S5",
+        "S2",
+        "S1"
+      ],
+      "correct": 2,
+      "explanation": "Se identifică S2 deoarece programarea comună coordonează unitățile S1 și reduce conflictele, stabilizând operațiunile.",
+      "lesson": "vsm-s2"
+    },
+    {
+      "id": "q-vsm-s3",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "S3: optimizează întregul",
+      "prompt": "Realocarea bugetelor pentru performanța totală este o funcție de:",
+      "choices": [
+        "S2",
+        "S4",
+        "S3*",
+        "S3"
+      ],
+      "correct": 3,
+      "explanation": "Acțiunea aparține S3: redistribuie resurse și optimizează ansamblul operațional pentru eficiență și sinergie.",
+      "lesson": "vsm-s3"
+    },
+    {
+      "id": "q-vsm-s3audit",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "S3*: verifică realitatea",
+      "prompt": "Ce funcție verifică direct stocul raportat, printr-o inspecție?",
+      "choices": [
+        "S3*",
+        "S4",
+        "S2",
+        "S5"
+      ],
+      "correct": 0,
+      "explanation": "Este S3*, deoarece controlul direct verifică realitatea operațională și completează rapoartele standard.",
+      "lesson": "vsm-s3audit"
+    },
+    {
+      "id": "q-vsm-s4s5",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "S4 privește înainte; S5 spune cine suntem",
+      "prompt": "Ce sistem echilibrează S3 și S4 și definește misiunea?",
+      "choices": [
+        "S1",
+        "S5",
+        "S2",
+        "S3*"
+      ],
+      "correct": 1,
+      "explanation": "S4 analizează mediul și viitorul, iar S5 definește identitatea și arbitrează între prezentul operațional și adaptare.",
+      "lesson": "vsm-s4s5"
+    },
+    {
+      "id": "q-vsm-recursivitate",
+      "kind": "mcq",
+      "category": "vsm",
+      "title": "Autonomie, recursivitate și echilibru",
+      "prompt": "O filială cu propriile funcții S1–S5 ilustrează:",
+      "choices": [
+        "Concentrare",
+        "Feedback pozitiv obligatoriu",
+        "Recursivitate",
+        "PSI"
+      ],
+      "correct": 2,
+      "explanation": "Se observă recursivitatea: unitățile operaționale au la propriul nivel funcțiile unui sistem viabil. Autonomia lor este corelată cu obiectivele ansamblului.",
+      "lesson": "vsm-recursivitate"
+    },
+    {
+      "id": "q-cas-definitie",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "CAS pe înțelesul tău",
+      "prompt": "Ce descrie corect un CAS?",
+      "choices": [
+        "Părți independente într-un mediu fix",
+        "Un sistem fără feedback",
+        "O organizație care nu se schimbă",
+        "Agenți interdependenți, adaptare și emergență"
+      ],
+      "correct": 3,
+      "explanation": "Un CAS este format din agenți eterogeni, conectați și interdependenți, care se adaptează prin feedback și generează comportamente emergente.",
+      "lesson": "cas-definitie"
+    },
+    {
+      "id": "q-cas-conectivitate",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Conectivitate versus interdependență",
+      "prompt": "Creșterea creditării modifică lichiditatea și capitalul. Ce evidențiază?",
+      "choices": [
+        "Interdependență",
+        "Lipsa conectivității",
+        "Echilibru permanent",
+        "Independență"
+      ],
+      "correct": 0,
+      "explanation": "Se observă conectivitatea prin fluxurile dintre subsisteme și interdependența deoarece decizia de creditare schimbă lichiditatea și capitalul.",
+      "lesson": "cas-conectivitate"
+    },
+    {
+      "id": "q-cas-feedback",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Feedback: negativ corectează, pozitiv amplifică",
+      "prompt": "Panica produce retrageri care amplifică panica. Ce feedback este?",
+      "choices": [
+        "Doar învățare",
+        "Pozitiv",
+        "Negativ",
+        "Fără feedback"
+      ],
+      "correct": 1,
+      "explanation": "Bucla este feedback pozitiv deoarece reacțiile amplifică șocul inițial. O măsură care reduce abaterea ar reprezenta feedback negativ.",
+      "lesson": "cas-feedback"
+    },
+    {
+      "id": "q-cas-coevolutie",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Coevoluție: adaptare reciprocă",
+      "prompt": "Ce exemplu arată coevoluție?",
+      "choices": [
+        "Un audit de stoc",
+        "Calcularea HHI",
+        "Adaptarea reciprocă și repetată a băncii și clienților",
+        "O firmă păstrează mereu același preț"
+      ],
+      "correct": 2,
+      "explanation": "Este coevoluție deoarece banca și firmele se influențează și se adaptează reciproc, modificând contextul deciziilor viitoare.",
+      "lesson": "cas-coevolutie"
+    },
+    {
+      "id": "q-cas-emergenta",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Emergență versus auto-organizare",
+      "prompt": "Ordinea apare din reguli locale fără repartizare centrală completă. Este:",
+      "choices": [
+        "Planificare centrală completă",
+        "RWA",
+        "S5 în mod obligatoriu",
+        "Auto-organizare"
+      ],
+      "correct": 3,
+      "explanation": "Repartizarea spontană arată auto-organizare, iar apariția unui comportament colectiv nou ilustrează emergența.",
+      "lesson": "cas-emergenta"
+    },
+    {
+      "id": "q-cas-traiectorie",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Trecutul schimbă opțiunile de azi",
+      "prompt": "Costurile mari de schimbare ale tehnologiei istorice indică:",
+      "choices": [
+        "Dependență de traiectorie",
+        "Uniformitate",
+        "Lipsa memoriei",
+        "PSI zero"
+      ],
+      "correct": 0,
+      "explanation": "Se observă dependența de traiectorie: deciziile anterioare limitează opțiunile și influențează evoluția ulterioară.",
+      "lesson": "cas-traiectorie"
+    },
+    {
+      "id": "q-cas-neliniaritate",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Neliniaritate și funcționare departe de echilibru",
+      "prompt": "Un șoc mic produce o reacție foarte mare. Ce proprietate evidențiază?",
+      "choices": [
+        "Entropie maximă obligatorie",
+        "Neliniaritate și sensibilitate",
+        "Proporționalitate strictă",
+        "Independență"
+      ],
+      "correct": 1,
+      "explanation": "Se observă neliniaritate deoarece perturbarea inițială are un efect disproporționat, amplificat de interacțiuni și feedback.",
+      "lesson": "cas-neliniaritate"
+    },
+    {
+      "id": "q-cas-raspuns",
+      "kind": "mcq",
+      "category": "cas",
+      "title": "Cum scrii răspunsul la studiul de caz",
+      "prompt": "Care este cea mai bună structură de răspuns?",
+      "choices": [
+        "Numai definiția CAS",
+        "O concluzie fără dovezi",
+        "Proprietate, dovadă din text, efect",
+        "Numai lista proprietăților"
+      ],
+      "correct": 2,
+      "explanation": "Se observă învățarea, deoarece experiența erorilor modifică procedura și competențele, îmbunătățind deciziile viitoare.",
+      "lesson": "cas-raspuns"
+    },
+    {
+      "id": "q-psi-scop",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "PSI: compară două momente",
+      "prompt": "Ce indicator compară distribuția de bază cu cea curentă?",
+      "choices": [
+        "HHI brut",
+        "Entropia unei singure distribuții",
+        "EAD",
+        "PSI"
+      ],
+      "correct": 3,
+      "explanation": "PSI = Σ(pᵢ − qᵢ) × ln(pᵢ/qᵢ). Pentru exemplu rezultă aproximativ 0,04118: verde, distribuție relativ stabilă.",
+      "lesson": "psi-scop"
+    },
+    {
+      "id": "q-psi-praguri",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "PSI: culoare și acțiune",
+      "prompt": "Ce culoare are PSI = 0,25, după pragurile seminarului?",
+      "choices": [
+        "Galben",
+        "Verde",
+        "Roșu",
+        "Nu se poate calcula"
+      ],
+      "correct": 0,
+      "explanation": "PSI de 0,18 se încadrează în zona galbenă, indicând o schimbare relevantă a distribuției; se investighează cauzele și segmentele afectate.",
+      "lesson": "psi-praguri"
+    },
+    {
+      "id": "q-psi-zerouri",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "PSI: normalizare și valori zero",
+      "prompt": "Două distribuții proporționale, cu totaluri diferite, au PSI:",
+      "choices": [
+        "Egal cu HHI",
+        "Zero după normalizare",
+        "Obligatoriu peste 0,25",
+        "Egal cu diferența totalurilor"
+      ],
+      "correct": 1,
+      "explanation": "Distribuțiile se normalizează separat. Dacă există ponderi nule, precizez convenția folosită înainte de a calcula PSI.",
+      "lesson": "psi-zerouri"
+    },
+    {
+      "id": "q-hhi-formula",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "HHI brut și HHI normalizat",
+      "prompt": "Ce valoare are HHI normalizat pentru ponderi egale?",
+      "choices": [
+        "1/n",
+        "n",
+        "0",
+        "1"
+      ],
+      "correct": 2,
+      "explanation": "HHI normalizat de 0,07 indică o concentrare redusă și se încadrează în zona verde a seminarului.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "q-hhi-praguri",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "HHI: detectează concentrarea",
+      "prompt": "HHI normalizat = 0,20 are culoarea:",
+      "choices": [
+        "Roșu",
+        "Verde",
+        "Albastru",
+        "Galben"
+      ],
+      "correct": 3,
+      "explanation": "Portofoliul este concentrat pe câteva clase, deoarece HHI normalizat depășește 0,20; este necesară analiza structurii expunerilor.",
+      "lesson": "hhi-praguri"
+    },
+    {
+      "id": "q-entropie-formula",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "Entropia: câtă varietate există?",
+      "prompt": "Distribuția uniformă are entropia normalizată:",
+      "choices": [
+        "1",
+        "0",
+        "1/n",
+        "Mai mare decât n"
+      ],
+      "correct": 0,
+      "explanation": "Entropia normalizată de aproximativ 0,937 indică diversificare ridicată și este în zona verde.",
+      "lesson": "entropie-formula"
+    },
+    {
+      "id": "q-entropie-praguri",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "Entropia: sensul invers al culorilor",
+      "prompt": "H normalizată = 0,90 are culoarea:",
+      "choices": [
+        "Nu există prag",
+        "Galben",
+        "Verde",
+        "Roșu"
+      ],
+      "correct": 1,
+      "explanation": "Entropia de 0,90 indică diversificare moderată conform pragurilor seminarului; se investighează structura categoriilor.",
+      "lesson": "entropie-praguri"
+    },
+    {
+      "id": "q-semafor-comparatie",
+      "kind": "mcq",
+      "category": "semafor",
+      "title": "Trei întrebări, trei indicatori",
+      "prompt": "Poate PSI să crească în timp ce HHI rămâne egal?",
+      "choices": [
+        "Doar dacă HHI este negativ",
+        "Numai când nu normalizăm",
+        "Da, măsoară aspecte diferite",
+        "Nu, sunt același indicator"
+      ],
+      "correct": 2,
+      "explanation": "O modificare a PSI poate apărea fără schimbarea HHI și a entropiei: stabilitatea în timp și structura distribuției sunt întrebări diferite.",
+      "lesson": "semafor-comparatie"
+    },
+    {
+      "id": "q-firma-subsisteme",
+      "kind": "mcq",
+      "category": "firma",
+      "title": "Firma: cinci întrebări de recunoaștere",
+      "prompt": "Achiziția și sincronizarea materiilor prime aparțin:",
+      "choices": [
+        "SPCP",
+        "SF",
+        "SRPB",
+        "SAFP"
+      ],
+      "correct": 3,
+      "explanation": "Acțiunea este atribuită subsistemului care îndeplinește funcția descrisă, nu după o asemănare între acronime.",
+      "lesson": "firma-subsisteme"
+    },
+    {
+      "id": "q-firma-piata",
+      "kind": "mcq",
+      "category": "firma",
+      "title": "SRPB și SP-T: cererea versus realizarea",
+      "prompt": "O firmă estimează cererea și face reclamă. Ce subsistem este?",
+      "choices": [
+        "SRPB",
+        "SAFP",
+        "SF",
+        "SP-T"
+      ],
+      "correct": 0,
+      "explanation": "Se identifică SRPB prin analiza cererii și promovare, respectiv SP-T prin transformarea inputurilor în produse.",
+      "lesson": "firma-piata"
+    },
+    {
+      "id": "q-firma-costfinantare",
+      "kind": "mcq",
+      "category": "firma",
+      "title": "SPCP, SAFP și SF: diferența practică",
+      "prompt": "Analiza marjei de profit și ajustarea prețurilor aparțin:",
+      "choices": [
+        "SP-T",
+        "SPCP",
+        "SF în orice situație",
+        "SAFP"
+      ],
+      "correct": 1,
+      "explanation": "SPCP analizează costuri, prețuri și profitabilitate, SAFP asigură factorii de producție, iar SF obține și gestionează resursele financiare.",
+      "lesson": "firma-costfinantare"
+    },
+    {
+      "id": "q-firma-proprietati",
+      "kind": "mcq",
+      "category": "firma",
+      "title": "Firma ca CAS: varietate și reguli locale",
+      "prompt": "De ce poate o firmă reduce performanța unei secții?",
+      "choices": [
+        "Fiindcă nu există feedback",
+        "Pentru a elimina toate regulile",
+        "Pentru a îmbunătăți rezultatul întregului",
+        "Pentru că unitățile sunt independente"
+      ],
+      "correct": 2,
+      "explanation": "Firma este un CAS deoarece părțile sale se influențează, se adaptează mediului și produc rezultate emergente; performanța întregului nu se obține întotdeauna maximizând fiecare parte.",
+      "lesson": "firma-proprietati"
+    },
+    {
+      "id": "q-banca-cas",
+      "kind": "mcq",
+      "category": "banca",
+      "title": "Banca drept CAS: răspuns în trei idei",
+      "prompt": "Ce exemplu arată emergență în sistemul bancar?",
+      "choices": [
+        "Numărul imprimantelor",
+        "Un client luat izolat",
+        "Absența fluxurilor",
+        "Contagiunea apărută din interacțiuni"
+      ],
+      "correct": 3,
+      "explanation": "Banca este un CAS deoarece subsistemele sunt conectate și interdependente, iar politicile se adaptează prin feedback; la nivel agregat poate apărea contagiunea.",
+      "lesson": "banca-cas"
+    },
+    {
+      "id": "q-banca-bucla",
+      "kind": "mcq",
+      "category": "banca",
+      "title": "Bucla de creditare: rezultatul revine în decizie",
+      "prompt": "O creștere a PD urmată de reducerea expunerii viitoare ilustrează:",
+      "choices": [
+        "Feedback de corecție",
+        "Absența monitorizării",
+        "O egalitate ECL–RWA",
+        "Auto-organizare obligatorie"
+      ],
+      "correct": 0,
+      "explanation": "Bucla are rol de feedback negativ asupra expunerii: deteriorarea riscului conduce la corectarea politicii de creditare.",
+      "lesson": "banca-bucla"
+    },
+    {
+      "id": "q-ecl",
+      "kind": "mcq",
+      "category": "banca",
+      "title": "ECL simplificat: probabilitate × pierdere × expunere",
+      "prompt": "Cum introduci PD = 0,15% în formulă?",
+      "choices": [
+        "1,5",
+        "0,0015",
+        "0,15",
+        "15"
+      ],
+      "correct": 1,
+      "explanation": "Pierderea așteptată simplificată este 0,99 mil. RON, în aceeași unitate monetară ca EAD.",
+      "lesson": "ecl"
+    },
+    {
+      "id": "q-ecl-rwa",
+      "kind": "mcq",
+      "category": "banca",
+      "title": "ECL și RWA nu măsoară același lucru",
+      "prompt": "Care afirmație este corectă?",
+      "choices": [
+        "RWA este PSI normalizat",
+        "ECL + RWA este pierderea totală",
+        "ECL și RWA au obiective diferite",
+        "ECL este identic cu RWA"
+      ],
+      "correct": 2,
+      "explanation": "ECL aproximează pierderea așteptată, iar RWA exprimă activele ponderate la risc pentru determinarea cerințelor de capital.",
+      "lesson": "ecl-rwa"
+    },
+    {
+      "id": "q-shadow-definitie",
+      "kind": "mcq",
+      "category": "shadow",
+      "title": "Shadow banking: ideea și exemplele",
+      "prompt": "Shadow banking înseamnă automat activitate ilegală?",
+      "choices": [
+        "Da, prin definiție",
+        "Numai fraudă informatică",
+        "Numai bănci centrale",
+        "Nu, criteriul este intermedierea din afara sistemului bancar regulat"
+      ],
+      "correct": 3,
+      "explanation": "Shadow banking desemnează intermedierea creditului din afara sistemului bancar regulat; nu înseamnă automat activitate ilegală.",
+      "lesson": "shadow-definitie"
+    },
+    {
+      "id": "q-shadow-comparatie",
+      "kind": "mcq",
+      "category": "shadow",
+      "title": "Comparația cu banca tradițională",
+      "prompt": "Ce risc poate amplifica retragerea finanțării pe termen scurt?",
+      "choices": [
+        "Riscul de lichiditate și vânzările forțate",
+        "Entropia matematică obligatoriu",
+        "Eliminarea riscului",
+        "Garantarea automată a tuturor investițiilor"
+      ],
+      "correct": 0,
+      "explanation": "Diferențele privesc sursa finanțării și cadrul instituțional; pot apărea riscuri de lichiditate, levier și contagiune, iar protecțiile bancare nu se transferă automat.",
+      "lesson": "shadow-comparatie"
+    },
+    {
+      "id": "q-erp",
+      "kind": "mcq",
+      "category": "it",
+      "title": "ERP: date comune între funcțiile firmei",
+      "prompt": "Integrarea financiarului, stocurilor și producției se asociază în primul rând cu:",
+      "choices": [
+        "S3*",
+        "ERP",
+        "CRM exclusiv",
+        "PSI"
+      ],
+      "correct": 1,
+      "explanation": "ERP susține integrarea proceselor și a datelor interne, reducând redundanța și întârzierile informaționale.",
+      "lesson": "erp"
+    },
+    {
+      "id": "q-crm-scm",
+      "kind": "mcq",
+      "category": "it",
+      "title": "CRM și SCM: clientul versus lanțul de aprovizionare",
+      "prompt": "Coordonarea furnizorilor, stocurilor și distribuției se asociază cu:",
+      "choices": [
+        "Entropie",
+        "ECL",
+        "SCM",
+        "CRM exclusiv"
+      ],
+      "correct": 2,
+      "explanation": "CRM susține relația cu clientul, iar SCM coordonează fluxurile lanțului de aprovizionare; ambele pot fi integrate cu ERP.",
+      "lesson": "crm-scm"
+    },
+    {
+      "id": "n-psi",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "Calculează PSI",
+      "prompt": "Bază: 50, 30, 20 clienți; curent: 40, 35, 25. Calculează PSI ca număr zecimal, nu procent.",
+      "correct": 0.041179066688494366,
+      "tolerance": 0.0001,
+      "explanation": "Normalizezi separat. PSI ≈ 0,04118 < 0,10: verde, abateri mici.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-hhi",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "HHI brut",
+      "prompt": "Pentru ponderile 0,50; 0,30; 0,20, calculează HHI brut.",
+      "correct": 0.38,
+      "tolerance": 0.001,
+      "explanation": "0,50² + 0,30² + 0,20² = 0,38; semaforul se aplică ulterior formei normalizate.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-hhi-norm",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "Normalizează HHI",
+      "prompt": "Sunt 3 clase, iar HHI brut = 0,38. Calculează HHI normalizat.",
+      "correct": 0.07,
+      "tolerance": 0.001,
+      "explanation": "(3 × 0,38 − 1) / (3 − 1) = 0,07: verde.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-entropy",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "Calculează entropia",
+      "prompt": "Pentru ponderile 0,50; 0,30; 0,20, calculează entropia Shannon normalizată.",
+      "correct": 0.9372305632161295,
+      "tolerance": 0.0001,
+      "explanation": "H ≈ 1,02965; H / ln(3) ≈ 0,93723: verde.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-hhi-uniform",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "Uniformitate",
+      "prompt": "Pentru 4 clase cu ponderi egale, cât este HHI brut?",
+      "correct": 0.25,
+      "tolerance": 0.001,
+      "explanation": "4 × 0,25² = 0,25; forma normalizată ar fi 0.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-concentrat",
+      "kind": "numeric",
+      "category": "semafor",
+      "title": "Concentrare totală",
+      "prompt": "Pentru ponderile 1; 0; 0, cât este HHI normalizat?",
+      "correct": 1,
+      "tolerance": 0.001,
+      "explanation": "HHI brut = 1; (3 × 1 − 1) / 2 = 1: roșu.",
+      "lesson": "hhi-formula"
+    },
+    {
+      "id": "n-ecl",
+      "kind": "numeric",
+      "category": "banca",
+      "title": "ECL în mil. RON",
+      "prompt": "PD = 0,15%, LGD = 60%, EAD = 1.100 mil. RON. ECL simplificat, în mil. RON?",
+      "correct": 0.99,
+      "tolerance": 0.001,
+      "explanation": "0,0015 × 0,60 × 1.100 = 0,99 mil. RON.",
+      "lesson": "ecl"
+    },
+    {
+      "id": "n-ecl2",
+      "kind": "numeric",
+      "category": "banca",
+      "title": "ECL în lei",
+      "prompt": "PD = 2%, LGD = 40%, EAD = 100.000 lei. Cât este ECL simplificat, în lei?",
+      "correct": 800,
+      "tolerance": 0.01,
+      "explanation": "0,02 × 0,40 × 100.000 = 800 lei.",
+      "lesson": "ecl"
+    },
+    {
+      "id": "w-s2s3",
+      "kind": "written",
+      "category": "vsm",
+      "title": "Compară S2 și S3",
+      "prompt": "Explică diferența S2–S3 și dă câte un exemplu.",
+      "model": "S2 coordonează unitățile și reduce conflictele, de exemplu printr-un program comun. S3 alocă resurse și optimizează întregul, de exemplu redistribuind personalul pentru rezultatul global.",
+      "rubric": [
+        "Definești rolul de coordonare al S2.",
+        "Definești rolul de optimizare și alocare al S3.",
+        "Dai exemple distincte, corelate cu scopul acțiunii."
+      ],
+      "explanation": "S2 coordonează unitățile și reduce conflictele, de exemplu printr-un program comun. S3 alocă resurse și optimizează întregul, de exemplu redistribuind personalul pentru rezultatul global.",
+      "lesson": "vsm-harta"
+    },
+    {
+      "id": "w-banca",
+      "kind": "written",
+      "category": "banca",
+      "title": "Banca drept CAS",
+      "prompt": "Explică banca drept CAS folosind conectivitatea, interdependența și încă o proprietate.",
+      "model": "Creditarea și trezoreria sunt conectate prin fluxuri. Creșterea creditării schimbă finanțarea, lichiditatea și riscul: interdependență. Politicile sunt ajustate după comportamentul de plată: adaptare prin feedback.",
+      "rubric": [
+        "Dovadă de conectivitate.",
+        "Lanț de efecte care arată interdependența.",
+        "A treia proprietate și exemplu concret."
+      ],
+      "explanation": "Creditarea și trezoreria sunt conectate prin fluxuri. Creșterea creditării schimbă finanțarea, lichiditatea și riscul: interdependență. Politicile sunt ajustate după comportamentul de plată: adaptare prin feedback.",
+      "lesson": "banca-cas"
+    },
+    {
+      "id": "w-caz",
+      "kind": "written",
+      "category": "cas",
+      "title": "Dovadă din studiu de caz",
+      "prompt": "După reclamații, o firmă schimbă procedura; concurenții răspund, iar firma își revizuiește din nou oferta. Identifică două proprietăți și justifică.",
+      "model": "Reclamațiile revin în decizie: feedback, urmat de adaptare. Reacțiile succesive ale firmei și concurenților modifică reciproc contextul: coevoluție.",
+      "rubric": [
+        "Proprietate identificată corect.",
+        "Dovadă precisă din text.",
+        "Explici adaptarea reciprocă, nu doar reacția unilaterală."
+      ],
+      "explanation": "Reclamațiile revin în decizie: feedback, urmat de adaptare. Reacțiile succesive ale firmei și concurenților modifică reciproc contextul: coevoluție.",
+      "lesson": "cas-definitie"
+    },
+    {
+      "id": "w-semafor",
+      "kind": "written",
+      "category": "semafor",
+      "title": "Interpretează două semnale",
+      "prompt": "PSI = 0,18 și HHI normalizat = 0,23. Dă culoarea, sensul și o acțiune pentru fiecare.",
+      "model": "PSI este galben: schimbare relevantă a distribuției, investigăm segmentele. HHI este roșu: concentrare ridicată, analizăm structura expunerilor și stabilim un plan de acțiune.",
+      "rubric": [
+        "PSI galben și interpretarea schimbării.",
+        "HHI roșu și interpretarea concentrării.",
+        "Acțiuni adecvate, fără a confunda indicatorii."
+      ],
+      "explanation": "PSI este galben: schimbare relevantă a distribuției, investigăm segmentele. HHI este roșu: concentrare ridicată, analizăm structura expunerilor și stabilim un plan de acțiune.",
+      "lesson": "psi-scop"
+    },
+    {
+      "id": "w-firma",
+      "kind": "written",
+      "category": "firma",
+      "title": "Recunoaște subsistemele",
+      "prompt": "Firma prognozează cererea, cumpără materii prime și obține credit. Identifică cele trei subsisteme.",
+      "model": "Prognoza cererii aparține SRPB, cumpărarea factorilor SAFP, iar finanțarea prin credit SF. Clasific după funcția fiecărei acțiuni.",
+      "rubric": [
+        "SRPB pentru cerere.",
+        "SAFP pentru factori.",
+        "SF pentru finanțare."
+      ],
+      "explanation": "Prognoza cererii aparține SRPB, cumpărarea factorilor SAFP, iar finanțarea prin credit SF. Clasific după funcția fiecărei acțiuni.",
+      "lesson": "firma-subsisteme"
+    },
+    {
+      "id": "w-shadow",
+      "kind": "written",
+      "category": "shadow",
+      "title": "Shadow banking: comparație",
+      "prompt": "Definește shadow banking și compară două aspecte cu banca tradițională.",
+      "model": "Este intermedierea creditului din afara sistemului bancar regulat. Finanțarea poate proveni din fonduri și titluri de piață, iar regimul de supraveghere și protecție diferă de cel bancar; nu este automat ilegal sau nereglementat.",
+      "rubric": [
+        "Definiție legată de intermedierea creditului.",
+        "Comparație a finanțării.",
+        "Comparație a regimului și protecției, fără generalizări absolute."
+      ],
+      "explanation": "Este intermedierea creditului din afara sistemului bancar regulat. Finanțarea poate proveni din fonduri și titluri de piață, iar regimul de supraveghere și protecție diferă de cel bancar; nu este automat ilegal sau nereglementat.",
+      "lesson": "shadow-definitie"
+    },
+    {
+      "id": "w-feedback",
+      "kind": "written",
+      "category": "cas",
+      "title": "Sensul feedbackului",
+      "prompt": "Explică de ce feedbackul negativ nu înseamnă un lucru rău; folosește un exemplu bancar.",
+      "model": "Negativ înseamnă că reacția contracarează abaterea. Deteriorarea riscului poate determina restrângerea expunerii viitoare, având un efect de corecție; pozitiv ar însemna amplificarea abaterii.",
+      "rubric": [
+        "Definești corecția.",
+        "Exemplu de buclă, cu efectul de retur.",
+        "Separi semnul de aprecierea bun/rău."
+      ],
+      "explanation": "Negativ înseamnă că reacția contracarează abaterea. Deteriorarea riscului poate determina restrângerea expunerii viitoare, având un efect de corecție; pozitiv ar însemna amplificarea abaterii.",
+      "lesson": "cas-definitie"
+    },
+    {
+      "id": "w-vsmcase",
+      "kind": "written",
+      "category": "vsm",
+      "title": "Mini-caz VSM",
+      "prompt": "Secțiile se blochează din lipsă de program comun; apoi conducerea redistribuie bugetul, iar un audit verifică stocul. Identifică funcțiile.",
+      "model": "Programul comun privește S2, bugetul alocat pentru ansamblu este S3, iar verificarea directă a stocului este S3*.",
+      "rubric": [
+        "S2 și sincronizare.",
+        "S3 și resurse.",
+        "S3* și verificare directă."
+      ],
+      "explanation": "Programul comun privește S2, bugetul alocat pentru ansamblu este S3, iar verificarea directă a stocului este S3*.",
+      "lesson": "vsm-harta"
+    },
+    {
+      "id": "w-psi-hhi",
+      "kind": "written",
+      "category": "semafor",
+      "title": "Aceeași concentrare, altă distribuție",
+      "prompt": "Baza are ponderi 0,8; 0,2, iar distribuția curentă 0,2; 0,8. Cum pot varia PSI și HHI?",
+      "model": "HHI brut rămâne 0,68: s-au permutat aceleași ponderi. PSI este pozitiv, deoarece ponderile categoriilor s-au schimbat între momente; stabilitatea și concentrarea sunt aspecte diferite.",
+      "rubric": [
+        "Observi egalitatea HHI.",
+        "Observi schimbarea pe categorii și PSI pozitiv.",
+        "Explici diferența stabilitate/concentrare."
+      ],
+      "explanation": "HHI brut rămâne 0,68: s-au permutat aceleași ponderi. PSI este pozitiv, deoarece ponderile categoriilor s-au schimbat între momente; stabilitatea și concentrarea sunt aspecte diferite.",
+      "lesson": "psi-scop"
+    },
+    {
+      "id": "w-it",
+      "kind": "written",
+      "category": "it",
+      "title": "Alege sistemul IT",
+      "prompt": "Firma vrea date interne integrate, istoric al clienților și coordonarea furnizorilor. Asociază ERP, CRM și SCM.",
+      "model": "ERP integrează procesele și datele interne; CRM susține relația și istoricul clienților; SCM coordonează lanțul de aprovizionare. Soluțiile pot funcționa integrat.",
+      "rubric": [
+        "ERP asociat integrării interne.",
+        "CRM asociat relațiilor cu clienții.",
+        "SCM asociat lanțului de aprovizionare."
+      ],
+      "explanation": "ERP integrează procesele și datele interne; CRM susține relația și istoricul clienților; SCM coordonează lanțul de aprovizionare. Soluțiile pot funcționa integrat.",
+      "lesson": "erp"
+    }
+  ],
+  "exams": [
+    {
+      "id": "cse-1",
+      "title": "Fundamente și semafor",
+      "minutes": 40,
+      "questions": [
+        "q-vsm-s2",
+        "q-vsm-s3",
+        "q-cas-feedback",
+        "n-psi",
+        "n-hhi-norm",
+        "n-entropy",
+        "q-firma-subsisteme",
+        "w-s2s3",
+        "w-banca",
+        "w-caz"
+      ]
+    },
+    {
+      "id": "cse-2",
+      "title": "VSM și aplicații bancare",
+      "minutes": 40,
+      "questions": [
+        "q-vsm-s3audit",
+        "q-vsm-s4s5",
+        "q-cas-coevolutie",
+        "n-hhi",
+        "n-ecl",
+        "q-hhi-praguri",
+        "q-entropie-praguri",
+        "w-vsmcase",
+        "w-semafor",
+        "w-firma"
+      ]
+    },
+    {
+      "id": "cse-3",
+      "title": "Proprietăți, risc și interpretare",
+      "minutes": 40,
+      "questions": [
+        "q-cas-traiectorie",
+        "q-cas-emergenta",
+        "q-psi-zerouri",
+        "n-hhi-uniform",
+        "n-ecl2",
+        "q-shadow-definitie",
+        "q-erp",
+        "w-feedback",
+        "w-shadow",
+        "w-psi-hhi"
+      ]
+    },
+    {
+      "id": "cse-4",
+      "title": "Recapitulare extinsă",
+      "minutes": 40,
+      "questions": [
+        "q-vsm-recursivitate",
+        "q-cas-neliniaritate",
+        "q-firma-costfinantare",
+        "n-concentrat",
+        "n-entropy",
+        "q-ecl-rwa",
+        "q-crm-scm",
+        "w-it",
+        "w-s2s3",
+        "w-banca"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ghid",
+      "title": "Ghid 80/20 existent",
+      "href": "/cse/surse/ghid-cse.md",
+      "type": "Material local"
+    },
+    {
+      "id": "simulare",
+      "title": "Simularea existentă și baremul",
+      "href": "/cse/surse/simulare-cse.md",
+      "type": "Material local"
+    },
+    {
+      "id": "rapid",
+      "title": "Ghidul rapid original",
+      "href": "/cse/surse/ghid-rapid.html",
+      "type": "Material local"
+    },
+    {
+      "id": "teorie",
+      "title": "Teoria detaliată originală",
+      "href": "/cse/surse/teorie-detaliata.html",
+      "type": "Material local"
+    },
+    {
+      "id": "vsm",
+      "title": "Seminar 3 — teoria VSM",
+      "href": "/cse/surse/vsm.pdf",
+      "type": "Material local"
+    },
+    {
+      "id": "cakes",
+      "title": "Studiul de caz Cakes, explicat",
+      "href": "/cse/surse/cakes.pdf",
+      "type": "Material local"
+    },
+    {
+      "id": "firma",
+      "title": "Seminar 2 — firma adaptivă",
+      "href": "/cse/surse/firma.pdf",
+      "type": "Material local"
+    },
+    {
+      "id": "banca",
+      "title": "Seminar 4–5 — bancă, risc și semafor",
+      "href": "/cse/surse/banca-semafor.pdf",
+      "type": "Material local"
+    },
+    {
+      "id": "it",
+      "title": "Curs 5 — soluții IT de business",
+      "href": "/cse/surse/solutii-it.pptx",
+      "type": "Material local"
+    },
+    {
+      "id": "excel",
+      "title": "Aplicațiile rezolvate în Excel",
+      "href": "/cse/surse/probleme-rezolvate.xlsx",
+      "type": "Material local"
+    },
+    {
+      "id": "intro",
+      "title": "Curs 1 — introducere",
+      "href": "/cse/surse/curs-1.pdf",
+      "type": "Material local"
+    },
+    {
+      "id": "fsb",
+      "title": "FSB — definiția shadow banking",
+      "href": "https://www.fsb.org/2011/04/shadow-banking-scoping-the-issues/",
+      "type": "Completare verificată"
+    },
+    {
+      "id": "rbi",
+      "title": "RBI — originea termenului, 2007",
+      "href": "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15119",
+      "type": "Completare verificată"
+    }
+  ]
+}
