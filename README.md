@@ -42,7 +42,7 @@ coloanele numerice de exclus.
 Aplicația este în [`aplicatie-partial/`](aplicatie-partial/README.md). Homepage-ul
 permite alegerea între **Analiza Datelor** (`/analiza-datelor/`) și **Cibernetica
 sistemelor economice** (`/cibernetica/`). Analiza Datelor păstrează cele 73 de
-lecții și cele 20 de modele. CSE adaugă 35 de lecții 80/20, 53 de întrebări,
+lecții și cele 20 de modele. CSE adaugă 40 de lecții 80/20, 53 de întrebări,
 cartonașe, 4 simulări cu barem și un calculator PSI/HHI/entropie/ECL. Progresul
 se păstrează separat pentru fiecare materie, în browser. Linkurile vechi cu
 hash către Analiza Datelor sunt redirecționate către secțiunea sa.
@@ -58,3 +58,8 @@ Repository-ul nu folosește GitHub Pages. Fișierele existente de curs și semin
 Verificarea setup-ului este descrisă în [VERIFICARE_SETUP.txt](VERIFICARE_SETUP.txt).
 Testele se pot relua cu `Rscript tests/verifica_final_ACP.R`: analiză reală,
 instalare locală, grafice, erori de previzualizare și toggle cu API simulat.
+
+Pentru noul parțial CSE, site-ul include un [ghid 80/20](aplicatie-partial/public/cse/ghid-partial-80-20.md)
+și [60 de variante cu rezolvări](aplicatie-partial/public/cse/variante-partial-60.md),
+cu 2 puncte teorie și 2 puncte probleme. Le găsești în meniurile
+„Esențialul pentru parțial” și „60 variante · 2 + 2 p”.

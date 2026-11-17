@@ -59,3 +59,25 @@ html[data-density=compact] .prof-home-banner{padding:17px 20px;margin-bottom:20p
 @media screen and (min-width:1024px) and (max-width:1280px){.display-options .density-choice{display:none}.subject-top-note{display:none}}
 @media(max-width:1023px){.display-options{display:none}}
 @media print{html{zoom:1}.display-options{display:none!important}}
+
+/* CSE: focused 80/20 course and 2 + 2 point exam practice. */
+.partial-guide-index { display:flex; flex-wrap:wrap; gap:10px; margin:20px 0; }
+.partial-guide-index a { padding:10px 14px; border:1px solid var(--line,#dce6e0); border-radius:10px; color:var(--cse-green,#26735c); background:#fff; text-decoration:none; }
+.partial-guide article { scroll-margin-top:24px; }
+.partial-guide .cse-action-row { gap:12px 22px; }
+.partial-guide .cse-action-row a { white-space:normal; text-align:left; }
+.partial-guide .cse-table td { min-width:130px; }
+.partial-pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+.partial-search { max-width:520px; margin:20px 0; }
+.partial-rubric { padding-left:20px; }
+.partial-rubric li { padding:9px 0; }
+.partial-rubric label { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+.partial-rubric select { min-width:185px; max-width:100%; padding:10px; border:1px solid #d3ded8; border-radius:8px; background:white; font:inherit; color:#24392e; }
+.partial-score { display:flex; flex-direction:column; gap:10px; border-top:1px solid #d3ded8; padding-top:22px; }
+.partial-score > strong { font-size:2rem; color:#24745d; }
+.partial-score .button { align-self:flex-start; }
+.partial-my-answer { padding:18px; background:#f2f6f4; border-radius:12px; }
+.partial-active { border:2px solid #39836b; }
+.partial-paper .timer { display:inline-block; margin:16px 0; }
+.partial-paper .cse-table { min-width:440px; }
+@media(max-width:700px) { .partial-rubric label { align-items:stretch; flex-direction:column; gap:8px; } .partial-guide-index a { font-size:14px; } }

@@ -5,7 +5,7 @@
       "id": "vsm",
       "title": "VSM: cine face ce?",
       "description": "Șase verbe și diferența S2–S3.",
-      "priority": "Prioritatea 1",
+      "priority": "Pentru parțial",
       "minutes": 20,
       "lessons": [
         "vsm-harta",
@@ -21,7 +21,7 @@
       "id": "cas",
       "title": "CAS și feedback",
       "description": "Recunoști proprietatea și o legi de dovada din caz.",
-      "priority": "Prioritatea 1",
+      "priority": "Pentru parțial",
       "minutes": 20,
       "lessons": [
         "cas-definitie",
@@ -31,14 +31,15 @@
         "cas-emergenta",
         "cas-traiectorie",
         "cas-neliniaritate",
-        "cas-raspuns"
+        "cas-raspuns",
+        "cas-explorare"
       ]
     },
     {
       "id": "semafor",
       "title": "PSI, HHI și entropie",
       "description": "Alegi formula, calculezi și interpretezi culoarea.",
-      "priority": "Prioritatea 1",
+      "priority": "Pentru parțial",
       "minutes": 25,
       "lessons": [
         "psi-scop",
@@ -55,48 +56,52 @@
       "id": "firma",
       "title": "Firma adaptivă",
       "description": "Cele cinci subsisteme, în situații concrete.",
-      "priority": "Prioritatea 2",
+      "priority": "Pentru parțial",
       "minutes": 15,
       "lessons": [
         "firma-subsisteme",
         "firma-piata",
         "firma-costfinantare",
-        "firma-proprietati"
+        "firma-proprietati",
+        "firma-proprietati-extinse"
       ]
     },
     {
       "id": "banca",
       "title": "Banca și riscul",
       "description": "Banca drept CAS, ECL și RWA.",
-      "priority": "Prioritatea 2",
+      "priority": "Pentru parțial",
       "minutes": 15,
       "lessons": [
         "banca-cas",
         "banca-bucla",
         "ecl",
-        "ecl-rwa"
+        "ecl-rwa",
+        "banca-conectivitate"
       ]
     },
     {
       "id": "shadow",
       "title": "Shadow banking",
-      "description": "Definiție, exemple și comparația cu banca.",
-      "priority": "Prioritatea 2",
+      "description": "2007, exemple și comparația de bază cu banca.",
+      "priority": "Pentru parțial",
       "minutes": 8,
       "lessons": [
         "shadow-definitie",
-        "shadow-comparatie"
+        "shadow-comparatie",
+        "shadow-partial"
       ]
     },
     {
       "id": "it",
       "title": "ERP, CRM și SCM",
-      "description": "Extindere din cursul 5: alegi soluția potrivită.",
-      "priority": "Extindere",
-      "minutes": 7,
+      "description": "Alegi ERP, CRM sau SCM după trei fraze concrete.",
+      "priority": "Pentru parțial",
+      "minutes": 10,
       "lessons": [
         "erp",
-        "crm-scm"
+        "crm-scm",
+        "it-trei-fraze"
       ]
     }
   ],
@@ -664,6 +669,85 @@
       "model": "CRM susține relația cu clientul, iar SCM coordonează fluxurile lanțului de aprovizionare; ambele pot fi integrate cu ERP.",
       "pitfall": "Soluțiile IT sunt instrumente pentru funcții economice, nu înlocuitori ai funcțiilor VSM.",
       "recall": "Coordonarea furnizorilor, stocurilor și distribuției se asociază cu:",
+      "sources": [
+        "it"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "cas-explorare",
+      "module": "cas",
+      "title": "Explorarea posibilităților: testează mai multe drumuri",
+      "core": "Mai multe micro-strategii testate în paralel = explorarea spațiului posibilităților.",
+      "explanation": "O strategie potrivită azi poate deveni nepotrivită mâine. Firma experimentează alternative și păstrează ce funcționează în contextul actual. Posibilul adiacent înseamnă o noutate realizabilă pornind de la resursele și ideile deja disponibile.",
+      "example": "O cofetărie testează trei rețete și două canale de vânzare. Folosește bucătăria existentă și pentru ateliere cu clienții: o utilizare nouă a unei resurse existente.",
+      "model": "Este explorarea spațiului posibilităților: firma testează mai multe micro-strategii. Rezultatele o ajută să selecteze variantele potrivite pieței. Nu presupune că o singură strategie rămâne optimă permanent.",
+      "pitfall": "Adaptarea este schimbarea ca răspuns la mediu; explorarea pune accentul pe încercarea și compararea alternativelor.",
+      "recall": "Firma testează trei variante în paralel: ce proprietate recunoști și ce dovadă ai?",
+      "sources": [
+        "intro",
+        "curs2"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "firma-proprietati-extinse",
+      "module": "firma",
+      "title": "Proprietățile firmei: indiciile suplimentare din cursul 3",
+      "core": "Varietate, reguli simple, suboptimalitate, sensibilitate la început și niveluri ierarhice completează proprietățile CAS.",
+      "explanation": "Varietatea necesară: răspunsuri suficiente la situațiile din mediu. Suboptimalitatea: o soluție locală suficient de bună poate susține ansamblul, fără optimizare perfectă a fiecărei părți. Reguli simple: puține reguli locale pot produce comportamente colective complexe. Sensibilitatea la condițiile inițiale: diferențe mici la început pot genera evoluții foarte diferite. Limita haosului descrie echilibrul dinamic între ordine și flexibilitate; sistemele ierarhizate au niveluri incluse unele în altele.",
+      "example": "Două magazine pornesc cu diferențe mici de reputație; recomandările amplifică diferența și evoluțiile devin foarte diferite. O echipă acceptă un rezultat local mai modest pentru a evita blocarea întregului flux.",
+      "model": "Primul caz ilustrează sensibilitatea la condițiile inițiale: o diferență mică la început se amplifică. Al doilea arată suboptimalitatea locală, acceptată pentru funcționarea ansamblului. Numesc proprietatea și explic mecanismul, nu doar repet eticheta.",
+      "pitfall": "Nu confunda nivelurile ierarhice cu controlul central al fiecărei acțiuni. Auto-organizarea poate exista și într-o organizație cu ierarhie.",
+      "recall": "Cum explici varietatea necesară și suboptimalitatea într-o firmă?",
+      "sources": [
+        "curs3",
+        "firma"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "banca-conectivitate",
+      "module": "banca",
+      "title": "Banca: răspunsul cerut în 3–4 propoziții",
+      "core": "Leagă fiecare proprietate de un mecanism bancar: fluxuri, influență, adaptare reciprocă.",
+      "explanation": "Conectivitatea arată existența legăturilor financiare și informaționale. Interdependența arată efectul unei schimbări asupra altor funcții. Coevoluția cere două sensuri de adaptare, de exemplu bancă → clienți → bancă.",
+      "example": "Banca lansează plăți mobile; clienții folosesc mai puțin numerar; banca își schimbă rețeaua de servicii după noile obiceiuri.",
+      "model": "Banca prezintă conectivitate prin fluxurile dintre depozite, creditare, trezorerie și risc. Interdependența apare când pierderile din credite afectează capitalul și deciziile de finanțare. Coevoluția apare când serviciile băncii schimbă comportamentul clienților, iar acesta determină noi adaptări ale băncii.",
+      "pitfall": "O singură adaptare a băncii nu dovedește singură coevoluția. Proprietățile nu sunt exclusive băncii; arăți cum se manifestă în bancă.",
+      "recall": "Explică trei proprietăți ale băncii, cu câte o dovadă concretă.",
+      "sources": [
+        "banca",
+        "intro"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "shadow-partial",
+      "module": "shadow",
+      "title": "Shadow banking: ce reții pentru acest parțial",
+      "core": "2007 = termenul; intermediere nebancară = ideea; flexibilitate mai mare ≠ absența regulilor.",
+      "explanation": "Termenul shadow banking este atribuit lui Paul McCulley în 2007; activitățile existau anterior. Sectorul este asociat intermedierii creditului în afara sistemului bancar regulat și s-a extins prin forme alternative de finanțare. Formularea „instituții financiare nebancare” ajută orientarea, dar nu orice entitate nebancară intră automat în shadow banking.",
+      "example": "Societăți financiare care acordă credite, anumite fonduri monetare implicate în finanțare și vehicule de securitizare. Compari banca și aceste forme de intermediere după finanțare, reguli și protecții.",
+      "model": "Shadow banking cuprinde intermedierea creditului prin entități și activități din afara sistemului bancar regulat. Termenul s-a consacrat în 2007. Aceste forme pot avea flexibilitate mai mare și un regim diferit de cel bancar. Exemple sunt creditorii nebancari și vehiculele de securitizare.",
+      "pitfall": "Slide-ul 14 nu este disponibil în fișierele locale. Comparația de pe site este o sinteză generală documentată, nu reproducerea tabelului profesorului.",
+      "recall": "Ce înseamnă anul 2007, ce libertate au aceste entități și ce exemple poți da?",
+      "sources": [
+        "fsb",
+        "rbi"
+      ],
+      "minutes": 3
+    },
+    {
+      "id": "it-trei-fraze",
+      "module": "it",
+      "title": "Trei fraze: alegi ERP, CRM sau SCM",
+      "core": "Date interne comune → ERP. Relații cu clienții → CRM. Lanțul furnizori–livrare → SCM.",
+      "explanation": "Cauți problema pe care firma vrea să o rezolve. ERP integrează procesele și informațiile interne; CRM urmărește atragerea, vânzarea și relația cu clienții; SCM coordonează fluxurile lanțului de aprovizionare și distribuție. Soluțiile pot avea module comune: alegi accentul dominant al enunțului.",
+      "example": "Distribuitor cu stocuri și contabilitate separate: ERP. Asigurător care urmărește relația cu clienții și reînnoirea polițelor: CRM. Producător care sincronizează furnizorii, materiile prime și livrările: SCM.",
+      "model": "Recomand ERP pentru integrarea datelor și proceselor interne. Recomand CRM pentru evidența clienților și gestionarea relației cu aceștia. Recomand SCM pentru coordonarea aprovizionării, producției și distribuției. Fiecare alegere răspunde nevoii descrise.",
+      "pitfall": "În curs este CRM, nu CRL. „Distribuitor” nu înseamnă automat ERP și „asigurător” nu înseamnă automat CRM: aceeași industrie poate avea nevoi diferite.",
+      "recall": "Un distribuitor vrea istoricul discuțiilor cu clienții: ERP sau CRM și de ce?",
       "sources": [
         "it"
       ],
@@ -1618,6 +1702,24 @@
       "title": "RBI — originea termenului, 2007",
       "href": "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15119",
       "type": "Completare verificată"
+    },
+    {
+      "id": "curs2",
+      "title": "Curs 2 — proprietățile CAS",
+      "href": "/cse/surse/curs2.pdf",
+      "type": "Curs local · conversie PDF"
+    },
+    {
+      "id": "curs3",
+      "title": "Curs 3 — firma și subsistemele",
+      "href": "/cse/surse/curs3.pdf",
+      "type": "Curs local · conversie PDF"
+    },
+    {
+      "id": "curs4",
+      "title": "Curs 4 — modelul sistemului viabil",
+      "href": "/cse/surse/curs4.pdf",
+      "type": "Curs local · conversie PDF"
     }
   ]
 }

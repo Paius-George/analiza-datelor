@@ -15,12 +15,35 @@ Homepage-ul `/` permite alegerea materiei. **Analiza Datelor** este la
 funcționează prin redirecționare cu păstrarea hash-ului. **Cibernetica sistemelor
 economice** este la `/cibernetica/`.
 
-CSE include 35 de lecții, 53 de întrebări (grile, calcule și interpretări),
-cartonașe, repetarea greșelilor, planuri de 30/60/120 de minute și 4 simulări.
-Simulările sunt didactice, de 10 întrebări și 40 de minute: 7 răspunsuri automate,
-3 răspunsuri scrise autoevaluate, 1 punct din oficiu și 9 puncte de lucru.
-Nu reproduc un format oficial confirmat pentru CSE. Progresul și răspunsurile
-sunt locale, în cheia `cibernetica-sistemelor-economice-8020-v1`, separată de AD.
+CSE include **40 de lecții**, 53 de întrebări, cartonașe și calculator.
+Pentru informațiile noi despre parțial:
+
+- `/cibernetica/#partial-ghid`: șapte fișe 80/20, exemple, răspunsuri de
+  3–4 propoziții, capcane și un traseu de 120 minute.
+- `/cibernetica/#partial`: **60 de variante** cu 2 puncte de teorie și 2 de
+  probleme, mod învățare și simulare cu timp ales (30/40/60 minute).
+- Fiecare variantă are cazuri CAS, VSM/firmă, bancă/shadow banking, trei
+  situații ERP/CRM/SCM, PSI și HHI/entropie cu semafor. Sunt 30 de cazuri
+  teoretice și 18 situații IT recombinate, plus 60 de seturi numerice distincte.
+- Rezolvările includ ponderi, contribuții, formule, interpretări și acțiuni.
+  Autoevaluarea pe criterii dă maximum **4 puncte**, fără oficiu și fără
+  conversie inventată în notă. Textul nu este corectat semantic automat.
+- Răspunsurile, termenul de predare și baremul completat se salvează în
+  `cse-partial-2plus2-v1`. La revenire după expirare se predă automat.
+  Păstrăm ultimele 60 de încercări. Modul învățare folosește notițe temporare.
+
+Cele 4 simulări generale anterioare (10 întrebări, 1 punct din oficiu + 9
+puncte de lucru) rămân în arhivă la `#simulari`, împreună cu progresul lor.
+Cheia lor este `cibernetica-sistemelor-economice-8020-v1`, separată de noile
+variante și de Analiza Datelor. Durata și împărțirea pe exerciții ale noilor
+variante sunt convenții de antrenament, nu baremul oficial al profesorului.
+
+Conținutul nou este în `content/cse-guide.json` și `content/cse-partial.json`.
+`node scripts/build-cse-partial.mjs` regenerează determinist variantele și
+`public/cse/variante-partial-60.md`. Ghidul separat se descarcă din
+`public/cse/ghid-partial-80-20.md`. Cursul 5 confirmă acronimul **CRM**, nu CRL;
+soluția se alege după nevoia firmei, nu doar după industria ei. Tabelul despre
+shadow banking este explicit o sinteză generală: slide-ul 14 nu este disponibil.
 
 Conținut CSE: `content/cse.json`. Fiecare lecție are esențialul, explicație,
 exemplu, răspuns-model, capcană și surse. Fișele noi pot fi descărcate din
@@ -38,8 +61,12 @@ calculabile. Pragurile sunt cele orientative din seminarul 4–5: PSI 0,10/0,25;
 HHI normalizat 0,10/0,20; entropie 0,60/0,90, cu granițele în galben.
 ECL este aproximația didactică PD × LGD × EAD, cu procente convertite corect.
 
-Verificare: `npm test` (35 teste), `npm run typecheck`, `npm run build`.
-Verificarea în Chromium a inclus desktop și mobil, homepage, progres separat,
+Verificare: `npm test` (40 teste), `npm run typecheck`, `npm run build`.
+Verificarea noilor variante în Chromium a inclus mod învățare/simulare,
+ascunderea rezolvărilor înainte de predare, salvare după refresh, expirare,
+autoevaluare 4/4, progresul vechi păstrat, stocare blocată, descărcări,
+mobil fără depășirea lățimii și scala 70%. Verificarea generală a inclus
+homepage, progres separat,
 lecții, cartonașe, calculator, antrenament, reluarea simulării după refresh,
 predare și autoevaluare, plus compatibilitatea unui link vechi către modelul 16.
 

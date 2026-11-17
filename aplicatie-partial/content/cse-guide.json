@@ -1,0 +1,389 @@
+{
+  "title": "Parțial CSE — traseul 80/20",
+  "intro": "Înveți indiciul, îl aplici într-un caz și scrii un răspuns de 3–4 propoziții. Distribuția comunicată este 2 puncte teorie și 2 puncte probleme; împărțirea noastră pe exerciții este didactică. Tehnica semaforului este prioritară conform informațiilor primite.",
+  "plan": [
+    "15 min: CAS — recunoaște proprietățile, apoi explică două cazuri.",
+    "15 min: VSM — fixează S2 versus S3 și activitățile primare S1.",
+    "10 min: firma — asociază cinci activități subsistemelor.",
+    "10 min: banca — scrie trei proprietăți cu exemple.",
+    "5 min: shadow banking — sens, 2007, exemple și două diferențe.",
+    "10 min: IT — trei fraze și justificarea ERP/CRM/SCM.",
+    "20 min: semafor — un calcul complet și pragurile.",
+    "35 min: rezolvă o variantă fără indicii și corectează după barem."
+  ],
+  "sections": [
+    {
+      "id": "cas",
+      "title": "1. CAS: recunoști proprietatea din poveste",
+      "minutes": 15,
+      "essence": "Proprietate → dovadă din enunț → efect. Trei propoziții pot fi suficiente.",
+      "headers": [
+        "Indiciul din enunț",
+        "Ce recunoști",
+        "Ce explici"
+      ],
+      "rows": [
+        [
+          "Există legături, rețea, schimb de informații",
+          "Conectivitate",
+          "Cine este conectat cu cine"
+        ],
+        [
+          "Schimbarea la A afectează B",
+          "Interdependență",
+          "Cum se transmite efectul"
+        ],
+        [
+          "A se adaptează, B răspunde, A se schimbă iar",
+          "Coevoluție",
+          "Adaptarea reciprocă"
+        ],
+        [
+          "Rezultatul revine și amplifică schimbarea",
+          "Feedback pozitiv",
+          "Bucla se întărește"
+        ],
+        [
+          "Reacția reduce abaterea față de țintă",
+          "Feedback negativ",
+          "Bucla corectează"
+        ],
+        [
+          "Oamenii se organizează fără ordin central",
+          "Auto-organizare",
+          "Ordinea apare local"
+        ],
+        [
+          "Interacțiunile produc o stare nouă a întregului",
+          "Emergență",
+          "Rezultatul colectiv, nu acțiunea individuală"
+        ],
+        [
+          "Trecutul influențează prezentul",
+          "Istoricitate",
+          "Urma experienței anterioare"
+        ],
+        [
+          "Alegerea trecută limitează opțiunile de azi",
+          "Dependență de traiectorie",
+          "Costul sau dificultatea schimbării"
+        ],
+        [
+          "Mai multe variante testate în paralel",
+          "Explorarea spațiului posibilităților",
+          "Experimente și selecție"
+        ],
+        [
+          "Perturbări persistente și reorganizare prin schimburi cu mediul",
+          "Departe de echilibru",
+          "Apariția unor structuri noi"
+        ],
+        [
+          "Cauză mică, efect disproporționat",
+          "Neliniaritate",
+          "Disproporția sau pragul"
+        ]
+      ],
+      "example": "Clienții retrag individual bani; cumularea retragerilor produce o criză a băncii.",
+      "model": "Este emergență: interacțiunile individuale produc un rezultat nou la nivelul sistemului. Acțiunea individuală este retragerea banilor. Fenomenul emergent este criza de lichiditate, nu retragerea unui singur client.",
+      "trap": "Pozitiv nu înseamnă bun. Negativ nu înseamnă rău. Coevoluția cere adaptare reciprocă, iar emergența cere un rezultat la nivelul întregului.",
+      "recall": "Explică diferența dintre auto-organizare și emergență, apoi dintre conectivitate și interdependență.",
+      "lessons": [
+        "cas-explorare",
+        "cas-feedback",
+        "cas-coevolutie",
+        "cas-emergenta",
+        "cas-traiectorie"
+      ],
+      "sources": [
+        "intro",
+        "curs2"
+      ]
+    },
+    {
+      "id": "vsm",
+      "title": "2. VSM: înțelegi ce face fiecare sistem",
+      "minutes": 15,
+      "essence": "S1 face munca; S2 armonizează; S3 optimizează; S3* verifică; S4 anticipează; S5 definește identitatea.",
+      "headers": [
+        "Sistem",
+        "Indiciu",
+        "Exemplu"
+      ],
+      "rows": [
+        [
+          "S1",
+          "Activități primare / operațiuni",
+          "Produce pâine sau prestează serviciul"
+        ],
+        [
+          "S2",
+          "Coordonare, conflicte, stabilizare",
+          "Program comun pentru utilaj"
+        ],
+        [
+          "S3",
+          "Reglare internă, resurse, sinergie",
+          "Redistribuie personal pentru performanța întregului"
+        ],
+        [
+          "S3*",
+          "Control direct / audit",
+          "Compară stocul fizic cu raportul"
+        ],
+        [
+          "S4",
+          "Mediu, viitor, strategie",
+          "Pregătește produse pentru cererea viitoare"
+        ],
+        [
+          "S5",
+          "Misiune, politică, identitate",
+          "Stabilește valorile și direcția fundamentală"
+        ]
+      ],
+      "example": "Două ateliere folosesc același cuptor. Se face un orar comun, apoi se redistribuie bugetul pentru reducerea costului total.",
+      "model": "Orarul comun reprezintă S2, care coordonează și previne conflictele. Redistribuirea bugetului reprezintă S3, care optimizează resursele ansamblului. S2 asigură compatibilitatea activităților, iar S3 urmărește eficiența globală.",
+      "trap": "S3* este canalul de audit, nu încă un sistem principal. Identifici funcția descrisă; numele unui departament nu stabilește automat sistemul VSM.",
+      "recall": "Prezintă S2 și S3 în trei propoziții, cu câte un exemplu.",
+      "lessons": [
+        "vsm-s2",
+        "vsm-s3",
+        "vsm-recursivitate"
+      ],
+      "sources": [
+        "curs4",
+        "vsm"
+      ]
+    },
+    {
+      "id": "firma",
+      "title": "3. Firma: cinci întrebări, cinci subsisteme",
+      "minutes": 10,
+      "essence": "Piață → producție → costuri/profit → factori → finanțare.",
+      "headers": [
+        "Întrebarea",
+        "Subsistem",
+        "Indiciu"
+      ],
+      "rows": [
+        [
+          "Ce cere piața?",
+          "SRPB — raporturi cu piața",
+          "Cerere, comenzi, prognoză, livrare, reclamă"
+        ],
+        [
+          "Cum realizăm produsul?",
+          "SP-T — producție/tehnologic",
+          "Tehnologie, capacitate, producție efectivă"
+        ],
+        [
+          "La ce cost și cu ce profit?",
+          "SPCP — prețuri/costuri/profit",
+          "Rentabilitate, preț, eficiență"
+        ],
+        [
+          "De ce resurse avem nevoie?",
+          "SAFP — asigurarea factorilor de producție",
+          "Materiale, personal, utilaje"
+        ],
+        [
+          "De unde vin și unde merg banii?",
+          "SF — financiar",
+          "Finanțare, plăți, credite, taxe"
+        ]
+      ],
+      "example": "Firma estimează cererea, cumpără materiale, produce și calculează profitul, folosind un credit pentru plăți.",
+      "model": "Estimarea cererii aparține SRPB, cumpărarea materialelor ține de SAFP, iar producția de SP-T. Calculul profitului ține de SPCP. Creditul pentru plăți aparține SF. Informațiile și resursele circulă între aceste subsisteme.",
+      "trap": "Nu confunda cele cinci subsisteme ale firmei cu S1–S5 din VSM. Sunt două moduri de analiză: folosești modelul cerut în enunț.",
+      "recall": "Materiale, rentabilitate, credit: ce subsistem recunoști la fiecare?",
+      "lessons": [
+        "firma-subsisteme",
+        "firma-proprietati-extinse"
+      ],
+      "sources": [
+        "curs3",
+        "firma"
+      ]
+    },
+    {
+      "id": "banca",
+      "title": "4. Banca: explici 2–3 proprietăți cu mecanisme concrete",
+      "minutes": 10,
+      "essence": "Nu scrii doar „este conectată”. Numești funcțiile și explici legătura dintre ele.",
+      "headers": [
+        "Funcție",
+        "Ce face"
+      ],
+      "rows": [
+        [
+          "Depozite / finanțare",
+          "Atrag fonduri"
+        ],
+        [
+          "Creditare",
+          "Analizează și acordă împrumuturi"
+        ],
+        [
+          "Trezorerie / lichiditate",
+          "Gestionează fluxurile și capacitatea de plată"
+        ],
+        [
+          "Risc",
+          "Monitorizează expunerile și propune limite"
+        ],
+        [
+          "Capital",
+          "Absoarbe pierderi și condiționează capacitatea de asumare a riscului"
+        ]
+      ],
+      "example": "Mai multe credite schimbă necesarul de finanțare; informația despre întârzieri revine în deciziile de creditare.",
+      "model": "Banca prezintă conectivitate prin fluxurile dintre depozite, creditare, trezorerie și risc. Interdependența apare când creșterea creditării mărește necesarul de finanțare. Adaptarea apare când informația despre întârzieri determină schimbarea politicilor de creditare.",
+      "trap": "Pentru coevoluție arată ambele sensuri: banca schimbă comportamentul clienților, iar clienții determină o nouă schimbare a băncii.",
+      "recall": "Descrie conectivitatea, interdependența și coevoluția unei bănci.",
+      "lessons": [
+        "banca-conectivitate",
+        "banca-cas",
+        "banca-bucla"
+      ],
+      "sources": [
+        "banca",
+        "intro"
+      ]
+    },
+    {
+      "id": "shadow",
+      "title": "5. Shadow banking: definiție, 2007, exemple, comparație",
+      "minutes": 5,
+      "essence": "Intermediere a creditului în afara băncilor tradiționale. Termenul datează din 2007; activitățile sunt mai vechi.",
+      "headers": [
+        "Criteriu",
+        "Banca tradițională",
+        "Shadow banking — sinteză generală"
+      ],
+      "rows": [
+        [
+          "Finanțare",
+          "Depozite și alte surse",
+          "Frecvent investitori și finanțare de piață"
+        ],
+        [
+          "Reguli",
+          "Cadru bancar prudențial",
+          "Regim diferit în funcție de entitate și activitate"
+        ],
+        [
+          "Flexibilitate",
+          "Constrângeri specifice băncilor",
+          "Poate avea mai multă flexibilitate"
+        ],
+        [
+          "Protecții",
+          "Mecanisme specifice pentru depozite eligibile",
+          "Nu presupui aceleași protecții ca pentru depozitele bancare"
+        ]
+      ],
+      "example": "Creditori nebancari, anumite fonduri monetare implicate în finanțare și vehicule de securitizare.",
+      "model": "Shadow banking desemnează intermedierea creditului în afara sistemului bancar regulat. Termenul este atribuit lui Paul McCulley în 2007. Sectorul poate avea mai multă flexibilitate, fără să fie lipsit de reguli. Exemple sunt societățile financiare care acordă credite și vehiculele de securitizare.",
+      "trap": "Slide-ul 14 nu există în fișierele disponibile: tabelul de aici este o sinteză generală, nu reproducerea lui. Nici „toate instituțiile nebancare”, nici „ilegal” nu sunt definiții corecte.",
+      "recall": "Dă două diferențe și trei exemple. Ce reprezintă exact anul 2007?",
+      "lessons": [
+        "shadow-partial",
+        "shadow-comparatie"
+      ],
+      "sources": [
+        "fsb",
+        "rbi"
+      ]
+    },
+    {
+      "id": "it",
+      "title": "6. IT: trei fraze, trei alegeri justificate",
+      "minutes": 10,
+      "essence": "ERP = interiorul firmei; CRM = relația cu clientul; SCM = lanțul furnizori–livrare.",
+      "headers": [
+        "Dacă accentul cade pe…",
+        "Alegi",
+        "De ce"
+      ],
+      "rows": [
+        [
+          "Stocuri + facturi + contabilitate + personal",
+          "ERP",
+          "Integrează procesele și datele interne"
+        ],
+        [
+          "Istoric clienți + oferte + fidelizare + reclamații",
+          "CRM",
+          "Gestionează relația cu clienții"
+        ],
+        [
+          "Materii prime + furnizori + producție + transport",
+          "SCM",
+          "Coordonează fluxurile lanțului de aprovizionare"
+        ]
+      ],
+      "example": "Un distribuitor vrea o bază comună pentru contabilitate și stocuri. Un asigurător vrea să urmărească relația cu clienții. Un producător vrea să sincronizeze furnizorii și livrările.",
+      "model": "Distribuitorului îi recomand ERP pentru integrarea internă. Asigurătorului îi recomand CRM pentru relația cu clienții. Producătorului îi recomand SCM pentru coordonarea lanțului de aprovizionare. Argumentul este nevoia descrisă, nu domeniul firmei.",
+      "trap": "Acronimul verificat în curs este CRM, nu CRL. O firmă de distribuție poate avea nevoie și de CRM sau SCM, dacă enunțul pune accentul pe clienți sau pe lanțul logistic.",
+      "recall": "Un asigurător vrea contabilitate și salarizare integrate: ce alegi și de ce?",
+      "lessons": [
+        "it-trei-fraze",
+        "erp",
+        "crm-scm"
+      ],
+      "sources": [
+        "it"
+      ]
+    },
+    {
+      "id": "semafor",
+      "title": "7. Semafor: rețeta pentru cele 2 puncte de probleme",
+      "minutes": 20,
+      "essence": "Ponderi → formulă → rezultat → culoare → sens → acțiune.",
+      "headers": [
+        "Indicator",
+        "Formula",
+        "Verde",
+        "Galben, inclusiv limite",
+        "Roșu"
+      ],
+      "rows": [
+        [
+          "PSI",
+          "Σ(p−q) ln(p/q)",
+          "< 0,10",
+          "0,10–0,25",
+          "> 0,25"
+        ],
+        [
+          "HHI normalizat",
+          "(n × Σq² − 1)/(n − 1)",
+          "< 0,10",
+          "0,10–0,20",
+          "> 0,20"
+        ],
+        [
+          "Entropie normalizată",
+          "−Σq ln(q) / ln(n)",
+          "> 0,90",
+          "0,60–0,90",
+          "< 0,60"
+        ]
+      ],
+      "example": "Pentru q = (0,5; 0,3; 0,2): HHI brut = 0,38, HHI normalizat = 0,07. Entropia brută ≈ 1,029653 și cea normalizată ≈ 0,937231.",
+      "model": "HHI normalizat este 0,07, în zona verde, indicând concentrare redusă. Entropia normalizată este aproximativ 0,937231, în zona verde, indicând diversificare ridicată. Recomand monitorizare obișnuită. PSI ar necesita și distribuția de referință pentru a evalua schimbarea.",
+      "trap": "Fiecare moment are propriul total. Folosești ponderi, nu procente întregi: 50% devine 0,5. Ridici ponderea la pătrat, folosești ln și compari formele normalizate la HHI/entropie. Nu clasifica după un rezultat rotunjit prematur. Dacă există zerouri, PSI cere o convenție explicită; nu o inventa.",
+      "recall": "Ce măsoară fiecare indicator? La 0,10 PSI, 0,20 HHI normalizat și 0,90 entropie normalizată, ce culori obții?",
+      "lessons": [
+        "psi-scop",
+        "hhi-formula",
+        "entropie-formula",
+        "semafor-comparatie"
+      ],
+      "sources": [
+        "banca"
+      ]
+    }
+  ]
+}
